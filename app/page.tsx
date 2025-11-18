@@ -1,6 +1,6 @@
-import Image from "next/image";
+import { AboutTeams } from "./components/AboutTeams";
 
 
 export default function Home() {
-  return (<div></div>);
+  return (<AboutTeams/>);
 }
