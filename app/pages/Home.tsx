@@ -22,11 +22,11 @@ const tempCurrentEventsData = {
 export default function Home() {
   return (
     <div>
+      <AboutTeams />
       <TextBlock
         heading={tempCurrentEventsData.heading}
         events={tempCurrentEventsData.events}
       ></TextBlock>
-      <AboutTeams />
     </div>
     
   );

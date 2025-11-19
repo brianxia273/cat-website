@@ -35,9 +35,9 @@ export const Cards = ({imgUrl, teamName, description}: team) => {
 }
 
 export const AboutTeams = () => {
-    return <div>
-        <h2 className="text-red text-5xl font-semibold mx-auto ml-25 p-4">Our Teams</h2>
-        <div className="flex justify-center gap-32">
+    return <div className="m-20">
+        <h2 className="text-theme-red text-5xl font-semibold mb-5">Our Teams</h2>
+        <div className="flex justify-between">
             <div className="">
                 <Cards
                 imgUrl={outreachAndEducation.imgUrl}
