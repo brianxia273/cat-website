@@ -1,6 +1,5 @@
-import { AboutTeams } from "./components/AboutTeams";
+import AppRouter from "./components/RouterProvider";
 
-
-export default function Home() {
-  return (<AboutTeams/>);
+export default function Page() {
+  return <AppRouter />;
 }
