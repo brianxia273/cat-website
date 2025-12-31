@@ -26,12 +26,11 @@ export default function Home() {
   const router = useRouter();
   return (
     <div>
+      <AboutTeams />
       <TextBlock
         heading={tempCurrentEventsData.heading}
         events={tempCurrentEventsData.events}
       ></TextBlock>
-      <AboutTeams />
-      <button onClick={() => { router.push("/tabs/JoinUs") }}>bruhhhh</button>
     </div>
 
   );
