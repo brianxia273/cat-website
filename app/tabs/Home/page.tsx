@@ -1,5 +1,7 @@
-import TextBlock from "../components/TextBlock";
-import { AboutTeams } from "../components/AboutTeams";
+import TextBlock from "../../components/TextBlock";
+import { AboutTeams } from "../../components/AboutTeams";
+import { useRouter } from "next/navigation";
+
 
 const tempCurrentEventsData = {
   heading: "Current Events",
@@ -20,6 +22,8 @@ const tempCurrentEventsData = {
 };
 
 export default function Home() {
+
+  const router = useRouter();
   return (
     <div>
       <TextBlock
@@ -27,8 +31,9 @@ export default function Home() {
         events={tempCurrentEventsData.events}
       ></TextBlock>
       <AboutTeams />
+      <button onClick={() => { router.push("/tabs/JoinUs") }}>bruhhhh</button>
     </div>
-    
+
   );
 }
 
