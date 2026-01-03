@@ -21,8 +21,12 @@
 
 
 @layer utilities {
-  .title {
-    @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red;
+  .heading {
+    @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+  }
+
+  .subheading {
+    @apply text-xl font-normal text-theme-dk-grey;
   }
 }
 

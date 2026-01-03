@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-import catLogo from "./assets/cat-logo.png"
+import catLogo from "@/public/assets/cat-logo.png"
 import Image from 'next/image';
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex justify-between h-24 bg-white">
-      <Image src={catLogo} alt="Cornell Assistive Technologies Logo" height={catLogo.height} width={catLogo.width} className="ml-16 h-auto w-auto" />
+      <Image src={catLogo} alt="Cornell Assistive Technologies Logo" height={catLogo.height} width={catLogo.width} className="h-auto w-auto" />
       <nav className="flex justify-end">
         <div className="flex gap-16 mr-20 text-base text-theme-dk-grey font-medium">
           <Tab routeToPath="/" tabName="Home" />

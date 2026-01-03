@@ -2,6 +2,7 @@ import TextBlock from "../../components/TextBlock";
 import { AboutTeams } from "../../components/AboutTeams";
 import { Navbar } from "../../components/Navbar"
 import { LandingHero } from "../../components/LandingHero"
+import { Mission } from "@/app/components/Mission";
 
 // const tempCurrentEventsData = {
 //   heading: "Current Events",
@@ -27,6 +28,7 @@ export default function Home() {
     <div>
       <Navbar />
       <LandingHero />
+      <Mission />
 
       {/* <AboutTeams />
       <TextBlock
