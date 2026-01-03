@@ -13,6 +13,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-theme-red: #d22333;
+  --color-theme-lt-red: #FBE9EB;
   --color-theme-dk-red: #a81c29;
   --color-theme-lt-grey: #E5E5E5;
   --color-theme-grey: #828282;
@@ -26,7 +27,7 @@
   }
 
   .subheading {
-    @apply text-xl font-normal text-theme-dk-grey;
+    @apply text-xl font-normal text-theme-dk-grey leading-[160%];
   }
 }
 
