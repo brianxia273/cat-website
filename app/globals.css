@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --red: #DD2233;
+  --dk-red: #bd2e2e;
 }
 
 @theme inline {
@@ -12,7 +13,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-theme-red: #d22333;
-  --color-theme-dk-red: #bd2e2e;
   --color-theme-grey: #828282;
   --color-theme-dk-grey: #534f4f;
 }
