@@ -1,6 +1,6 @@
 import TextBlock from "../../components/TextBlock";
 import { AboutTeams } from "../../components/AboutTeams";
-import { useRouter } from "next/navigation";
+import Navbar from "../../components/Navbar"
 
 
 const tempCurrentEventsData = {
@@ -23,9 +23,9 @@ const tempCurrentEventsData = {
 
 export default function Home() {
 
-  const router = useRouter();
   return (
     <div>
+      <Navbar />
       <AboutTeams />
       <TextBlock
         heading={tempCurrentEventsData.heading}
