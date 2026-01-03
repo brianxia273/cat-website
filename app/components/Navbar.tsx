@@ -2,10 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-import catLogo from "./assets/catLogo.png"
+import catLogo from "@/public/assets/cat-logo.png"
 import Image from 'next/image';
 
-export default function Navbar() {
+export function Navbar() {
   type TabProps = {
     routeToPath: string;
     tabName: string;
@@ -25,14 +25,14 @@ export default function Navbar() {
     return <button
       onClick={() => router.push(routeToPath)}
       // won't change color on hover if current page
-      className={`${isActive(routeToPath) ? "text-theme-red" : ""} hover:text-theme-dk-red`}>
+      className={`hover:text-theme-dk-red cursor-pointer ${isActive(routeToPath) ? "text-theme-red hover:text-theme-red" : ""}`}>
       {tabName}
     </button>
   }
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex justify-between h-24 bg-white">
-      <Image src={catLogo} alt="Cornell Assistive Technologies Logo" height={catLogo.height} width={catLogo.width} className="ml-16 h-auto w-auto" />
+      <Image src={catLogo} alt="Cornell Assistive Technologies Logo" height={catLogo.height} width={catLogo.width} className="h-auto w-auto" />
       <nav className="flex justify-end">
         <div className="flex gap-16 mr-20 text-base text-theme-dk-grey font-medium">
           <Tab routeToPath="/" tabName="Home" />
