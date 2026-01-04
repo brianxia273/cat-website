@@ -22,7 +22,7 @@ const HeroGraphic = () => {
       <img src="/assets/Landing/hero-blob-solid.svg" alt="" className="absolute left-9.25 top-32" />
       <img src="/assets/Landing/hero-blob-clear.svg" alt="" className="absolute left-0 top-29" />
       <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={HeroPic.height} width={HeroPic.width}
-        className="h-78 w-111 rounded-[1000px] absolute left-15 top-47.5" />
+        className="h-78 w-111 rounded-[1000px] absolute left-15 top-47.5 hover:scale-102 transition-transform duration-300" />
       <img src="/assets/Landing/hero-square-bl.svg" alt="" className="absolute left-39 top-134" />
       <img src="/assets/Landing/hero-square-tl.svg" alt="" className="absolute left-45.75 top-0" />
       <img src="/assets/Landing/hero-circle-br.svg" alt="" className="absolute left-93.25 top-112.25 -z-10" />
