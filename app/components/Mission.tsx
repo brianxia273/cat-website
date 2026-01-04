@@ -5,18 +5,19 @@ import ImgBR from "@/public/assets/Landing/img-br.png"
 import Image from 'next/image';
 
 function ImgGrid({ className }: { className?: string }) {
+  const imgStyles = "h-42.5 w-56.75 rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform duration-300"
   return (<div className={`${className} flex gap-5 w-full justify-center`}>
     <div className="flex flex-col gap-5">
       <Image src={ImgTL} alt="Cornell Assistive Tech team photo" height={ImgTL.height} width={ImgTL.width}
-        className="h-42.5 w-56.75 rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        className={imgStyles} />
       <Image src={ImgBL} alt="The team helping students" height={ImgBL.height} width={ImgBL.width}
-        className="h-42.5 w-56.75 rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        className={imgStyles} />
     </div>
     <div className="flex flex-col gap-5">
       <Image src={ImgTR} alt="The team helping a child in a modified car" height={ImgTR.height} width={ImgTR.width}
-        className="h-42.5 w-56.75 rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        className={imgStyles} />
       <Image src={ImgBR} alt="The team's tactile coding block project" height={ImgBR.height} width={ImgBR.width}
-        className="h-42.5 w-56.75 rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        className={imgStyles} />
     </div>
   </div>)
 }
