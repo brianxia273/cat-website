@@ -1,11 +1,9 @@
-import TextBlock from "../../components/TextBlock";
-import { AboutTeams } from "../../components/AboutTeams";
-import { Navbar } from "../../components/Navbar"
-import { LandingHero } from "../../components/LandingHero"
+import { Navbar } from "@/app/components/Navbar"
+import { LandingHero } from "@/app/components/LandingHero"
 import { Mission } from "@/app/components/Mission";
+import { CommunityHighlights } from "@/app/components/CommunityHighlights";
 
 // const tempCurrentEventsData = {
-//   heading: "Current Events",
 //   events: [
 //     [
 //       "Subheading",
@@ -29,12 +27,7 @@ export default function Home() {
       <Navbar />
       <LandingHero />
       <Mission />
-
-      {/* <AboutTeams />
-      <TextBlock
-        heading={tempCurrentEventsData.heading}
-        events={tempCurrentEventsData.events}
-      ></TextBlock> */}
+      <CommunityHighlights events={[]} />
     </div>
 
   );

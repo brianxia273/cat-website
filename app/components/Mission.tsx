@@ -35,9 +35,9 @@ function MissionText() {
   return (
     <div className="flex flex-col w-110 justify-center">
       <h2 className="heading mb-9">Our Mission</h2>
-      <p className="subheading mb-8">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities
+      <p className="subtext mb-8">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities
         and raise awareness of their impact among communities in Ithaca and beyond.</p>
-      <p className="subheading">We partner with individuals, families, and organizations to engineer accessible, needs-driven solutions.</p>
+      <p className="subtext">We partner with individuals, families, and organizations to engineer accessible, needs-driven solutions.</p>
     </div>
   )
 }

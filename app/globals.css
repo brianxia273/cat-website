@@ -26,8 +26,12 @@
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
 
-  .subheading {
+  .subtext {
     @apply text-xl font-normal text-theme-dk-grey leading-[160%];
+  }
+
+  .navtext {
+    @apply text-base text-theme-dk-grey font-medium;
   }
 }
 

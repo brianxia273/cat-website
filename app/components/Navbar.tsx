@@ -25,7 +25,7 @@ export function Navbar() {
     return <button
       onClick={() => router.push(routeToPath)}
       // won't change color on hover if current page
-      className={`hover:text-theme-dk-red cursor-pointer ${isActive(routeToPath) ? "text-theme-red hover:text-theme-red" : ""}`}>
+      className={`navtext hover:text-theme-dk-red cursor-pointer ${isActive(routeToPath) ? "text-theme-red hover:text-theme-red" : ""}`}>
       {tabName}
     </button>
   }
@@ -34,7 +34,7 @@ export function Navbar() {
     <div className="fixed top-0 left-0 w-full z-50 flex justify-between h-24 bg-white">
       <Image src={catLogo} alt="Cornell Assistive Technologies Logo" height={catLogo.height} width={catLogo.width} className="h-auto w-auto" />
       <nav className="flex justify-end">
-        <div className="flex gap-16 mr-20 text-base text-theme-dk-grey font-medium">
+        <div className="flex gap-16 mr-20">
           <Tab routeToPath="/" tabName="Home" />
           <Tab routeToPath="/tabs/OurWork" tabName="Our Work" />
           <Tab routeToPath="/tabs/AboutUs" tabName="About Us" />
