@@ -44,7 +44,7 @@ function MissionText() {
 
 export function Mission() {
   return (
-    <div className="bg-linear-to-b from-theme-lt-grey via-theme-lt-red to-theme-lt-grey h-180 w-full px-24 py-31 flex align-center justify-between">
+    <div className="bg-linear-to-b from-bg-lt-grey via-theme-lt-red to-bg-lt-grey h-180 w-full px-24 py-31 flex align-center justify-between">
       <MissionGraphic />
       <MissionText />
     </div>

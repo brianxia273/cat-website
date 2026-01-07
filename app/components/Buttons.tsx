@@ -5,29 +5,39 @@ import { useRouter } from "next/navigation";
 type ButtonProps = {
   label: string
   to: string
+  size?: "L" | "M" | "S"
 }
 
-const baseButtonStyles = "cursor-pointer h-14 px-12 rounded-lg text-xl font-light transition-colors duration-200"
+const baseButtonStyles = "cursor-pointer h-13 rounded-lg text-xl font-light transition-colors duration-200 py-3"
 const baseWidthStyles = "w-auto max-w-full"
 
-export function ButtonRed({ label, to }: ButtonProps) {
+const sizeStyles = {
+  L: "px-12",
+  M: "px-6",
+  S: "px-4",
+};
+
+
+export function ButtonRed({ label, to, size = "L" }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
       <button onClick={() => router.push(to)}
-        className={`bg-theme-red hover:bg-theme-dk-red text-white ${baseButtonStyles}`}>
+        className={`bg-theme-red hover:bg-theme-dk-red text-white ${baseButtonStyles} 
+         ${sizeStyles[size]}`}>
         {label}
       </button>
     </div>
   )
 }
 
-export function ButtonWhite({ label, to }: ButtonProps) {
+export function ButtonWhite({ label, to, size = "L" }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
       <button onClick={() => router.push(to)}
-        className={`bg-theme-white hover:bg-theme-lt-grey text-theme-dk-grey outline outline-2 outline-theme-dk-grey outline-offset-[-2px] ${baseButtonStyles}`}>
+        className={`bg-theme-white hover:bg-bg-lt-grey text-text-dk-grey outline-[1.5px] outline-text-dk-grey outline-offset-[-2px] ${baseButtonStyles}
+          ${sizeStyles[size]}`}>
         {label}
       </button>
     </div>
