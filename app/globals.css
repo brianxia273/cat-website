@@ -15,9 +15,10 @@
   --color-theme-red: #d22333;
   --color-theme-lt-red: #FBE9EB;
   --color-theme-dk-red: #a81c29;
-  --color-theme-lt-grey: #E5E5E5;
-  --color-theme-grey: #828282;
-  --color-theme-dk-grey: #404040;
+  --color-bg-lt-grey: #E5E5E5;
+  --color-text-grey-muted: #ABABAB;
+  --color-text-grey: #828282;
+  --color-text-dk-grey: #404040;
 }
 
 
@@ -27,7 +28,19 @@
   }
 
   .subheading {
-    @apply text-xl font-normal text-theme-dk-grey leading-[160%];
+    @apply text-xl font-medium
+  }
+
+  .descriptext {
+    @apply text-lg font-normal leading-[160%];
+  }
+
+  .subtext {
+    @apply text-xl font-normal text-text-dk-grey leading-[160%];
+  }
+
+  .navtext {
+    @apply text-base text-text-dk-grey font-medium;
   }
 }
 

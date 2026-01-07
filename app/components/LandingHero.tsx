@@ -9,7 +9,7 @@ const HeroText = () => {
   return (
     <div className="flex flex-col mt-40">
       <h1 className="heading w-140 mb-6">Making Assistive Technologies Accessible for All</h1>
-      <h2 className="subheading w-140 mb-16">We create assistive technologies and teach inclusive design to empower communities in Ithaca and beyond.</h2>
+      <h2 className="subtext w-140 mb-16">We create assistive technologies and teach inclusive design to empower communities in Ithaca and beyond.</h2>
       <ButtonRed label="Explore Our Work" to="/tabs/OurWork" />
     </div>
   )

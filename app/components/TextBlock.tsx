@@ -13,7 +13,7 @@ export default function TextBlock(data: headingProps) {
         return (
           <div key={index}>
             <h3 className="mb-5 text-4xl text-black">{pair[0]}</h3>
-            <p className="mb-10 text-theme-grey">{pair[1]}</p>
+            <p className="mb-10 text-text-grey">{pair[1]}</p>
           </div>
         );
       })}
