@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import Pic1 from "@/public/assets/Landing/comm-high-1.png"
 import Pic2 from "@/public/assets/Landing/comm-high-2.png"
