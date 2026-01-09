@@ -8,7 +8,7 @@ type ButtonProps = {
   size?: "L" | "M" | "S"
 }
 
-const baseButtonStyles = "cursor-pointer h-13 rounded-lg text-xl font-light transition-colors duration-200 py-3"
+const baseButtonStyles = "cursor-pointer h-13 rounded-lg text-xl transition-colors duration-200 py-3"
 const baseWidthStyles = "w-auto max-w-full"
 
 const sizeStyles = {
@@ -36,7 +36,7 @@ export function ButtonWhite({ label, to, size = "L" }: ButtonProps) {
   return (
     <div className={baseWidthStyles}>
       <button onClick={() => router.push(to)}
-        className={`bg-theme-white hover:bg-bg-lt-grey text-text-dk-grey outline-[1.5px] outline-text-dk-grey outline-offset-[-2px] ${baseButtonStyles}
+        className={`bg-theme-white hover:bg-bg-lt-grey text-text-dk-grey outline-[1.5px] outline-text-dk-grey -outline-offset-1 ${baseButtonStyles}
           ${sizeStyles[size]}`}>
         {label}
       </button>
