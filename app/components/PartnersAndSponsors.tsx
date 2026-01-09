@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image';
 // partners row 1 images
 import GreaterBOCES from "@/public/assets/Landing/Partners/greater-southen-tier-boces.png"
