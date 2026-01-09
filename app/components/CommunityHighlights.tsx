@@ -4,7 +4,6 @@ import { useState } from "react"
 import Pic1 from "@/public/assets/Landing/comm-high-1.png"
 import Pic2 from "@/public/assets/Landing/comm-high-2.png"
 import Pic3 from "@/public/assets/Landing/comm-high-3.webp"
-import BlurM from "@/public/assets/Landing/blur-m.png"
 import Image from 'next/image';
 import { ButtonRed, ButtonWhite } from "./Buttons";
 
@@ -26,7 +25,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
               <h3 className={`subheading ${activeTab === index ? "text-text-dk-grey" : "text-text-grey-muted"}`}>{subtitle}</h3>
               <p className={`descriptext mt-2 ${activeTab === index ? "text-text-grey" : "text-text-grey-muted"}`}>{descrip}</p>
               <p className={`descriptext ${activeTab === index ? "text-text-grey" : "text-text-grey-muted"}`}>{date}</p>
-              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-4 ${activeTab === index ? "" : "opacity-10"}`} />
+              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 ${activeTab === index ? "" : "opacity-10"}`} />
             </div>
           )
         })}</div>
@@ -34,12 +33,11 @@ export function CommunityHighlights({ events }: CommHighProps) {
   }
 
   function CommHighText({ events }: CommHighProps) {
-
     return (
       <div className="flex flex-col">
         <h2 className="heading">Community Highlights</h2>
         <GalleryTabs events={events} />
-        <div className="flex gap-11 mt-15">
+        <div className="flex gap-11 mt-20">
           <ButtonRed label="Visit Our Blog" to="/tabs/Blog" size="M" />
           <ButtonWhite label="Join Our Newsletter" to="" size="M" />
         </div>
@@ -64,16 +62,20 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
     return (
       <div className="relative">
-        <Image src={BlurM} alt="" fill className="absolute object-cover left-0 top-0 scale-150" />
-        <div className="h-116 w-137 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
-          {/* TODO: Add transitions */}
-          <Image
-            src={curPic}
-            alt={curAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 548px"
-          />
+        <div className="h-116 w-137 relative">
+          <div className="h-100 w-118 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            {/* TODO: Add transitions */}
+            <Image
+              src={curPic}
+              alt={curAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 548px"
+            />
+          </div>
+          <img src="/assets/Landing/triangle.svg" alt="" className="absolute top-0 left-0 rotate-180 -z-10" />
+          <img src="/assets/Landing/triangle.svg" alt="" className="absolute bottom-0 right-0 -z-10" />
+
         </div>
       </div>
     )
