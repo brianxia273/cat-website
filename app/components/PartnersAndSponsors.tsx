@@ -87,7 +87,7 @@ function Sponsors() {
 export function PartnersAndSponsors() {
   return (
 
-    <div className="h-250 w-full flex flex-col px-20 pt-15">
+    <div className="h-250 w-full flex flex-col universepad pt-15">
       <h2 className="heading">Partners & Sponsors</h2>
       <p className="subtext mt-10 text-center">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
       <Partners />

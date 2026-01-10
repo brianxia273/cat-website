@@ -8,9 +8,9 @@ const HeroText = () => {
   return (
     <div className="flex flex-col mt-40">
       <h1 className="heading w-140 mb-6">Our Work</h1>
-      <h2 className="subtext w-140 mb-16">
+      <p className="subtext w-140 mb-16">
         Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
-      </h2>
+      </p>
       <div className="flex gap-10">
         <ButtonRed label="Our Projects" to="/tabs/OurWork" />
         <ButtonWhite label="Our Events" to="/tabs/OurWork" />
@@ -29,7 +29,7 @@ const HeroGraphic = () => {
 const HeroContainer = ({ children }: any) => {
   return (
     <div className="flex flex-col">
-      <div className="h-140 mt-24 px-24 flex justify-between relative overflow-hidden">
+      <div className="h-140 mt-24 universepad flex justify-between relative overflow-hidden">
         <Image src={BlurTL} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute left-0 top-0 -z-10" />
         <Image src={BlurTR} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute right-0 top-0 -z-10" />
         {children}
