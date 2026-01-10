@@ -1,8 +1,8 @@
 import { ButtonRed } from "./Buttons"
 import HeroPic from "@/public/assets/Landing/hero-pic-full.jpg"
-import BlurM from "@/public/assets/Landing/blur-m.png"
-import BlurTL from "@/public/assets/Landing/blur-tl.png"
-import BlurTR from "@/public/assets/Landing/blur-tr.png"
+import BlurM from "@/public/assets/blur-m.png"
+import BlurTL from "@/public/assets/blur-tl.png"
+import BlurTR from "@/public/assets/blur-tr.png"
 import Image from 'next/image';
 
 const HeroText = () => {
