@@ -6,6 +6,7 @@ type ButtonProps = {
   label: string
   to: string
   size?: "L" | "M" | "S"
+  isScroll?: boolean
 }
 
 const baseButtonStyles = "cursor-pointer h-13 rounded-lg text-xl transition-colors duration-200 py-3"
@@ -18,11 +19,11 @@ const sizeStyles = {
 };
 
 
-export function ButtonRed({ label, to, size = "L" }: ButtonProps) {
+export function ButtonRed({ label, to, size = "L", isScroll = false }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => router.push(to)}
+      <button onClick={() => isScroll ? document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' }) : router.push(to)}
         className={`bg-theme-red hover:bg-theme-dk-red text-white ${baseButtonStyles} 
          ${sizeStyles[size]}`}>
         {label}

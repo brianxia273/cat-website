@@ -63,7 +63,8 @@ export function CommunityHighlights({ events }: CommHighProps) {
     return (
       <div className="relative">
         <div className="h-116 w-137 relative">
-          <div className="h-100 w-118 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="h-100 w-118 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+          hover:scale-102 transition-transform duration-300">
             {/* TODO: Add transitions */}
             <Image
               src={curPic}
