@@ -75,7 +75,7 @@ function ProjectCard({ title, description1, description2, cta, textLocation, img
 
 export function OurProjects() {
   return (
-    <div className="h-auto w-full flex flex-col universepad py-20">
+    <div className="h-auto w-full flex flex-col universepad py-24" id="our-projects">
       <OurProjectsTopText />
       <div className="flex flex-col gap-21 mt-21">
         {allProjects.map((item, index) => {
