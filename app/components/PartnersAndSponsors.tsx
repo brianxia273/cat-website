@@ -23,7 +23,7 @@ import HumanEco from "@/public/assets/Landing/Sponsors/human-ecology.png"
 
 const rowStyles = "flex gap-8 justify-center items-center"
 const colStyles = "flex flex-col gap-12 mt-15"
-const imgStyles = "h-20 w-auto cursor-pointer"
+const imgStyles = "h-17 w-auto cursor-pointer"
 
 function Partners() {
   return (
@@ -89,9 +89,9 @@ export function PartnersAndSponsors() {
 
     <div className="h-250 w-full flex flex-col px-20 pt-15">
       <h2 className="heading">Partners & Sponsors</h2>
-      <p className="subtext mt-10">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
+      <p className="subtext mt-10 text-center">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
       <Partners />
-      <p className="subtext mt-24">We are so grateful to receive funding to support our mission. Here are our various sponsors!</p>
+      <p className="subtext mt-24 text-center">We are so grateful to receive funding to support our mission. Here are our various sponsors!</p>
       <Sponsors />
     </div>
   )

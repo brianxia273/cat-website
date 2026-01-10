@@ -1,8 +1,8 @@
 import { ButtonRed } from "./Buttons"
 import HeroPic from "@/public/assets/Landing/hero-pic-full.jpg"
-import BlurM from "@/public/assets/Landing/blur-m.png"
-import BlurTL from "@/public/assets/Landing/blur-tl.png"
-import BlurTR from "@/public/assets/Landing/blur-tr.png"
+import BlurM from "@/public/assets/blur-m.png"
+import BlurTL from "@/public/assets/blur-tl.png"
+import BlurTR from "@/public/assets/blur-tr.png"
 import Image from 'next/image';
 
 const HeroText = () => {
@@ -34,9 +34,9 @@ const HeroGraphic = () => {
 const HeroContainer = ({ children }: any) => {
   return (
     <div className="flex mt-24 px-24 justify-between relative overflow-hidden h-190">
-      <Image src={BlurTL} alt="" height={HeroPic.height / 3} width={HeroPic.width / 3} className="absolute left-0 top-0 -z-10" />
-      <Image src={BlurM} alt="" height={HeroPic.height} width={HeroPic.width} className="absolute left-1/2 -translate-x-1/2 top-90 -z-10" />
-      <Image src={BlurTR} alt="" height={HeroPic.height / 2} width={HeroPic.width / 2} className="absolute right-0 top-0 -z-10" />
+      <Image src={BlurTL} alt="" height={BlurTL.height / 3} width={BlurTL.width / 3} className="absolute left-0 top-0 -z-10" />
+      <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 top-110 -z-10" />
+      <Image src={BlurTR} alt="" height={BlurTR.height / 2} width={BlurTR.width / 2} className="absolute right-0 top-0 -z-10" />
       {children}
     </div>
   )
