@@ -85,7 +85,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
   }
 
   return (
-    <div className="h-230 w-full px-20 flex justify-between items-center">
+    <div className="h-230 w-full universepad flex justify-between items-center">
       <CommHighText events={events} />
       <CommHighPics />
     </div>
