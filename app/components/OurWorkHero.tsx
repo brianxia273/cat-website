@@ -12,7 +12,7 @@ const HeroText = () => {
         Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
       </p>
       <div className="flex gap-10">
-        <ButtonRed label="Our Projects" to="/tabs/OurWork" />
+        <ButtonRed label="Our Projects" to="our-projects" isScroll />
         <ButtonWhite label="Our Events" to="/tabs/OurWork" />
       </div>
     </div>
