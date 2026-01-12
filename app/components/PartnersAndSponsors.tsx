@@ -91,7 +91,7 @@ export function PartnersAndSponsors() {
       <h2 className="heading">Partners & Sponsors</h2>
       <p className="subtext mt-10 text-center">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
       <Partners />
-      <p className="subtext mt-24 text-center">We are so grateful to receive funding to support our mission. Here are our various sponsors!</p>
+      <p className="subtext mt-24 text-center">We are so grateful to receive funding to support our mission. Here are our sponsors!</p>
       <Sponsors />
     </div>
   )

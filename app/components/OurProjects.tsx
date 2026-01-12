@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image'
 import Image from 'next/image'
-import { ButtonRed } from './Buttons';
+import { ButtonRed, ButtonWhite } from './Buttons';
+
 // import Image1 from "@/public/assets/OurWork/image1"
 // import Image2 from "@/public/assets/OurWork/image2"
 // import Image3 from "@/public/assets/OurWork/image3"
@@ -14,7 +15,6 @@ interface ProjectCardProps {
   img?: { pic: StaticImageData; alt: string };
   index?: number;
 }
-
 
 const project1: ProjectCardProps = {
   title: "Sensory Overload Wearable",
@@ -42,15 +42,6 @@ const project4: ProjectCardProps = {
 
 const allProjects = [project1, project2, project3, project4];
 
-function OurProjectsTopText() {
-  return (
-    <div className="flex flex-col">
-      <h2 className="heading">Our Projects</h2>
-      <p className="subtext mt-3">See our current engineering builds in action!</p>
-    </div>
-  )
-}
-
 const rotationClasses = [
   'rotate-0',
   'rotate-90',
@@ -65,24 +56,35 @@ const negRotationClasses = [
   '-rotate-270'
 ];
 
+const centered = "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+
+function OurProjectsTopText() {
+  return (
+    <div className="flex flex-col">
+      <h2 className="heading">Our Projects</h2>
+      <p className="subtext mt-3">See our current engineering builds in action!</p>
+    </div>
+  )
+}
+
 function ProjectCard({ title, description1, description2, cta, textLocation, img, index = 0 }: ProjectCardProps) {
-  const solidBlobStyles = `-z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${rotationClasses[index % 4]}`
-  const clearBlobStyles = `-z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${negRotationClasses[index % 4]}`
+  const solidBlobStyles = `-z-10 ${centered} ${rotationClasses[index % 4]}`
+  const clearBlobStyles = `-z-10 ${centered} ${negRotationClasses[index % 4]}`
   return (
     <div className={`flex justify-between items-center ${(textLocation === "Right") ? "flex-row" : "flex-row-reverse"}`}>
       {/* Image */}
       <div className="relative h-full w-127">
         {(img === undefined) ?
-          <div className="bg-theme-grey rounded-[20px] h-87 w-127 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" /> :
+          <div className={`bg-theme-grey rounded-[20px] h-87 w-127 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${centered}`} /> :
           <Image src={img.pic} alt={img.alt} height={img.pic.height} width={img.pic.width}
-            className="rounded-[20px] h-87 w-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />}
+            className={`rounded-[20px] h-87 w-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${centered}`} />}
         <img src="/assets/OurWork/blob-solid.svg" className={solidBlobStyles} />
         <img src="/assets/OurWork/blob-clear.svg" className={clearBlobStyles} />
       </div>
       {/* Textbox */}
       <div className="flex flex-col py-8 w-150 h-110">
         <h3 className="cardheading">{title}</h3>
-        <ul className="list-disc list-outside pl-5 space-y-2">
+        <ul className="list-disc list-outside pl-5 space-y-2 mt-4">
           <li className="cardtext">{description1}</li>
           <li className="cardtext mt-5">{description2}</li>
         </ul>
@@ -97,12 +99,15 @@ export function OurProjects() {
     <div className="flex flex-col">
       <div className="h-auto w-full flex flex-col universepad py-24" id="our-projects">
         <OurProjectsTopText />
-        <div className="flex flex-col gap-25 mt-21">
+        <div className="flex flex-col gap-25 mt-20">
           {allProjects.map((item, index) => {
             const isEven = index % 2 === 0;
             return (<ProjectCard key={`project-${index}`} title={item.title} description1={item.description1}
               description2={item.description2} cta={item?.cta} textLocation={isEven ? "Left" : "Right"} img={item?.img} index={index} />)
           })}
+          <div className="flex justify-center">
+            <ButtonWhite label="See All Our Projects" to="" />
+          </div>
         </div>
       </div>
       <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10" />
