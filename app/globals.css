@@ -64,7 +64,7 @@
   }
 
   .cardtext {
-    @apply text-base leading-normal text-text-grey
+    @apply text-base leading-normal text-text-dk-grey
   }
 
   .universepad {
