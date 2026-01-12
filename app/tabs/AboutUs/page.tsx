@@ -1,8 +1,13 @@
+import { Navbar } from "@/app/components/Navbar"
+import { AboutUsHero } from "@/app/components/AboutUsHero";
+import { Footer } from "@/app/components/Footer";
+
 export default function AboutUs() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">About Us</h1>
+    <div className="flex flex-col">
+      <Navbar />
+      <AboutUsHero />
+      <Footer />
     </div>
   );
 }
-
