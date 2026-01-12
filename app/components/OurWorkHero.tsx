@@ -13,7 +13,7 @@ const HeroText = () => {
       </p>
       <div className="flex gap-10">
         <ButtonRed label="Our Projects" to="our-projects" isScroll />
-        <ButtonWhite label="Our Events" to="/tabs/OurWork" />
+        <ButtonWhite label="Our Events" to="our-events" isScroll />
       </div>
     </div>
   )

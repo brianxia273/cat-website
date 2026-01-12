@@ -60,11 +60,11 @@
   }
 
   .cardheading {
-    @apply text-2xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+    @apply text-2xl font-semibold tracking-[-0.02em] text-theme-red;
   }
 
   .cardtext {
-    @apply text-base leading-normal text-text-grey
+    @apply text-base leading-normal text-text-dk-grey
   }
 
   .universepad {

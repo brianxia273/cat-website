@@ -9,13 +9,13 @@ type ButtonProps = {
   isScroll?: boolean
 }
 
-const baseButtonStyles = "cursor-pointer h-13 rounded-lg text-xl transition-colors duration-200 py-3"
+const baseButtonStyles = "cursor-pointer rounded-lg transition-colors duration-200"
 const baseWidthStyles = "w-auto max-w-full"
 
 const sizeStyles = {
-  L: "px-12",
-  M: "px-6",
-  S: "px-4",
+  L: "px-12 text-xl py-3 h-13",
+  M: "px-6 text-lg py-2  h-11",
+  S: "px-4  h-9",
 };
 
 
@@ -32,11 +32,11 @@ export function ButtonRed({ label, to, size = "L", isScroll = false }: ButtonPro
   )
 }
 
-export function ButtonWhite({ label, to, size = "L" }: ButtonProps) {
+export function ButtonWhite({ label, to, size = "L", isScroll = false }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => router.push(to)}
+      <button onClick={() => isScroll ? document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' }) : router.push(to)}
         className={`bg-theme-white hover:bg-bg-lt-grey text-text-dk-grey outline-[1.5px] outline-text-dk-grey -outline-offset-1 ${baseButtonStyles}
           ${sizeStyles[size]}`}>
         {label}
