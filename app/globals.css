@@ -19,9 +19,11 @@
   --color-theme-dk-red: #a81c29;
   --color-theme-grey: #D9D9D9;
   --color-bg-lt-grey: #E5E5E5;
+  --color-bg-dk-grey: #404040;
   --color-text-grey-muted: #ABABAB;
   --color-text-grey: #828282;
   --color-text-dk-grey: #404040;
+  --color-text-red: #C51F2F;
 }
 
 
@@ -37,7 +39,6 @@
   .subheading {
     @apply text-xl font-medium
   }
-
 
   .descriptext {
     @apply text-lg font-normal leading-[160%];
@@ -65,6 +66,18 @@
 
   .cardtext {
     @apply text-base leading-normal text-text-dk-grey
+  }
+
+  .teamheading {
+    @apply text-5xl font-semibold tracking-[-0.02em] leading-16 text-white;
+  }
+
+  .membername {
+    @apply text-lg leading-normal text-text-dk-grey
+  }
+
+  .membertag {
+    @apply text-base leading-normal text-text-red
   }
 
   .universepad {

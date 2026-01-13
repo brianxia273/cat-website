@@ -24,9 +24,11 @@ function ImgGrid({ className }: { className?: string }) {
 
 function MissionGraphic() {
   return (
-    <div className="w-139 h-117 relative">
-      <img src="/assets/Landing/mission-blob.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-      <ImgGrid className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+    <div className="flex flex-col justify-center">
+      <div className="w-139 h-117 relative">
+        <img src="/assets/Landing/mission-blob.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <ImgGrid className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      </div>
     </div>
   )
 }
@@ -44,7 +46,7 @@ function MissionText() {
 
 export function Mission() {
   return (
-    <div className="bg-linear-to-b from-bg-lt-grey via-theme-lt-red to-bg-lt-grey h-180 w-full universepad py-31 flex align-center justify-between">
+    <div className="bg-linear-to-b from-bg-lt-grey via-theme-lt-red to-bg-lt-grey h-140 w-full universepad flex align-center justify-between">
       <MissionGraphic />
       <MissionText />
     </div>

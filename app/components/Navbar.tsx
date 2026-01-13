@@ -32,7 +32,8 @@ export function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex justify-between h-24 bg-white">
-      <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto" />
+      <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto cursor-pointer"
+        onClick={() => { router.push("/") }} />
       <nav className="flex justify-end">
         <div className="flex gap-16 mr-20">
           <Tab routeToPath="/" tabName="Home" />

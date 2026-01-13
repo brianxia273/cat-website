@@ -2,6 +2,7 @@ import { ButtonRed, ButtonWhite } from "./Buttons"
 import HeroPic from "@/public/assets/AboutUs/hero-pic.png"
 import BlurTL from "@/public/assets/blur-tl.png"
 import BlurTR from "@/public/assets/blur-tr.png"
+import BlurM from "@/public/assets/blur-m.png"
 import Image from 'next/image';
 
 const HeroText = () => {
@@ -18,16 +19,17 @@ const HeroText = () => {
 const HeroGraphic = () => {
   return (
     <Image src={HeroPic} alt="Cornell Assistive Technologies team photo" height={HeroPic.height} width={HeroPic.width}
-      className="mt-38 h-100 w-auto rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+      className="mt-42 h-90 w-auto rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
   )
 }
 
 const HeroContainer = ({ children }: any) => {
   return (
     <div className="flex flex-col mt-24">
-      <div className="h-140 universepad flex justify-between relative overflow-hidden">
+      <div className="h-180 universepad flex justify-between relative overflow-hidden">
         <Image src={BlurTL} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute left-0 top-0 -z-10" />
-        <Image src={BlurTR} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute right-0 top-0 -z-10" />
+        <Image src={BlurTR} alt="" height={BlurTL.height} width={BlurTL.width} className="absolute right-0 top-0 -z-10" />
+        <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 top-110 -z-10" />
         {children}
       </div>
     </div>
