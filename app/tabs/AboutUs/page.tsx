@@ -1,5 +1,6 @@
 import { Navbar } from "@/app/components/Navbar"
 import { AboutUsHero } from "@/app/components/AboutUsHero";
+import { Members } from "@/app/components/Members";
 import { Footer } from "@/app/components/Footer";
 
 export default function AboutUs() {
@@ -7,6 +8,7 @@ export default function AboutUs() {
     <div className="flex flex-col">
       <Navbar />
       <AboutUsHero />
+      <Members />
       <Footer />
     </div>
   );

@@ -1,12 +1,25 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import CATLogo from "@/public/assets/cat-logo.png"
 import Image from "next/image"
 
 function TopFooter() {
+  const router = useRouter()
+  const location = usePathname();
   const iconStyles = "hover:grayscale grayscale-0 hover:brightness-75 brightness-100 transition-all cursor-pointer";
   return (
     <div className="h-50 bg-theme-grey flex justify-start px-15">
       <div className="flex items-center">
-        <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-40 w-auto" />
+        <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-40 w-auto cursor-pointer"
+          onClick={() => {
+            if (location === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              router.push("/");
+            }
+          }} />
       </div>
       <div className="flex flex-col mt-5 ml-25">
         <h3 className="footerheading">Find Us Online</h3>
