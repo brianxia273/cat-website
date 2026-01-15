@@ -24,9 +24,12 @@ function TopFooter() {
       <div className="flex flex-col mt-5 ml-25">
         <h3 className="footerheading">Find Us Online</h3>
         <div className="flex gap-4.5">
-          <img src="/assets/linkedin.svg" alt="Visit Our LinkedIn" className={iconStyles} />
-          <img src="/assets/instagram.svg" alt="Visit Our Instagram" className={iconStyles} />
-          <img src="/assets/youtube.svg" alt="Visit Our Youtube" className={iconStyles} />
+          <img src="/assets/linkedin.svg" alt="Visit Our LinkedIn" className={iconStyles}
+            onClick={() => window.open('https://www.linkedin.com/company/cornellassist/', '_blank')} />
+          <img src="/assets/instagram.svg" alt="Visit Our Instagram" className={iconStyles}
+            onClick={() => window.open('https://www.instagram.com/cornellassist/', '_blank')} />
+          <img src="/assets/youtube.svg" alt="Visit Our Youtube" className={iconStyles}
+            onClick={() => window.open('https://www.youtube.com/@CornellAssistiveTechnologies', '_blank')} />
         </div>
       </div>
       <div className="flex flex-col mt-5 ml-80">

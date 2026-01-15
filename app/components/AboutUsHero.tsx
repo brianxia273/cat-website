@@ -8,7 +8,7 @@ import Image from 'next/image';
 const HeroText = () => {
   return (
     <div className="flex flex-col mt-40">
-      <h1 className="heading w-140 mb-6">About Us</h1>
+      <h1 className="mainheading w-140 mb-6">About Us</h1>
       <p className="subtext w-140 mb-14">
         Founded in Fall 2021, the Cornell Assistive Technologies Project Team is a Cornell Engineering Student Project team that has the main goal of making assistive technologies more accessible to the special needs community in Ithaca and beyond. Meet the members of our dedicated and passionate team below!</p>
       <ButtonRed label="Join Us" to="/tabs/JoinUs" />

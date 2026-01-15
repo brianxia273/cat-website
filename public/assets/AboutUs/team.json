@@ -385,19 +385,19 @@
     "linkedin": "https://www.linkedin.com/in/emmanuella-umoh-602655300/"
   },
   {
-    "name": "Mihika Mukherjee",
-    "role": "Engineering",
-    "year": "2029",
-    "major": "Computer Science & Math",
-    "college": "College of Arts and Sciences",
-    "linkedin": "https://www.linkedin.com/in/mihika-mukherjee-2343bb295/"
-  },
-  {
     "name": "Elom Eskender",
     "role": "Engineering",
     "year": "2029",
     "major": "Computer Science",
     "college": "College of Arts & Sciences",
     "linkedin": "https://www.linkedin.com/in/elom-eskender/"
+  },
+  {
+    "name": "Mihika Mukherjee",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Computer Science & Math",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/mihika-mukherjee-2343bb295/"
   }
 ]
