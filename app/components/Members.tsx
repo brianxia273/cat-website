@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { StaticImageData } from 'next/image'
+import data from "@/public/assets/AboutUs/team.json"
 
 interface Member {
   name: string;
@@ -8,35 +9,122 @@ interface Member {
   major: string;
   college: string;
   linkedin?: string;
+}
+
+interface MemberCardInfo extends Member {
   img?: StaticImageData;
 }
 
-const teamLeads: Member[] = [
-  {
-    name: "Lucas Keith",
-    role: "Full Team Lead",
-    year: "2026",
-    major: "Biomedical Engineering",
-    college: "College of Engineering",
-    linkedin: "https://www.linkedin.com/in/lucas-keith/",
-  },
-  {
-    name: "Mae Sliwinski",
-    role: "Full Team Lead",
-    year: "2026",
-    major: "Mechanical Engineering",
-    college: "College of Engineering",
-    linkedin: "https://www.linkedin.com/in/mae-sliwinski-771a76237/",
-  },
-  {
-    name: "Natalie Shepherd",
-    role: "Engineering Subteam Lead",
-    year: "2027",
-    major: "Biomedical Engineering",
-    college: "College of Engineering",
-    linkedin: "https://www.linkedin.com/in/natalie-m-shepherd/",
-  },
+interface CreateMemberCardProps {
+  name: string;
+  img?: StaticImageData;
+}
+
+interface SectionProps {
+  title: string;
+  team: MemberCardInfo[];
+}
+
+const teamData: Member[] = data
+
+function lookupHelper(name: string): Member {
+  const member = teamData.find((curMember) => (curMember.name === name));
+  if (member === undefined) {
+    console.error("Member not found: ", name)
+    return {
+      name: name,
+      role: "",
+      year: "",
+      major: "",
+      college: "",
+    }
+  } else {
+    return member;
+  }
+};
+
+function createMemberCardInfo({ name, img }: CreateMemberCardProps): MemberCardInfo {
+  const member = lookupHelper(name);
+  if (img !== undefined) {
+    return {
+      ...member,
+      img: img
+    }
+  } else {
+    return member;
+  }
+}
+
+const teamLeadsInfo: CreateMemberCardProps[] = [
+  { name: 'Lucas Keith' },
+  { name: 'Mae Sliwinski' },
+  { name: 'Natalie Shepherd' },
+  { name: 'Chris Parker' },
+  { name: 'William Ellis' },
+  { name: 'Savaas Iqbal' },
+  { name: 'Josephine Kelly' },
+  { name: 'Richard Ballard' },
+  { name: 'Abigail Jin' }
 ]
+
+const engSubteamInfo: CreateMemberCardProps[] = [
+  { name: 'Shannon Lin' },
+  { name: 'Alan Wu' },
+  { name: 'Rishabh Dholakia' },
+  { name: 'Emily Wang' },
+  { name: 'Liz Pappania' },
+  { name: 'Ajaa-Sungma Sigri-Naah' },
+  { name: 'Madhu Balaji' },
+  { name: 'Selin Toker' },
+  { name: 'Lila Alderete' },
+  { name: 'Diya Sheth' },
+  { name: 'Merve Tutar' },
+  { name: 'Jay Zhu' },
+  { name: 'Jenny Dong' },
+  { name: 'Jayesha Sharma' },
+  { name: 'Serena Inderjit' },
+  { name: 'Sahana Behera' },
+  { name: 'David Shepherd' },
+  { name: 'Brian Xia' },
+  { name: 'Saejoon Park' },
+  { name: 'Neha Chigurupati' },
+  { name: 'Mihika Mukherjeer' },
+  { name: 'Elom Eskender' }
+]
+
+const eduOutSubteamInfo: CreateMemberCardProps[] = [
+  { name: 'Sarah Swee' },
+  { name: 'Rafael Green Mendez' },
+  { name: 'David Han' },
+  { name: 'Evan Lee' },
+  { name: 'Sophia Roache' },
+  { name: 'Morgan Ogata' },
+  { name: 'Rachel Turney' },
+  { name: 'Vanessa Chen Hsieh' },
+  { name: 'Zaid Al-Shoha' },
+  { name: 'Omar Alkhitan' },
+  { name: 'Chloe Jung' },
+  { name: 'Scott Zinman' },
+  { name: 'Neel Behari' }
+]
+
+const opsSubteamInfo: CreateMemberCardProps[] = [
+  { name: 'Andy Chen' },
+  { name: 'Ariana Sanchez' },
+  { name: 'Sonya Zheng' },
+  { name: 'Jason Yang' },
+  { name: 'Dina Shlufman' },
+  { name: 'William Chen' }
+]
+
+const teamLeads: MemberCardInfo[] = teamLeadsInfo.map((member) => (createMemberCardInfo({ name: member.name })))
+
+const engSubteam: MemberCardInfo[] = engSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
+
+const eduOutSubteam: MemberCardInfo[] = eduOutSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
+
+const opsSubteam: MemberCardInfo[] = opsSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
+
 
 function MemberModal() {
   return (
@@ -44,15 +132,15 @@ function MemberModal() {
   )
 }
 
-function MemberCard(member: Pick<Member, "name" | "role" | "img">) {
+function MemberCard(member: Pick<MemberCardInfo, "name" | "role" | "img">) {
   const name = member.name
   const role = member.role
   const img = member.img
   return (
-    <div className="h-100 min-w-70 flex flex-col rounded-[20px] bg-white">
+    <div className="h-100 min-w-70 w-70 flex flex-col rounded-[20px] bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] cursor-pointer">
       {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="h-80 w-full rounded-t-[20px]" /> : <div className="bg-text-grey h-80 w-full rounded-t-[20px]" />}
-      <div className="flex flex-col">
+        className="h-75 w-full rounded-t-[20px]" /> : <div className="bg-text-grey h-75  w-full rounded-t-[20px]" />}
+      <div className="flex flex-col pl-3 pt-2">
         <h4 className="membername">{name}</h4>
         <p className="membertag">{role}</p>
       </div>
@@ -60,12 +148,12 @@ function MemberCard(member: Pick<Member, "name" | "role" | "img">) {
   )
 }
 
-function TeamLeadsSection() {
+function TeamSection({ title, team }: SectionProps) {
   return (
-    <div className="flex flex-col mt-10">
-      <h2 className="teamheading">Team Leads</h2>
-      <div className="flex justify-between gap-20 h-1000">
-        {teamLeads.map((item, index) => {
+    <div className="flex flex-col mt-15 mb-30">
+      <h2 className="teamheading">{title}</h2>
+      <div className="grid grid-cols-4 gap-12 mt-10">
+        {team.map((item, index) => {
           return (
             <MemberCard key={`Team Lead ` + index} name={item.name} role={item.role} img={item?.img} />
           )
@@ -79,7 +167,10 @@ function TeamLeadsSection() {
 export function Members() {
   return (
     <div className="bg-bg-dk-grey universepad">
-      <TeamLeadsSection />
+      <TeamSection title="Team Leads" team={teamLeads} />
+      <TeamSection title="Engineering Subteam" team={engSubteam} />
+      <TeamSection title="Education & Outreach Subteam" team={eduOutSubteam} />
+      <TeamSection title="Operations Subteam" team={opsSubteam} />
     </div>
   )
 }
