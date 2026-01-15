@@ -88,8 +88,8 @@ const engSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Brian Xia' },
   { name: 'Saejoon Park' },
   { name: 'Neha Chigurupati' },
-  { name: 'Mihika Mukherjeer' },
-  { name: 'Elom Eskender' }
+  { name: 'Elom Eskender' },
+  { name: 'Mihika Mukherjee' },
 ]
 
 const eduOutSubteamInfo: CreateMemberCardProps[] = [

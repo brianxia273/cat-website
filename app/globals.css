@@ -28,8 +28,12 @@
 
 
 @layer utilities {
-  .heading {
+  .mainheading {
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+  }
+
+  .heading {
+    @apply text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
 
   .ctaheading {

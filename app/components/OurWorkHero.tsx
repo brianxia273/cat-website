@@ -7,7 +7,7 @@ import Image from 'next/image';
 const HeroText = () => {
   return (
     <div className="flex flex-col mt-40">
-      <h1 className="heading w-140 mb-6">Our Work</h1>
+      <h1 className="mainheading w-140 mb-6">Our Work</h1>
       <p className="subtext w-140 mb-16">
         Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
       </p>
