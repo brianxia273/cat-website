@@ -69,11 +69,11 @@
   }
 
   .teamheading {
-    @apply text-5xl font-semibold tracking-[-0.02em] leading-16 text-white;
+    @apply text-4xl font-semibold tracking-[-0.02em] leading-16 text-white;
   }
 
   .membername {
-    @apply text-lg leading-normal text-text-dk-grey
+    @apply text-xl leading-normal text-text-dk-grey font-medium
   }
 
   .membertag {

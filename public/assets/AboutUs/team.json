@@ -1,0 +1,403 @@
+[
+  {
+    "name": "Richard Ballard",
+    "role": "Operations Team Lead",
+    "year": "2027",
+    "major": "Information Science & Communication",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": "https://www.linkedin.com/in/richard-p-ballard/"
+  },
+  {
+    "name": "Andy Chen",
+    "role": "Operations-Engineering Liaison",
+    "year": "2028",
+    "major": "Mechanical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/-andy-chen/"
+  },
+  {
+    "name": "Mae Sliwinski",
+    "role": "Full Team Lead",
+    "year": "2026",
+    "major": "Mechanical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/mae-sliwinski-771a76237/"
+  },
+  {
+    "name": "Ariana Sanchez",
+    "role": "Operations Treasurer",
+    "year": "2028",
+    "major": "Applied Economics and Management",
+    "college": "Dyson School of Applied Economics and Management",
+    "linkedin": "https://www.linkedin.com/iriana-carolina-sanchez-67a871327/"
+  },
+  {
+    "name": "Shannon Lin",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Computer Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/shanlin24/"
+  },
+  {
+    "name": "Alan Wu",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Biology (Neuroscience Concentration)",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": "https://www.linkedin.com/ilanwuyo/"
+  },
+  {
+    "name": "Annie Park",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Computer Science & Psychology",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/inniey-park/"
+  },
+  {
+    "name": "Sonya Zheng",
+    "role": "Operations",
+    "year": "2029",
+    "major": "Computer Science",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/sonya-zheng-a19b39285/"
+  },
+  {
+    "name": "Sarah Swee",
+    "role": "Outreach & Education",
+    "year": "2027",
+    "major": "Biometry and Statistics",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": "https://www.linkedin.com/in/sarah-swee/"
+  },
+  {
+    "name": "Rishabh Dholakia",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Mechanical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/rishabh-dholakia/"
+  },
+  {
+    "name": "Rafael Green Mendez",
+    "role": "Outreach & Education",
+    "year": "2026",
+    "major": "Biological Sciences",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": "https://www.linkedin.com/in/rafaelgreenmendez/"
+  },
+  {
+    "name": "Emily Wang",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Electrical & Computer Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/emily-wang-exw4/"
+  },
+  {
+    "name": "David Han",
+    "role": "Outreach & Education",
+    "year": "2028",
+    "major": "HBHS",
+    "college": "College of Human Ecology"
+  },
+  {
+    "name": "Liz Pappania",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "BME",
+    "college": "College of Engineering"
+  },
+  {
+    "name": "Ajaa-Sungma Sigri-Naah",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Electrical and Computer Engineering",
+    "college": "College of Engineering"
+  },
+  {
+    "name": "Madhu Balaji",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Computer Science",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/madhushalini-balaji/"
+  },
+  {
+    "name": "Selin Toker",
+    "role": "Engineering",
+    "year": "2026",
+    "major": "Computer Science",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/selin-toker/"
+  },
+  {
+    "name": "Lila Alderete",
+    "role": "Engineering",
+    "year": "2027",
+    "major": "Computer Science",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/lila-alderete-88047929b/"
+  },
+  {
+    "name": "Natalie Shepherd",
+    "role": "Engineering Lead",
+    "year": "2027",
+    "major": "BME",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/natalie-m-shepherd/"
+  },
+  {
+    "name": "Diya Sheth",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Mechanical Engineering",
+    "college": "College of Engineering ",
+    "linkedin": "https://www.linkedin.com/in/diyatsheth/"
+  },
+  {
+    "name": "Evan Lee",
+    "role": "Outreach & Education",
+    "year": "2027",
+    "major": "Hotel Administration",
+    "college": "Nolan School of Hotel Administration",
+    "linkedin": "https://www.linkedin.com/in/evan-lee-375a20288/"
+  },
+  {
+    "name": "Ria Dhulia",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Biomedical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/ria-dhulia/"
+  },
+  {
+    "name": "Jason Yang",
+    "role": "Operations Social Media Manager",
+    "year": "2027",
+    "major": "Biological Sciences",
+    "college": "College of Agriculture and Life Sciences"
+  },
+  {
+    "name": "Josephine Kelly",
+    "role": "Outreach & Education Lead",
+    "year": "2027",
+    "major": "Information Science & Cognitive Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/jos-kelly/"
+  },
+  {
+    "name": "Merve Tutar",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Electrical & Computer Engineering",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/merve-tutar-a3004a389/"
+  },
+  {
+    "name": "Sophia Roache",
+    "role": "Outreach & Education",
+    "year": "2027",
+    "major": "BME",
+    "college": "College of Engineering"
+  },
+  {
+    "name": "Morgan Ogata",
+    "role": "Outreach & Education",
+    "year": "2027",
+    "major": "\"Independent Major (Primary: BME",
+    "college": " Secondary: Public Policy)\"",
+    "linkedin": "College of Engineering"
+  },
+  {
+    "name": "Jay Zhu",
+    "role": "Engineering ",
+    "year": "2029",
+    "major": "Computer Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/jay-zhu-ab2603361/"
+  },
+  {
+    "name": "Rachel Turney",
+    "role": "Outreach & Education",
+    "year": "2028",
+    "major": "Information Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/rachel-turney-20786033a/"
+  },
+  {
+    "name": "William Ellis",
+    "role": "New Member Education Lead",
+    "year": "2026",
+    "major": "Civil Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/william-ellis-60304a273/"
+  },
+  {
+    "name": "Jenny Dong",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Electrical & Computer Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/ruyuan-dong-b25242287/"
+  },
+  {
+    "name": "Vanessa Chen Hsieh",
+    "role": "Outreach & Education",
+    "year": "2028",
+    "major": "Biological Sciences",
+    "college": "College of Arts and Sciences"
+  },
+  {
+    "name": "Zaid Al-Shoha",
+    "role": "Outreach & Education",
+    "year": "2028",
+    "major": "Biological Sciences",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": "https://www.linkedin.com/in/zaid-al-shoha/"
+  },
+  {
+    "name": "Omar Alkhitan",
+    "role": "Outreach & Education",
+    "year": "2028",
+    "major": "Applied Economics & Management ",
+    "college": "Dyson School of Applied Economics and Management",
+    "linkedin": "https://www.linkedin.com/in/omar-alkhitan/"
+  },
+  {
+    "name": "Lucas Keith",
+    "role": "Full Team Lead",
+    "year": "2026",
+    "major": "BME",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/lucas-keith/"
+  },
+  {
+    "name": "Jayesha Sharma",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Computer Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/jayesha-sharma-51b26a325/"
+  },
+  {
+    "name": "Serena Inderjit",
+    "role": "Engineering",
+    "year": "2027",
+    "major": "Computer Science",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/serena-inderjit/"
+  },
+  {
+    "name": "Sahana Behera",
+    "role": "Engineering ",
+    "year": "2028",
+    "major": "Biomedical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/sahana-behera-0a0759339/"
+  },
+  {
+    "name": "David Shepherd",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Material Science & Engineering",
+    "college": "College of Engineering"
+  },
+  {
+    "name": "Chloe Jung",
+    "role": "Outreach & Education",
+    "year": "2027",
+    "major": "Biology & Cognitive Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/chloeajung/"
+  },
+  {
+    "name": "Scott Zinman",
+    "role": "Outreach & Education",
+    "year": "2029",
+    "major": "GPHS",
+    "college": "College of Human Ecology",
+    "linkedin": "https://www.linkedin.com/in/scott-zinman-4456a8374/"
+  },
+  {
+    "name": "Brian Xia",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Computer Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/brian-xia/"
+  },
+  {
+    "name": "Dina Shlufman",
+    "role": "Operations",
+    "year": "2027",
+    "major": "Information Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/dina-shlufman/"
+  },
+  {
+    "name": "Savaas Iqbal",
+    "role": "Engineering Subteam Lead",
+    "year": "2028",
+    "major": "Electrical & Computer Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/savaas-iqbal/"
+  },
+  {
+    "name": "Saejoon Park",
+    "role": "Engineering",
+    "year": "2028",
+    "major": "Electrical & Computer Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/saejoon-park-1b3b1430b/"
+  },
+  {
+    "name": "Neel Behari",
+    "role": "Outreach & Education",
+    "year": "2029",
+    "major": "Public Policy",
+    "college": "Brooks School of Public Policy",
+    "linkedin": "https://www.linkedin.com/in/neel-behari/"
+  },
+  {
+    "name": "Neha Chigurupati",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Mechanical Engineering",
+    "college": "College of Engineering",
+    "linkedin": "https://www.linkedin.com/in/neha-chigurupati-4a74b42b3/"
+  },
+  {
+    "name": "Chris Parker",
+    "role": "Engineering Subteam Lead",
+    "year": "2026",
+    "major": "Computer Science",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/dchrisparker/"
+  },
+  {
+    "name": "Ella Umoh",
+    "role": "Outreach & Education",
+    "year": "2029",
+    "major": "Public Policy",
+    "college": "Brooks School of Public Policy",
+    "linkedin": "https://www.linkedin.com/in/emmanuella-umoh-602655300/"
+  },
+  {
+    "name": "Mihika Mukherjee",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Computer Science & Math",
+    "college": "College of Arts and Sciences",
+    "linkedin": "https://www.linkedin.com/in/mihika-mukherjee-2343bb295/"
+  },
+  {
+    "name": "Elom Eskender",
+    "role": "Engineering",
+    "year": "2029",
+    "major": "Computer Science",
+    "college": "College of Arts & Sciences",
+    "linkedin": "https://www.linkedin.com/in/elom-eskender/"
+  }
+]
