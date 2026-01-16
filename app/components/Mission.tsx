@@ -46,7 +46,7 @@ function MissionText() {
 
 export function Mission() {
   return (
-    <div className="bg-linear-to-b from-bg-lt-grey via-theme-lt-red to-bg-lt-grey h-140 w-full universepad flex align-center justify-between">
+    <div className="bg-bg-lt-grey h-160 w-full universepad flex align-center justify-between">
       <MissionGraphic />
       <MissionText />
     </div>
