@@ -69,7 +69,7 @@ function OurProjectsTopText() {
 
 function ProjectCard({ title, description1, description2, cta, textLocation, img, index = 0 }: ProjectCardProps) {
   const solidBlobStyles = `-z-10 ${centered} ${rotationClasses[index % 4]}`
-  const clearBlobStyles = `-z-10 ${centered} ${negRotationClasses[index % 4]}`
+  const clearBlobStyles = `-z-20 ${centered} ${negRotationClasses[index % 4]}`
   return (
     <div className={`flex justify-between items-center ${(textLocation === "Right") ? "flex-row" : "flex-row-reverse"}`}>
       {/* Image */}
@@ -113,6 +113,5 @@ export function OurProjects() {
       <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10" />
       <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10" />
     </div>
-    // "@/public/assets/OurWork/blob-clear.svg"
   )
 }

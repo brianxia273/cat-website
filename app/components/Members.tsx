@@ -117,6 +117,11 @@ const opsSubteamInfo: CreateMemberCardProps[] = [
   { name: 'William Chen' }
 ]
 
+const alumniInfo: CreateMemberCardProps[] = [
+  { name: 'Alum' },
+]
+
+
 const teamLeads: MemberCardInfo[] = teamLeadsInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
 const engSubteam: MemberCardInfo[] = engSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
@@ -125,6 +130,7 @@ const eduOutSubteam: MemberCardInfo[] = eduOutSubteamInfo.map((member) => (creat
 
 const opsSubteam: MemberCardInfo[] = opsSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
+const alumni: MemberCardInfo[] = alumniInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
 function MemberModal() {
   return (
@@ -150,7 +156,7 @@ function MemberCard(member: Pick<MemberCardInfo, "name" | "role" | "img">) {
 
 function TeamSection({ title, team }: SectionProps) {
   return (
-    <div className="flex flex-col mt-15 mb-30">
+    <div className={`flex flex-col universepad w-full pt-10 pb-15`}>
       <h2 className="teamheading">{title}</h2>
       <div className="grid grid-cols-4 gap-12 mt-10">
         {team.map((item, index) => {
@@ -166,11 +172,12 @@ function TeamSection({ title, team }: SectionProps) {
 
 export function Members() {
   return (
-    <div className="bg-bg-dk-grey universepad">
-      <TeamSection title="Team Leads" team={teamLeads} />
+    <div className="bg-bg-dk-grey b-10">
+      <TeamSection title="Our Team Leads" team={teamLeads} />
       <TeamSection title="Engineering Subteam" team={engSubteam} />
       <TeamSection title="Education & Outreach Subteam" team={eduOutSubteam} />
       <TeamSection title="Operations Subteam" team={opsSubteam} />
+      <TeamSection title="Our Alumni" team={alumni} />
     </div>
   )
 }

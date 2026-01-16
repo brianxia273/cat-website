@@ -61,23 +61,22 @@ export function CommunityHighlights({ events }: CommHighProps) {
     const curAlt = altDescriptions[activeTab]
 
     return (
-      <div className="relative">
-        <div className="h-116 w-137 relative">
-          <div className="h-100 w-118 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+      <div className="h-140 w-161 relative">
+        <div className="h-100 w-118 relative overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           hover:scale-102 transition-transform duration-300">
-            {/* TODO: Add transitions */}
-            <Image
-              src={curPic}
-              alt={curAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 548px"
-            />
-          </div>
-          <img src="/assets/Landing/triangle.svg" alt="" className="absolute top-0 left-0 rotate-180 -z-10" />
-          <img src="/assets/Landing/triangle.svg" alt="" className="absolute bottom-0 right-0 -z-10" />
-
+          {/* TODO: Add transitions */}
+          <Image
+            src={curPic}
+            alt={curAlt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 548px"
+          />
         </div>
+        <div className="absolute top-0 left-1/2 right-0 bg-bg-m-grey h-140 -z-10 rounded-l-[20px]" />
+        {/* <img src="/assets/Landing/triangle-tl.svg" alt="" className="absolute top-0 left-0 -z-10" />
+          <img src="/assets/Landing/triangle-br.svg" alt="" className="absolute bottom-0 right-0 -z-10" /> */}
+
       </div>
     )
 
@@ -85,7 +84,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
   }
 
   return (
-    <div className="h-200 w-full universepad flex justify-between items-center">
+    <div className="h-200 w-full pl-24 flex justify-between items-center">
       <CommHighText events={events} />
       <CommHighPics />
     </div>
