@@ -1,8 +1,15 @@
+import { Navbar } from "@/app/components/Navbar"
+import { Footer } from "@/app/components/Footer";
+import { JoinUsHero } from "@/app/components/JoinUsHero";
+import { AboutTeams } from "@/app/components/AboutTeams";
+
 export default function JoinUs() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Join Us</h1>
+    <div className="flex flex-col">
+      <Navbar />
+      <JoinUsHero />
+      <AboutTeams />
+      <Footer />
     </div>
   );
 }
-

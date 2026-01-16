@@ -6,10 +6,11 @@ type ButtonProps = {
   label: string
   to: string
   size?: "L" | "M" | "S"
-  isScroll?: boolean
+  behav?: "Internal" | "Scroll" | "External"
+  isOn?: boolean
 }
 
-const baseButtonStyles = "cursor-pointer rounded-lg transition-colors duration-200"
+const baseButtonStyles = "rounded-lg"
 const baseWidthStyles = "w-auto max-w-full"
 
 const sizeStyles = {
@@ -18,13 +19,25 @@ const sizeStyles = {
   S: "px-4  h-9",
 };
 
+function onClickNavigation({ to, behav = "Internal", isOn = true, router }: { to: string; behav: string; isOn: boolean; router: ReturnType<typeof useRouter> }) {
+  if (isOn) {
+    if (behav === "Scroll") {
+      document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
+    } else if (behav === "Internal") {
+      router.push(to)
+    } else {
+      window.open(to, '_blank')
+    }
+  }
+}
 
-export function ButtonRed({ label, to, size = "L", isScroll = false }: ButtonProps) {
+
+export function ButtonRed({ label, to, size = "L", behav = "Internal", isOn = true }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => isScroll ? document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' }) : router.push(to)}
-        className={`bg-theme-red hover:bg-theme-dk-red text-white ${baseButtonStyles} 
+      <button onClick={() => onClickNavigation({ to, behav, isOn, router })}
+        className={`${isOn ? "bg-theme-red hover:bg-theme-dk-red cursor-pointer transition-colors duration-200" : "bg-theme-m-red"} text-white ${baseButtonStyles} 
          ${sizeStyles[size]}`}>
         {label}
       </button>
@@ -32,12 +45,13 @@ export function ButtonRed({ label, to, size = "L", isScroll = false }: ButtonPro
   )
 }
 
-export function ButtonWhite({ label, to, size = "L", isScroll = false }: ButtonProps) {
+export function ButtonWhite({ label, to, size = "L", behav = "Internal", isOn = true }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => isScroll ? document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' }) : router.push(to)}
-        className={`bg-theme-white hover:bg-bg-lt-grey text-text-dk-grey outline-[1.5px] outline-text-dk-grey -outline-offset-1 ${baseButtonStyles}
+      <button onClick={() => onClickNavigation({ to, behav, isOn, router })}
+        className={`${isOn ? "bg-theme-white hover:bg-bg-lt-grey cursor-pointer transition-colors duration-200" : "bg-bg-lt-grey"} 
+        text-text-dk-grey outline-[1.5px] outline-text-dk-grey -outline-offset-1 ${baseButtonStyles}
           ${sizeStyles[size]}`}>
         {label}
       </button>
