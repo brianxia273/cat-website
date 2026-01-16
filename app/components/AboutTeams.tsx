@@ -1,62 +1,67 @@
 import Image from "next/image"
-import photoPlaceholder from "./assets/photo-placeholder.png"
+import { StaticImageData } from 'next/image'
+import photoPlaceholder from "@/public/assets/JoinUs/hero-pic.jpg"
 
-type team = {
-    imgUrl: any,
+type Team = {
+    imgUrl: StaticImageData,
     teamName: string,
     description: string
 }
 
-const engineeringTeam: team = {
-    imgUrl: photoPlaceholder.src,
+const engineeringTeam: Team = {
+    imgUrl: photoPlaceholder,
     teamName: "Engineering",
-    description: "Description of the subteam",
+    description: "Focused on designing and creating assistive solutions for the Ithaca community.",
 }
 
-const outreachAndEducation: team = {
-    imgUrl: photoPlaceholder.src,
+const outreachAndEducation: Team = {
+    imgUrl: photoPlaceholder,
     teamName: "Outreach and Education",
-    description: "Description of the subteam",
+    description: "Focused on community outreach initiatives and fostering K-12 STEM education in Ithaca.",
 }
 
-const internalOperation: team = {
-    imgUrl: photoPlaceholder.src,
-    teamName: "Internal Operations",
-    description: "Description of the subteam"
+const internalOperation: Team = {
+    imgUrl: photoPlaceholder,
+    teamName: "Operations",
+    description: "Focused on promoting brand awareness and handling internal operations"
 }
 
-export const Cards = ({imgUrl, teamName, description}: team) => {
-    return <div>
-        <img src={imgUrl} width={405} height={405} alt=""/>
-        <h3 className="text-2xl font-medium">{teamName}</h3>
-        <p className="text-2xl text-gray-400">{description}</p>
-        
-    </div>
+export const Cards = ({ imgUrl, teamName, description }: Team) => {
+    return (
+        <div className="hover:bg-bg-lt-grey transition-colors w-105 h-130 flex flex-col items-center pt-5 rounded-lg">
+            <Image src={imgUrl} width={380} height={380} alt={"The" + teamName + "subteam"} className="rounded-lg drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
+            <h3 className="subheading mt-5">{teamName}</h3>
+            <p className="descriptext w-95">{description}</p>
+        </div>
+    )
 }
 
 export const AboutTeams = () => {
-    return <div className="m-20">
-        <h2 className="text-theme-red text-5xl font-semibold mb-5">Our Teams</h2>
-        <div className="flex justify-between">
-            <div className="">
-                <Cards
-                imgUrl={outreachAndEducation.imgUrl}
-                teamName={engineeringTeam.teamName}
-                description={engineeringTeam.description} />
+    return (
+        <div className="universepad py-15 h-200">
+            <h2 className="heading">Our Teams</h2>
+            <p className="subtext">See how you can get involved!</p>
+            <div className="flex justify-between mt-10">
+                <div className="">
+                    <Cards
+                        imgUrl={outreachAndEducation.imgUrl}
+                        teamName={engineeringTeam.teamName}
+                        description={engineeringTeam.description} />
+                </div>
+                <div className="">
+                    <Cards
+                        imgUrl={outreachAndEducation.imgUrl}
+                        teamName={outreachAndEducation.teamName}
+                        description={outreachAndEducation.description} />
+                </div>
+                <div className="">
+                    <Cards
+                        imgUrl={internalOperation.imgUrl}
+                        teamName={internalOperation.teamName}
+                        description={internalOperation.description} />
+                </div>
             </div>
-            <div className="">
-                <Cards
-                imgUrl={outreachAndEducation.imgUrl}
-                teamName={outreachAndEducation.teamName}
-                description={outreachAndEducation.description} />
-            </div>
-            <div className="">
-                <Cards
-                imgUrl={internalOperation.imgUrl}
-                teamName={internalOperation.teamName}
-                description={outreachAndEducation.description} />
-            </div>
+
         </div>
-        
-    </div>
+    )
 }

@@ -1,0 +1,38 @@
+import { ButtonRed } from "./Buttons"
+import HeroPic from "@/public/assets/JoinUs/hero-pic.jpg"
+import Image from "next/image"
+import BlurTL from "@/public/assets/blur-tl.png"
+import BlurTR from "@/public/assets/blur-tr.png"
+
+function HeroContent() {
+  return (
+    <div className="flex flex-col items-center">
+      <h1 className="mainheading mt-10">Join Us</h1>
+      <p className="subtext mt-4 w-200 text-center">We will not be recruiting Spring 2026, but applications will reopen Fall 2026. We look forward to your applications!</p>
+      <Image src={HeroPic} alt="A Cornell Assistive Technology team work session" height={HeroPic.height} width={HeroPic.width}
+        className="mt-5 h-80 w-auto rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:scale-102 transition-transform duration-300" />
+      <div className="mt-8 flex justify-center">
+        <ButtonRed label="Apply Now" to="" behav="External" isOn={false} />
+      </div>
+
+    </div>
+  )
+}
+
+const HeroContainer = ({ children }: any) => {
+  return (
+    <div className="mt-24 universepad relative overflow-hidden h-170">
+      <Image src={BlurTL} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute left-0 top-0 -z-10" />
+      <Image src={BlurTR} alt="" height={BlurTR.height} width={BlurTR.width} className="absolute right-0 top-0 -z-10" />
+      {children}
+    </div>
+  )
+}
+
+export function JoinUsHero() {
+  return (
+    <HeroContainer>
+      <HeroContent />
+    </HeroContainer>
+  )
+}
