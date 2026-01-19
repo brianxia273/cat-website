@@ -36,7 +36,10 @@ function ContactHeader({ className }: { className?: string }) {
       <img src="/assets/Contact/blob-bg.svg" alt="" className="absolute left-1/2 -translate-x-1/2 -top-10 w-full -z-10"></img>
       {/* Note the heading and socialtags arent meant to be aligned */}
       <div className={`h-60 w-full universepad flex justify-between`}>
-        <h1 className="contactheading pt-12">Contact Us</h1>
+        <div className="flex flex-col gap-3">
+          <h1 className="contactheading pt-12">Contact Us</h1>
+          <p className="contactsubheading">Interested in collaborating or sharing your insights? Reach out to us.</p>
+        </div>
         <div className="flex flex-col gap-4 justify-center">
           <SocialTag iconsrc="/assets/Contact/white-email.svg" label="assistivetech@cornell.edu" link="mailto:assistivetech@cornell.edu" className="underline underline-offset-3" />
           <SocialTag iconsrc="/assets/Contact/white-linkedin.svg" label="Cornell Assistive Technologies" link="https://www.linkedin.com/company/cornellassist/" />
@@ -127,8 +130,13 @@ export function ContactForm() {
   return (
     <div className="h-220 mt-24 relative">
       <ContactHeader className="absolute left-0 top-0" />
-      <Form className="absolute left-24 top-50" />
-
+      <Form className="absolute left-24 top-55" />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.791640024081!2d-76.47607762388589!3d42.45344917118449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0821a6191da9d%3A0xf50ee64d821b9ff4!2sCornell%20University!5e0!3m2!1sen!2sus!4v1768798639466!5m2!1sen!2sus"
+        className="absolute w-140 h-100 right-24 top-80 rounded-sm"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
   )
 }
