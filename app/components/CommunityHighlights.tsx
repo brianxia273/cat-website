@@ -22,9 +22,9 @@ export function CommunityHighlights({ events }: CommHighProps) {
           return (
             <div key={index} className="flex flex-col cursor-pointer w-124"
               onClick={() => { setActiveTab(index) }}>
-              <h3 className={`subheading ${activeTab === index ? "text-text-dk-grey" : "text-text-grey-muted"}`}>{subtitle}</h3>
-              <p className={`descriptext mt-2 ${activeTab === index ? "text-text-grey" : "text-text-grey-muted"}`}>{descrip}</p>
-              <p className={`descriptext ${activeTab === index ? "text-text-grey" : "text-text-grey-muted"}`}>{date}</p>
+              <h3 className={activeTab === index ? "subheading text-text-dk-grey" : "subheading text-text-grey-muted"}>{subtitle}</h3>
+              <p className={activeTab === index ? "descriptext text-text-grey mt-2 " : "descriptext text-text-grey-muted mt-2 "}>{descrip}</p>
+              <p className={activeTab === index ? "descriptext text-text-grey" : "descriptext text-text-grey-muted"}>{date}</p>
               <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 ${activeTab === index ? "" : "opacity-10"}`} />
             </div>
           )
@@ -73,10 +73,8 @@ export function CommunityHighlights({ events }: CommHighProps) {
             sizes="(max-width: 768px) 100vw, 548px"
           />
         </div>
-        <div className="absolute top-0 left-1/2 right-0 bg-bg-m-grey h-140 -z-10 rounded-l-[20px]" />
-        {/* <img src="/assets/Landing/triangle-tl.svg" alt="" className="absolute top-0 left-0 -z-10" />
-          <img src="/assets/Landing/triangle-br.svg" alt="" className="absolute bottom-0 right-0 -z-10" /> */}
-
+        {/* <div className="absolute top-0 left-1/2 right-0 bg-bg-m-grey h-140 -z-10 rounded-l-[20px]" /> */}
+        <img src="/assets/Landing/com-bg.svg" alt="" className="absolute -top-20 right-0 -z-10 h-160" />
       </div>
     )
 
@@ -84,7 +82,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
   }
 
   return (
-    <div className="h-200 w-full pl-24 flex justify-between items-center">
+    <div className="mt-20 h-200 w-full pl-24 flex justify-between items-center">
       <CommHighText events={events} />
       <CommHighPics />
     </div>

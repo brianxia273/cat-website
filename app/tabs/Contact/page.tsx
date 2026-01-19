@@ -1,7 +1,13 @@
+import { Navbar } from "@/app/components/Navbar";
+import { Footer } from "@/app/components/Footer";
+import { ContactForm } from "@/app/components/ContactForm";
+
 export default function Contact() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Contact</h1>
+    <div>
+      <Navbar />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }

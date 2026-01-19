@@ -11,27 +11,27 @@ type Team = {
 const engineeringTeam: Team = {
     imgUrl: photoPlaceholder,
     teamName: "Engineering",
-    description: "Focused on designing and creating assistive solutions for the Ithaca community.",
+    description: "Design and create assistive solutions for the Ithaca community.",
 }
 
 const outreachAndEducation: Team = {
     imgUrl: photoPlaceholder,
     teamName: "Outreach and Education",
-    description: "Focused on community outreach initiatives and fostering K-12 STEM education in Ithaca.",
+    description: "Create community outreach initiatives and foster K-12 STEM education in Ithaca.",
 }
 
 const internalOperation: Team = {
     imgUrl: photoPlaceholder,
     teamName: "Operations",
-    description: "Focused on promoting brand awareness and handling internal operations"
+    description: "Promote brand awareness and handle internal operations"
 }
 
 export const Cards = ({ imgUrl, teamName, description }: Team) => {
     return (
         <div className="hover:bg-bg-lt-grey transition-colors w-105 h-130 flex flex-col items-center pt-5 rounded-lg">
             <Image src={imgUrl} width={380} height={380} alt={"The" + teamName + "subteam"} className="rounded-lg drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]" />
-            <h3 className="subheading mt-5">{teamName}</h3>
-            <p className="descriptext w-95">{description}</p>
+            <h3 className="subheading text-text-dk-grey mt-5">{teamName}</h3>
+            <p className="descriptext text-text-grey w-95 mt-2">{description}</p>
         </div>
     )
 }
