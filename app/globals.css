@@ -34,6 +34,10 @@
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
 
+  .contactheading {
+    @apply text-5xl font-semibold tracking-[-0.02em] text-theme-white leading-16;
+  }
+
   .heading {
     @apply text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
@@ -42,12 +46,14 @@
     @apply text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
 
+  /* do not add color  */
   .subheading {
-    @apply text-xl font-medium text-text-dk-grey
+    @apply text-xl font-medium
   }
 
+  /* do not add color */
   .descriptext {
-    @apply text-lg font-normal leading-[160%] text-text-grey;
+    @apply text-lg font-normal leading-[160%];
   }
 
   .subtext {
@@ -84,6 +90,10 @@
 
   .membertag {
     @apply text-base leading-normal text-text-red
+  }
+
+  .formlabel {
+    @apply text-xl tracking-[-0.02em];
   }
 
   .universepad {

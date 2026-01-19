@@ -7,7 +7,7 @@ type ButtonProps = {
   to: string
   size?: "L" | "M" | "S"
   behav?: "Internal" | "Scroll" | "External"
-  isOn?: boolean
+  disabled?: boolean
 }
 
 const baseButtonStyles = "rounded-lg"
@@ -19,8 +19,8 @@ const sizeStyles = {
   S: "px-4  h-9",
 };
 
-function onClickNavigation({ to, behav = "Internal", isOn = true, router }: { to: string; behav: string; isOn: boolean; router: ReturnType<typeof useRouter> }) {
-  if (isOn) {
+function onClickNavigation({ to, behav = "Internal", disabled = false, router }: { to: string; behav: string; disabled: boolean; router: ReturnType<typeof useRouter> }) {
+  if (disabled) {
     if (behav === "Scroll") {
       document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
     } else if (behav === "Internal") {
@@ -32,12 +32,12 @@ function onClickNavigation({ to, behav = "Internal", isOn = true, router }: { to
 }
 
 
-export function ButtonRed({ label, to, size = "L", behav = "Internal", isOn = true }: ButtonProps) {
+export function ButtonRed({ label, to, size = "L", behav = "Internal", disabled = false }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => onClickNavigation({ to, behav, isOn, router })}
-        className={`${isOn ? "bg-theme-red hover:bg-theme-dk-red cursor-pointer transition-colors duration-200" : "bg-theme-m-red"} text-white ${baseButtonStyles} 
+      <button onClick={() => onClickNavigation({ to, behav, disabled, router })}
+        className={`${!disabled ? "bg-theme-red hover:bg-theme-dk-red cursor-pointer transition-colors duration-200" : "bg-theme-m-red"} text-white ${baseButtonStyles} 
          ${sizeStyles[size]}`}>
         {label}
       </button>
@@ -45,12 +45,12 @@ export function ButtonRed({ label, to, size = "L", behav = "Internal", isOn = tr
   )
 }
 
-export function ButtonWhite({ label, to, size = "L", behav = "Internal", isOn = true }: ButtonProps) {
+export function ButtonWhite({ label, to, size = "L", behav = "Internal", disabled = false }: ButtonProps) {
   const router = useRouter();
   return (
     <div className={baseWidthStyles}>
-      <button onClick={() => onClickNavigation({ to, behav, isOn, router })}
-        className={`${isOn ? "bg-theme-white hover:bg-bg-lt-grey cursor-pointer transition-colors duration-200" : "bg-bg-lt-grey"} 
+      <button onClick={() => onClickNavigation({ to, behav, disabled, router })}
+        className={`${!disabled ? "bg-theme-white hover:bg-bg-lt-grey cursor-pointer transition-colors duration-200" : "bg-bg-lt-grey"} 
         text-text-dk-grey outline-[1.5px] outline-text-dk-grey -outline-offset-1 ${baseButtonStyles}
           ${sizeStyles[size]}`}>
         {label}
