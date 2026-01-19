@@ -85,7 +85,7 @@
   }
 
   .teamheading {
-    @apply text-4xl font-semibold tracking-[-0.02em] leading-16 text-theme-white;
+    @apply text-4xl font-semibold tracking-[-0.02em] leading-16;
   }
 
   .membername {
