@@ -38,6 +38,10 @@
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-white leading-16;
   }
 
+  .contactsubheading {
+    @apply text-xl text-theme-white;
+  }
+
   .heading {
     @apply text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
