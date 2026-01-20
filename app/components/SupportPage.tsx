@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ButtonRed } from "./Buttons";
 import SponsorImg from "@/public/assets/Support/sponsor-img.png"
 import Image from "next/image";
-import BlurM from "@/public/assets/blur-m.png"
+import BlurTR from "@/public/assets/blur-tr.png"
 
 
 interface SponsorTierTagProps {
@@ -69,11 +69,10 @@ export function SupportPage() {
   }
   function SponsorshipPage() {
     return (
-      <div className="bg-theme-white z-10 h-320 universepad">
+      <div className="bg-theme-white z-10 h-320 universepad relative">
         {/* text section */}
         <div className="flex flex-col">
-
-          <p className="subtext mt-12">Your sponsorship supports Cornell Assistive
+          <p className="subtext mt-12 w-280">Your sponsorship supports Cornell Assistive
             Technologies’ mission to enhance inclusivity through innovative
             design. Contributions help offset the costs of our student-led projects and community outreach initiatives, each designed to meet the unique needs of individuals with disabilities.</p>
           <p className="subtext mt-5">You can support us as a Program Partner at any level, or
@@ -91,6 +90,7 @@ export function SupportPage() {
           <ButtonRed label="View Sponsor Packet" to="/assets/Support/CAT%202025%20Fall%20Sponsorship.pdf" behav="External" />
           <p className="mt-6 text-sm text-text-dk-grey">*Email Cornell Assistive Technologies at cornellassist@gmail.com for custom tier options</p>
         </div>
+        <Image src={BlurTR} alt="" height={BlurTR.height / 2} width={BlurTR.width / 2} className="absolute right-0 top-0" />
       </div>
     );
   }

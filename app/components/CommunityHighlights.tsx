@@ -62,7 +62,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
     return (
       <div className="h-140 w-161 relative">
-        <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-28 -translate-y-1/2
           hover:scale-102 transition-transform duration-300 z-10">
           {/* TODO: Add transitions */}
           <Image
@@ -74,8 +74,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
           />
 
         </div>
-        <img src="/assets/Landing/com-frame.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-126 h-auto" />
-        {/* <div className="absolute top-0 left-1/2 right-0 bg-bg-m-grey h-140 -z-10 rounded-l-[20px]" /> */}
+        <img src="/assets/Landing/com-frame.svg" alt="" className="absolute top-1/2 right-24 -translate-y-1/2 w-126 h-auto" />
         <img src="/assets/Landing/com-bg.svg" alt="" className="absolute -top-20 right-0 -z-10 h-160" />
       </div>
     )
