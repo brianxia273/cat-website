@@ -54,7 +54,7 @@ export function Mission() {
       <MissionGraphic />
       <MissionText />
       <img src="/assets/Landing/Union.svg" alt="" className={`${centered} w-full mt-5 z-5`} />
-      <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-70" />
+      <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-70 -z-10" />
 
     </div>
   )

@@ -1,7 +1,14 @@
+import { Navbar } from "@/app/components/Navbar"
+import { Footer } from "@/app/components/Footer";
+import { SupportPage } from "@/app/components/SupportPage";
+
+
 export default function Support() {
   return (
-    <div className="p-8">
-      <h1 className="text-2xl font-bold">Support</h1>
+    <div className="flex flex-col">
+      <Navbar />
+      <SupportPage />
+      <Footer />
     </div>
   );
 }

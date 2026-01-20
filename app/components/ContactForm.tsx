@@ -1,5 +1,9 @@
 "use client"
 import { useState } from "react";
+import Image from "next/image";
+import BlurM from "@/public/assets/blur-m.png"
+import BlurTR from "@/public/assets/blur-tr.png"
+
 
 interface SocialTagProps {
   iconsrc: string;
@@ -33,12 +37,13 @@ function SocialTag({ iconsrc, label, link, className }: SocialTagProps) {
 function ContactHeader({ className }: { className?: string }) {
   return (
     <div className={`relative ${className}`}>
+      <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-75 -z-10" />
       <img src="/assets/Contact/blob-bg.svg" alt="" className="absolute left-1/2 -translate-x-1/2 -top-10 w-full -z-10"></img>
       {/* Note the heading and socialtags arent meant to be aligned */}
       <div className={`h-60 w-full universepad flex justify-between`}>
         <div className="flex flex-col gap-3">
-          <h1 className="contactheading pt-12">Contact Us</h1>
-          <p className="contactsubheading">Interested in collaborating or sharing your insights? Reach out to us.</p>
+          <h1 className="whitemainheading pt-12">Contact Us</h1>
+          <p className="whitesubheading">Interested in collaborating or sharing your insights? Reach out to us.</p>
         </div>
         <div className="flex flex-col gap-4 justify-center">
           <SocialTag iconsrc="/assets/Contact/white-email.svg" label="assistivetech@cornell.edu" link="mailto:assistivetech@cornell.edu" className="underline underline-offset-3" />
@@ -128,7 +133,7 @@ function Form({ className }: { className?: string }) {
 
 export function ContactForm() {
   return (
-    <div className="h-220 mt-24 relative">
+    <div className="h-220 mt-24 relative overflow-hidden">
       <ContactHeader className="absolute left-0 top-0" />
       <Form className="absolute left-24 top-55" />
       <iframe
@@ -137,6 +142,7 @@ export function ContactForm() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
+      <Image src={BlurTR} alt="" height={BlurTR.height} width={BlurTR.width} className="absolute right-0 -bottom-10 rotate-90" />
     </div>
   )
 }

@@ -6,8 +6,6 @@ import { useRouter } from "next/navigation";
 import { ButtonRed, ButtonWhite } from "./Buttons";
 
 export function TakePart() {
-  const router = useRouter();
-
   return (
     <div className="h-100 w-271 flex gap-10 rounded-[20px] bg-linear-to-b from-theme-lt-red to-bg-lt-grey drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
       <Image src={TakePartPic} alt="Team photo on Libe Slope" height={TakePartPic.height} width={TakePartPic.width}
