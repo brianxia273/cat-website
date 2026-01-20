@@ -20,7 +20,7 @@ const sizeStyles = {
 };
 
 function onClickNavigation({ to, behav = "Internal", disabled = false, router }: { to: string; behav: string; disabled: boolean; router: ReturnType<typeof useRouter> }) {
-  if (disabled) {
+  if (!disabled) {
     if (behav === "Scroll") {
       document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
     } else if (behav === "Internal") {
@@ -37,7 +37,7 @@ export function ButtonRed({ label, to, size = "L", behav = "Internal", disabled 
   return (
     <div className={baseWidthStyles}>
       <button onClick={() => onClickNavigation({ to, behav, disabled, router })}
-        className={`${!disabled ? "bg-theme-red hover:bg-theme-dk-red cursor-pointer transition-colors duration-200" : "bg-theme-m-red"} text-white ${baseButtonStyles} 
+        className={`${!disabled ? "bg-theme-red hover:bg-theme-dk-red cursor-pointer transition-colors duration-200" : "bg-theme-m-red"} text-theme-white ${baseButtonStyles} 
          ${sizeStyles[size]}`}>
         {label}
       </button>

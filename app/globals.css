@@ -34,11 +34,11 @@
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }
 
-  .contactheading {
+  .whitemainheading {
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-white leading-16;
   }
 
-  .contactsubheading {
+  .whitesubheading {
     @apply text-xl text-theme-white;
   }
 
@@ -85,7 +85,7 @@
   }
 
   .teamheading {
-    @apply text-4xl font-semibold tracking-[-0.02em] leading-16;
+    @apply text-4xl font-semibold tracking-[-0.02em] leading-16 text-theme-white;
   }
 
   .membername {
