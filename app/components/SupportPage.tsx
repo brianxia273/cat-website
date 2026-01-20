@@ -69,14 +69,21 @@ export function SupportPage() {
   }
   function SponsorshipPage() {
     return (
-      <div className="bg-theme-white z-10 h-320 universepad relative">
+      <div className="bg-theme-white z-10 h-380 universepad relative">
         {/* text section */}
         <div className="flex flex-col">
           <p className="subtext mt-12 w-280">Your sponsorship supports Cornell Assistive
             Technologies’ mission to enhance inclusivity through innovative
             design. Contributions help offset the costs of our student-led projects and community outreach initiatives, each designed to meet the unique needs of individuals with disabilities.</p>
-          <p className="subtext mt-5">You can support us as a Program Partner at any level, or
-            by sponsoring a specific initiative.</p>
+          <p className="subtext mt-5">You can support us in two ways:</p>
+          <ol className="subtext list-decimal list-outside pl-10 mt-4 space-y-2">
+            <li>
+              <strong>Program Partner</strong>: Provide general support to help our ongoing initiatives
+            </li>
+            <li><strong>Project/Event Sponsor</strong>: Sponsor a specific initiative that aligns with your values
+            </li>
+          </ol>
+          <p className="subtext mt-10">See our Program Partner tiers here:</p>
           <div className="flex justify-between items-center">
             <div className="flex flex-col gap-10 mt-12">
               <SponsorTierSection label="Supporter Tier: $500 - $3499" bullets={["Website logo placement", "CAT swag pack"]} />
@@ -86,9 +93,11 @@ export function SupportPage() {
             </div>
             <SponsorGraphic />
           </div>
-          <p className="subtext mt-12 mb-4">To become a sponsor, download and submit the sponsorship packet by mail, then email us at <a href="mailto:assistivetech@cornell.edu" className="underline underline-offset-2">cornellassist@gmail.com </a> to confirm your sponsorship.</p>
+          <p className="subtext mt-12">To become a Program Partner, download and submit the sponsorship packet by mail, then email us at <a href="mailto:assistivetech@cornell.edu" className="underline underline-offset-2">cornellassist@gmail.com </a> to confirm your sponsorship.</p>
+          <p className="mt-3 mb-8 text-sm text-text-dk-grey">*Email Cornell Assistive Technologies at cornellassist@gmail.com for custom tier options</p>
           <ButtonRed label="View Sponsor Packet" to="/assets/Support/CAT%202025%20Fall%20Sponsorship.pdf" behav="External" />
-          <p className="mt-6 text-sm text-text-dk-grey">*Email Cornell Assistive Technologies at cornellassist@gmail.com for custom tier options</p>
+          <p className="subtext mt-12 mb-4">To become a Project/Event Sponsor,....</p>
+
         </div>
         <Image src={BlurTR} alt="" height={BlurTR.height / 2} width={BlurTR.width / 2} className="absolute right-0 top-0" />
       </div>
@@ -96,8 +105,17 @@ export function SupportPage() {
   }
 
   function DonationPage() {
-    return <div className="bg-theme-white z-10 h-50">
-
+    return <div className="bg-theme-white z-10 h-150 universepad flex">
+      <div className="flex flex-col w-1/2">
+        <h3 className="subtext font-bold mt-12">Donate a Toy</h3>
+        <p className="subtext">If you are interested in donating a toy to our cause, please see our Amazon Wishlist for sample toys.</p>
+        <p className="subtext mb-6">To donate a toy, please...</p>
+        <ButtonRed label="See Wishlist" to="https://www.amazon.com/hz/wishlist/ls/13KDRAOU6ZAPR?ref_=wl_share" size="M" />
+        <h3 className="subtext font-bold mt-8">Donate With Card</h3>
+        <p className="subtext">If you would like to donate via card, you can navigate to our <a href="https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=16421&cid=27217&dids=5596&sort=1&bledit=1" className="underline underline-offset-2">Giving to Cornell</a> page.</p>
+        <p className="subtext mb-6">From here, Giving to Cornell will assist you in safely transferring the funds to our Cornell Assistive Technologies internal account.</p>
+        <ButtonRed label="Visit Giving to Cornell" to="https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=16421&cid=27217&dids=5596&sort=1&bledit=1" size="M" />
+      </div>
     </div>;
   }
 

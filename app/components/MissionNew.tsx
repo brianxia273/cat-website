@@ -6,7 +6,7 @@ import BlurM from "@/public/assets/blur-m.png"
 
 function MissionMainCard() {
   return (
-    <div className="h-130 w-full max-w-219 bg-theme-white drop-shadow-[0px_1px_1px_rgba(0,0,0,1)] flex flex-col justify-between rounded-[20px] py-8 px-12" >
+    <div className="h-130 w-full max-w-219 bg-theme-white drop-shadow-[0px_2px_2px_rgba(0,0,0,0.5)] flex flex-col justify-between rounded-[20px] py-8 px-12" >
       <div className="flex flex-col">
         <h2 className="heading">Our Mission</h2>
         <p className="subtext mt-6">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities and raise awareness of their impact among communities in Ithaca and beyond.</p>
