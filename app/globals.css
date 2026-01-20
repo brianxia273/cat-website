@@ -61,7 +61,7 @@
   }
 
   .subtext {
-    @apply text-xl font-normal text-text-dk-grey leading-[160%];
+    @apply text-xl text-text-dk-grey leading-[160%];
   }
 
   .navtext {
