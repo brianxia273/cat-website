@@ -12,6 +12,45 @@ interface CommHighProps {
   events: Array<[string, string, string]>;
 }
 
+function CommHighPics({ activeTab }: { activeTab: number }) {
+  const pictures = [
+    Pic1,
+    Pic2,
+    Pic3
+  ]
+  const altDescriptions = [
+    "Team photo at Island Conference on Disability and Stem",
+    "Team photo at GoBabyGo 2025 at Ithaca College",
+    "Team photo at Sciencenter Workshop"
+  ]
+
+  const curPic = pictures[activeTab]
+  const curAlt = altDescriptions[activeTab]
+
+  return (
+    <div className="h-140 w-161 relative">
+      <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-28 -translate-y-1/2
+          hover:scale-102 transition-transform duration-300 z-10">
+        {pictures.map((pic, index) => {
+          return (
+            <Image
+              key={`picture-${index}`}
+              src={pic}
+              alt={altDescriptions[index]}
+              fill
+              className={`object-cover transition-opacity duration-500 ease-in-out 
+              ${activeTab === index ? "opacity-100" : "opacity-0"}`}
+              sizes="(max-width: 768px) 100vw, 548px"
+            />
+          )
+        })}
+      </div>
+      <img src="/assets/Landing/com-frame.svg" alt="" className="absolute top-1/2 right-24 -translate-y-1/2 w-126 h-auto" />
+      <img src="/assets/Landing/com-bg.svg" alt="" className="absolute -top-20 right-0 -z-10 h-160" />
+    </div>
+  )
+}
+
 export function CommunityHighlights({ events }: CommHighProps) {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -45,47 +84,12 @@ export function CommunityHighlights({ events }: CommHighProps) {
     )
   }
 
-  function CommHighPics() {
-    const pictures = [
-      Pic1,
-      Pic2,
-      Pic3
-    ]
-    const altDescriptions = [
-      "Team photo at Island Conference on Disability and Stem",
-      "Team photo at GoBabyGo 2025 at Ithaca College",
-      "Team photo at Sciencenter Workshop"
-    ]
 
-    const curPic = pictures[activeTab]
-    const curAlt = altDescriptions[activeTab]
-
-    return (
-      <div className="h-140 w-161 relative">
-        <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-28 -translate-y-1/2
-          hover:scale-102 transition-transform duration-300 z-10">
-          {/* TODO: Add transitions */}
-          <Image
-            src={curPic}
-            alt={curAlt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 548px"
-          />
-
-        </div>
-        <img src="/assets/Landing/com-frame.svg" alt="" className="absolute top-1/2 right-24 -translate-y-1/2 w-126 h-auto" />
-        <img src="/assets/Landing/com-bg.svg" alt="" className="absolute -top-20 right-0 -z-10 h-160" />
-      </div>
-    )
-
-
-  }
 
   return (
     <div className="mt-20 h-200 w-full pl-24 flex justify-between items-center">
       <CommHighText events={events} />
-      <CommHighPics />
+      <CommHighPics activeTab={activeTab} />
     </div>
   )
 }
