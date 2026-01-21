@@ -6,7 +6,8 @@ import BlurM from "@/public/assets/blur-m.png"
 
 function MissionMainCard() {
   return (
-    <div className="h-130 w-full max-w-219 bg-theme-white drop-shadow-[0px_2px_2px_rgba(0,0,0,0.5)] flex flex-col justify-between rounded-[20px] py-8 px-12" >
+    <div className="h-130 w-full max-w-219 backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] 
+    flex flex-col justify-between rounded-[20px] py-8 px-15 relative" >
       <div className="flex flex-col">
         <h2 className="heading">Our Mission</h2>
         <p className="subtext mt-6">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities and raise awareness of their impact among communities in Ithaca and beyond.</p>
@@ -16,17 +17,20 @@ function MissionMainCard() {
         <ButtonRed label="Join Us" to="/JoinUs" />
         <ButtonWhite label="Meet the Team" to="/AboutUs" />
       </div>
+      <img src="/assets/Landing/mission-square-t.svg" alt="" className="absolute right-9 bottom-15" />
+      <img src="/assets/Landing/mission-square-b.svg" alt="" className="absolute right-20 -bottom-10" />
     </div>
   )
 }
 
 function MissionGraphic() {
+  const imgStyles = "h-60 w-85 rounded-[20px] overflow-hidden relative shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-300"
   return (
     <div className="flex flex-col h-130 gap-10 items-center">
-      <div className="h-60 w-85 rounded-[20px] overflow-hidden relative drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] hover:scale-102 transition-transform duration-300">
+      <div className={imgStyles}>
         <Image src={ImgT} alt="" fill className="object-cover" />
       </div>
-      <div className="h-60 w-85 rounded-[20px] overflow-hidden relative drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] hover:scale-102 transition-transform duration-300">
+      <div className={imgStyles}>
         <Image src={ImgB} alt="" fill className="object-cover" />
       </div>
     </div>

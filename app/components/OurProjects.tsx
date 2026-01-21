@@ -106,7 +106,7 @@ export function OurProjects() {
               description2={item.description2} cta={item?.cta} textLocation={isEven ? "Left" : "Right"} img={item?.img} index={index} />)
           })}
           <div className="flex justify-center">
-            <ButtonWhite label="See All Our Projects" to="" />
+            <ButtonWhite label="See All Our Projects" to="/assets/OurWork/Extensive-Documentation-of-CAT-Projects.pdf" behav="External" />
           </div>
         </div>
       </div>
