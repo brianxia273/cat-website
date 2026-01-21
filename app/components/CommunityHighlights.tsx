@@ -38,7 +38,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
         <h2 className="heading">Community Highlights</h2>
         <GalleryTabs events={events} />
         <div className="flex gap-11 mt-20">
-          <ButtonRed label="Visit Our Blog" to="/tabs/Blog" size="M" />
+          <ButtonRed label="Visit Our Blog" to="/Blog" size="M" />
           <ButtonWhite label="Join Our Newsletter" to="" size="M" />
         </div>
       </div>

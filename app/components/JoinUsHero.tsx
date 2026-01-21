@@ -11,7 +11,7 @@ function HeroContent() {
       <p className="subtext mt-4 w-200 text-center">We will not be recruiting Spring 2026, but applications will reopen Fall 2026. Thank you for your interest, and we look forward to your applications!</p>
       <Image src={HeroPic} alt="A Cornell Assistive Technology team work session" height={HeroPic.height} width={HeroPic.width}
         className="mt-5 h-80 w-auto rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] hover:scale-102 transition-transform duration-300" />
-      <div className="mt-8 flex justify-center">
+      <div className="mt-12 flex justify-center">
         <ButtonRed label="Apply Now" to="" behav="External" disabled={true} />
       </div>
 

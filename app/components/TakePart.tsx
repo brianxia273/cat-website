@@ -14,8 +14,8 @@ export function TakePart() {
         <h2 className="ctaheading mt-8">Take Part</h2>
         <p className="subtext mt-4">Be part of a project team making assistive technology more effective, and reach out if you’d like to collaborate or share your ideas</p>
         <div className="flex gap-10 mt-24">
-          <ButtonRed label="Join Us" to="/tabs/JoinUs" />
-          <ButtonWhite label="Contact Us" to="/tabs/Contact" />
+          <ButtonRed label="Join Us" to="/JoinUs" />
+          <ButtonWhite label="Contact Us" to="/Contact" />
         </div>
       </div>
     </div>
