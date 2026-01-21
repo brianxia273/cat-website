@@ -37,13 +37,13 @@ export function Navbar() {
       <nav className="flex justify-end">
         <div className="flex gap-16 mr-20">
           <Tab routeToPath="/" tabName="Home" />
-          <Tab routeToPath="/tabs/OurWork" tabName="Our Work" />
-          <Tab routeToPath="/tabs/AboutUs" tabName="About Us" />
-          {/* <Tab routeToPath="/tabs/Blog" tabName="Blog" />
-        <Tab routeToPath="/tabs/DIY" tabName="DIY" /> */}
-          <Tab routeToPath="/tabs/JoinUs" tabName="Join Us" />
-          <Tab routeToPath="/tabs/Contact" tabName="Contact" />
-          <Tab routeToPath="/tabs/Support" tabName="Support" />
+          <Tab routeToPath="/OurWork" tabName="Our Work" />
+          <Tab routeToPath="/AboutUs" tabName="About Us" />
+          {/* <Tab routeToPath="/Blog" tabName="Blog" />
+        <Tab routeToPath="/DIY" tabName="DIY" /> */}
+          <Tab routeToPath="/JoinUs" tabName="Join Us" />
+          <Tab routeToPath="/Contact" tabName="Contact" />
+          <Tab routeToPath="/Support" tabName="Support" />
         </div>
       </nav>
     </div>

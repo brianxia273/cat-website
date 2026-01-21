@@ -9,7 +9,7 @@ const HeroText = () => {
     <div className="flex flex-col mt-35">
       <h1 className="mainheading w-140 mb-6">Making Assistive Technologies Accessible for All</h1>
       <p className="subtext w-140 mb-16">We create assistive technologies and teach inclusive design to empower communities in Ithaca and beyond.</p>
-      <ButtonRed label="Explore Our Work" to="/tabs/OurWork" />
+      <ButtonRed label="Explore Our Work" to="/OurWork" />
     </div>
   )
 }

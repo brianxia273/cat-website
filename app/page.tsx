@@ -1,5 +1,5 @@
 "use client"
-import Home from "./tabs/Home/page";
+import Home from "./Home/page";
 import { Analytics } from "@vercel/analytics/next"
 
 

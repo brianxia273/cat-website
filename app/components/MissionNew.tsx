@@ -13,8 +13,8 @@ function MissionMainCard() {
         <p className="subtext mt-6">We partner with individuals, families, and organizations to engineer accessible, needs-driven solutions.</p>
       </div>
       <div className="flex gap-6 mb-2">
-        <ButtonRed label="Join Us" to="/tabs/JoinUs" />
-        <ButtonWhite label="Meet the Team" to="/tabs/AboutUs" />
+        <ButtonRed label="Join Us" to="/JoinUs" />
+        <ButtonWhite label="Meet the Team" to="/AboutUs" />
       </div>
     </div>
   )

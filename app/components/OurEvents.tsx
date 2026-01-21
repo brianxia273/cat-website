@@ -57,7 +57,7 @@ function OurEventsBottomText() {
   return (
     <div className="flex flex-col">
       <p className="subtext mb-8">Check out our past events on our blog!</p>
-      <ButtonRed label="Visit Our Blog" to="/tabs/Blog" size="M" />
+      <ButtonRed label="Visit Our Blog" to="/Blog" size="M" />
     </div>
   )
 }
