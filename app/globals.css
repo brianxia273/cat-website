@@ -90,11 +90,16 @@
   }
 
   .membername {
-    @apply text-xl leading-normal text-text-dk-grey font-medium
+    @apply text-xl leading-normal text-theme-white font-medium
   }
 
+  .longmembername {
+    @apply text-lg leading-normal text-theme-white font-medium
+  }
+
+
   .membertag {
-    @apply text-base leading-normal text-text-red
+    @apply text-sm leading-normal text-text-red
   }
 
   .formlabel {

@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import { StaticImageData } from 'next/image'
 import data from "@/public/assets/AboutUs/team.json"
@@ -138,17 +139,27 @@ function MemberModal() {
   )
 }
 
-function MemberCard(member: Pick<MemberCardInfo, "name" | "role" | "img">) {
+function MemberCard(member: Pick<MemberCardInfo, "name" | "role" | "img" | "linkedin">) {
   const name = member.name
   const role = member.role
   const img = member.img
+  const linkedin = member.linkedin
+
   return (
-    <div className="h-100 min-w-70 w-70 flex flex-col rounded-[20px] bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] cursor-pointer">
+    <div className="h-100 min-w-70 w-70 flex flex-col rounded-[20px] cursor-pointer">
       {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="h-75 w-full rounded-t-[20px]" /> : <div className="bg-text-grey h-75  w-full rounded-t-[20px]" />}
-      <div className="flex flex-col pl-3 pt-2">
-        <h4 className="membername">{name}</h4>
-        <p className="membertag">{role}</p>
+        className="h-75 w-full rounded-[15px]" /> : <div className="bg-text-grey h-75  w-full rounded-[15px]" />}
+      <div className="flex flex-col pt-3 px-2">
+        <div className="flex justify-between items-center">
+          <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
+          <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`} className="h-7"
+            onClick={() => window.open((linkedin !== undefined ? linkedin : ""), '_blank')} />
+        </div>
+        {role !== "" &&
+          <div className="bg-theme-offwhite w-fit rounded-lg mt-4">
+            <p className="membertag px-2 py-1">{role}</p>
+          </div>
+        }
       </div>
     </div>
   )
@@ -161,7 +172,7 @@ function TeamSection({ title, team }: SectionProps) {
       <div className="grid grid-cols-4 gap-12 mt-10">
         {team.map((item, index) => {
           return (
-            <MemberCard key={`Team Lead ` + index} name={item.name} role={item.role} img={item?.img} />
+            <MemberCard key={`Team Lead ` + index} name={item.name} role={item.role} img={item?.img} linkedin={item?.linkedin} />
           )
         })}
       </div>
@@ -172,12 +183,13 @@ function TeamSection({ title, team }: SectionProps) {
 
 export function Members() {
   return (
-    <div className="bg-bg-dk-grey b-10">
+    <div className="bg-bg-dk-grey b-10 mt-5 relative pt-5">
       <TeamSection title="Our Team Leads" team={teamLeads} />
       <TeamSection title="Engineering Subteam" team={engSubteam} />
       <TeamSection title="Education & Outreach Subteam" team={eduOutSubteam} />
       <TeamSection title="Operations Subteam" team={opsSubteam} />
       <TeamSection title="Our Alumni" team={alumni} />
+      <img src="/assets/AboutUs/wave-top.svg" alt="" className="absolute bottom-full left-0 w-full scale-x-[-1]" />
     </div>
   )
 }
