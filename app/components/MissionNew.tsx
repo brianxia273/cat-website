@@ -24,7 +24,10 @@ function MissionMainCard() {
 }
 
 function MissionGraphic() {
-  const imgStyles = "h-60 w-85 rounded-[20px] overflow-hidden relative shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] hover:scale-102 transition-transform duration-300"
+  const imgStyles =
+    "h-60 w-85 rounded-[20px] overflow-hidden relative \
+   shadow-[0_-2px_4px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] \
+   hover:scale-102 transition-transform duration-300";
   return (
     <div className="flex flex-col h-130 gap-10 items-center">
       <div className={imgStyles}>
@@ -44,7 +47,7 @@ export function Mission() {
     <div className="h-130 flex gap-10 items-center universepad relative">
       <MissionGraphic />
       <MissionMainCard />
-      <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-70 -z-10" />
+      {/* <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-70 -z-10" /> */}
     </div>
   )
 }

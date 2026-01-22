@@ -122,7 +122,7 @@ function Form({ className }: { className?: string }) {
         setter={setMessage}
         className="mt-4"
       />
-      <button type="submit" className="mt-6 w-full h-10 text-center formlabel text-theme-white bg-theme-red rounded-sm
+      <button type="submit" className="mt-6 w-full h-10 text-center formlabel text-theme-white bg-theme-red rounded-[1000px]
       hover:bg-theme-dk-red cursor-pointer transition-colors duration-200"
         disabled={!isValidForm}>
         Submit
