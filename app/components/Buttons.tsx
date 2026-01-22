@@ -10,7 +10,7 @@ type ButtonProps = {
   disabled?: boolean
 }
 
-const baseButtonStyles = "rounded-lg"
+const baseButtonStyles = "rounded-[1000px]"
 const baseWidthStyles = "w-auto max-w-full"
 
 const sizeStyles = {
