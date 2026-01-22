@@ -65,10 +65,6 @@
     @apply text-xl text-text-dk-grey leading-[160%];
   }
 
-  .navtext {
-    @apply text-base text-text-dk-grey font-medium;
-  }
-
   .footerheading {
     @apply text-2xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
   }

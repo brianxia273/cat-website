@@ -5,6 +5,10 @@ import { useRouter } from "next/navigation";
 import CATLogo from "@/public/assets/cat-logo.png"
 import Image from 'next/image';
 
+const baseTabStyles = "text-base font-medium hover:text-theme-dk-red cursor-pointer"
+const activeStyles = `${baseTabStyles} text-theme-red`
+const nonActiveStyles = `${baseTabStyles} text-text-dk-grey`
+
 export function Navbar() {
   type TabProps = {
     routeToPath: string;
@@ -24,8 +28,7 @@ export function Navbar() {
   const Tab = ({ routeToPath, tabName }: TabProps) => {
     return <button
       onClick={() => router.push(routeToPath)}
-      // won't change color on hover if current page
-      className={`navtext hover:text-theme-dk-red cursor-pointer ${isActive(routeToPath) ? "text-theme-red hover:text-theme-red" : ""}`}>
+      className={`${isActive(routeToPath) ? activeStyles : nonActiveStyles}`}>
       {tabName}
     </button>
   }
