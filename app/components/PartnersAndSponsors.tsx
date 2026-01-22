@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image';
+import CompanyLogoScroll, { Company } from './CompanyLogoScroll';
 // partners row 1 images
 import GreaterBOCES from "@/public/assets/Landing/Partners/greater-southen-tier-boces.png"
 import TstBOCES from "@/public/assets/Landing/Partners/tst-boces.png"
@@ -11,7 +12,7 @@ import Racker from "@/public/assets/Landing/Partners/racker.png"
 import CodeRedRobotics from "@/public/assets/Landing/Partners/code-red-robotics.png"
 import Sciencenter from "@/public/assets/Landing/Partners/sciencenter.jpg"
 import UnityHouse from "@/public/assets/Landing/Partners/unity-house.webp"
-// row 3 images 
+// row 3 images (to be redistributed)
 import MountainLakesLibrary from "@/public/assets/Landing/Partners/mountain-lakes-library.png"
 import NYOpportunity from "@/public/assets/Landing/Partners/ny-opportunity.jpg"
 import Nysed from "@/public/assets/Landing/Partners/nysed.png"
@@ -26,43 +27,85 @@ const colStyles = "flex flex-col gap-12 mt-15"
 const imgStyles = "h-17 w-auto cursor-pointer"
 
 function Partners() {
+  // Row 1: 4 existing + 2 from row 3 (MountainLakesLibrary, Quorum) = 6 total, scroll right
+  const row1Companies: Company[] = [
+    {
+      logo: GreaterBOCES,
+      name: "Greater Southern Tier BOCES",
+      url: "https://www.gstboces.org/"
+    },
+    {
+      logo: TstBOCES,
+      name: "TST BOCES",
+      url: "https://www.tstboces.org/"
+    },
+    {
+      logo: IthacaSchool,
+      name: "Ithaca City School District",
+      url: "https://www.ithacacityschools.org/"
+    },
+    {
+      logo: "/assets/Landing/Partners/ithaca-college.svg",
+      name: "Ithaca College",
+      url: "https://www.ithaca.edu/academics/school-health-sciences-and-human-performance/occupational-therapy"
+    },
+    {
+      logo: MountainLakesLibrary,
+      name: "Mountain Lakes Public Library Makerspace",
+      url: "https://bit.ly/m/mlmakerspace"
+    },
+    {
+      logo: "/assets/Landing/Partners/quorum.svg",
+      name: "Quorum",
+      url: "https://quorumlanguage.com/"
+    }
+  ];
+
+  // Row 2: 5 existing + 2 from row 3 (NYOpportunity, Nysed) = 7 total, scroll left
+  const row2Companies: Company[] = [
+    {
+      logo: Flic,
+      name: "FLIC",
+      url: "https://fliconline.org/FLIC/"
+    },
+    {
+      logo: Racker,
+      name: "Racker",
+      url: "https://www.racker.org/"
+    },
+    {
+      logo: CodeRedRobotics,
+      name: "Code Red Robotics",
+      url: "https://www.team639.org/"
+    },
+    {
+      logo: Sciencenter,
+      name: "Sciencenter",
+      url: "https://sciencenter.org/"
+    },
+    {
+      logo: UnityHouse,
+      name: "Unity House",
+      url: "https://unityhouse.org/"
+    },
+    {
+      logo: NYOpportunity,
+      name: "New York State of Opportunity",
+      url: "https://www.ny.gov/"
+    },
+    {
+      logo: Nysed,
+      name: "New York State Education Department",
+      url: "https://www.nysed.gov/new-york-state-school-blind"
+    }
+  ];
+
   return (
     <div className={colStyles}>
-      {/* row 1 */}
-      <div className={rowStyles}>
-        <Image src={GreaterBOCES} alt="Visit Greater Southern Tier BOCES" height={GreaterBOCES.height} width={GreaterBOCES.width} className={imgStyles}
-          onClick={() => window.open('https://www.gstboces.org/', '_blank')} />
-        <Image src={TstBOCES} alt="Visit TST BOCES" height={TstBOCES.height} width={TstBOCES.width} className={imgStyles}
-          onClick={() => window.open('https://www.tstboces.org/', '_blank')} />
-        <Image src={IthacaSchool} alt="Visit Ithaca City School District" height={IthacaSchool.height} width={IthacaSchool.width} className={imgStyles}
-          onClick={() => window.open('https://www.ithacacityschools.org/', '_blank')} />
-        <img src={"/assets/Landing/Partners/ithaca-college.svg"} alt="Visit Ithaca College" className={imgStyles}
-          onClick={() => window.open('https://www.ithaca.edu/academics/school-health-sciences-and-human-performance/occupational-therapy', '_blank')} />
-      </div>
-      {/* row 2 */}
-      <div className={rowStyles}>
-        <Image src={Flic} alt="Visit FLIC" height={Flic.height} width={Flic.width} className={imgStyles}
-          onClick={() => window.open('https://fliconline.org/FLIC/', '_blank')} />
-        <Image src={Racker} alt="Visit Racker" height={Racker.height} width={Racker.width} className={imgStyles}
-          onClick={() => window.open('https://www.racker.org/', '_blank')} />
-        <Image src={CodeRedRobotics} alt="Visit Code Red Robotics" height={CodeRedRobotics.height} width={CodeRedRobotics.width} className={imgStyles}
-          onClick={() => window.open('https://www.team639.org/', '_blank')} />
-        <Image src={Sciencenter} alt="Visit Sciencenter" height={Sciencenter.height} width={Sciencenter.width} className={imgStyles}
-          onClick={() => window.open('https://sciencenter.org/', '_blank')} />
-        <Image src={UnityHouse} alt="Visit Unity House" height={UnityHouse.height} width={UnityHouse.width} className={imgStyles}
-          onClick={() => window.open('https://unityhouse.org/', '_blank')} />
-      </div>
-      {/* row 3 */}
-      <div className={rowStyles}>
-        <Image src={MountainLakesLibrary} alt="Visit Mountain Lakes Public Library Makerspace" height={MountainLakesLibrary.height} width={MountainLakesLibrary.width} className={imgStyles}
-          onClick={() => window.open('https://bit.ly/m/mlmakerspace', '_blank')} />
-        <img src={"/assets/Landing/Partners/quorum.svg"} alt="Visit Quorum" className={imgStyles}
-          onClick={() => window.open('https://quorumlanguage.com/', '_blank')} />
-        <Image src={NYOpportunity} alt="New York State of Opportunity logo" height={NYOpportunity.height} width={NYOpportunity.width} className={imgStyles}
-          onClick={() => window.open('https://www.ny.gov/', '_blank')} />
-        <Image src={Nysed} alt="Visit New York State Education Department" height={Nysed.height} width={Nysed.width} className={imgStyles}
-          onClick={() => window.open('https://www.nysed.gov/new-york-state-school-blind', '_blank')} />
-      </div>
+      {/* row 1 - scroll right */}
+      <CompanyLogoScroll scrollDirection="right" companies={row1Companies} />
+      {/* row 2 - scroll left */}
+      <CompanyLogoScroll scrollDirection="left" companies={row2Companies} />
     </div>
   )
 }
