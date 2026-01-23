@@ -3,6 +3,7 @@ import HeroPic from "@/public/assets/Landing/hero-pic-full.jpg"
 import BlurTL from "@/public/assets/blur-tl.png"
 import BlurTR from "@/public/assets/blur-tr.png"
 import Image from 'next/image';
+import { loadingComplete, imgLoadStyles } from "../utils/imgLoad";
 
 const HeroText = () => {
   return (
@@ -18,14 +19,16 @@ const HeroGraphic = () => {
   return (
     <div className="relative w-131.5 h-full">
       {/* No alts for decoration */}
-      <img src="/assets/Landing/hero-blob-solid.svg" alt="" className="absolute left-9.25 top-32" />
-      <img src="/assets/Landing/hero-blob-clear.svg" alt="" className="absolute left-0 top-29" />
+      <img src="/assets/Landing/hero-blob-solid.svg" alt="" className="absolute xl:scale-80 xl:left-24.25 xl:top-32" />
+      <img src="/assets/Landing/hero-blob-clear.svg" alt="" className="absolute xl:scale-80 xl:left-17 xl:top-29" />
       <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={HeroPic.height} width={HeroPic.width}
-        className="h-78 w-111 rounded-[1000px] absolute left-15 top-47.5 hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
-      <img src="/assets/Landing/hero-square-bl.svg" alt="" className="absolute left-39 top-130" />
-      <img src="/assets/Landing/hero-square-tl.svg" alt="" className="absolute left-45.75 top-0" />
-      <img src="/assets/Landing/hero-circle-br.svg" alt="" className="absolute left-93.25 top-112.25 -z-10" />
-      <img src="/assets/Landing/hero-circle-tr.svg" alt="" className="absolute left-99 top-20.5" />
+        className={`absolute xl:scale-70 xl:left-23 xl:top-42 rounded-[1000px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] `}
+        // ${imgLoadStyles}
+        onLoadingComplete={(img) => { loadingComplete(img) }} />
+      <img src="/assets/Landing/hero-square-bl.svg" alt="" className="absolute xl:left-30 xl:top-110 -z-10" />
+      <img src="/assets/Landing/hero-square-tl.svg" alt="" className="absolute xl:left-45.75 xl:top-10" />
+      <img src="/assets/Landing/hero-circle-br.svg" alt="" className="absolute xl:left-93.25 xl:top-112.25 -z-10" />
+      <img src="/assets/Landing/hero-circle-tr.svg" alt="" className="absolute xl:left-99 xl:top-25.5" />
     </div>
   )
 }

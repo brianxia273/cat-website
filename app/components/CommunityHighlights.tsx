@@ -24,9 +24,6 @@ function CommHighPics({ activeTab }: { activeTab: number }) {
     "Team photo at Sciencenter Workshop"
   ]
 
-  const curPic = pictures[activeTab]
-  const curAlt = altDescriptions[activeTab]
-
   return (
     <div className="h-140 w-161 relative">
       <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-28 -translate-y-1/2
