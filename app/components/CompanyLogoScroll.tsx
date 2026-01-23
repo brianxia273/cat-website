@@ -21,7 +21,7 @@ export default function CompanyLogoScroll({
   speed = 40, // Slower default speed (higher number = slower)
 }: CompanyLogoScrollProps) {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   // Duplicate companies array to create seamless loop
   const duplicatedCompanies = [...companies, ...companies];
 
@@ -52,7 +52,7 @@ export default function CompanyLogoScroll({
   const animationDirection = scrollDirection === "right" ? "reverse" : "normal";
 
   return (
-    <div 
+    <div
       className="relative w-full overflow-hidden py-8"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -100,7 +100,7 @@ export default function CompanyLogoScroll({
                 <span className="text-2xl shrink-0">{typeof company.logo === 'string' ? company.logo : ''}</span>
               )}
               {/* Company Name */}
-              <span className="text-black text-3xl whitespace-nowrap">
+              <span className="text-text-dk-grey text-3xl whitespace-nowrap">
                 {company.name}
               </span>
             </div>
