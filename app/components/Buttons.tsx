@@ -14,9 +14,9 @@ const baseButtonStyles = "rounded-[1000px]"
 const baseWidthStyles = "w-auto max-w-full"
 
 const sizeStyles = {
-  L: "px-12 text-xl py-3 h-13",
-  M: "px-6 text-lg py-2  h-11",
-  S: "px-4  h-9",
+  L: "px-12 text-xl py-3 h-13 min-w-60",
+  M: "px-6 text-lg py-2  h-11 min-w-30",
+  S: "px-4  h-9 s-20",
 };
 
 function onClickNavigation({ to, behav = "Internal", disabled = false, router }: { to: string; behav: string; disabled: boolean; router: ReturnType<typeof useRouter> }) {
