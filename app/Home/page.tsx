@@ -4,7 +4,7 @@ import { CommunityHighlights } from "@/app/components/CommunityHighlights";
 import { PartnersAndSponsors } from "@/app/components/PartnersAndSponsors";
 import { TakePart } from "@/app/components/TakePart";
 import { Footer } from "@/app/components/Footer";
-import { Mission } from "@/app/components/MissionNew";
+import { Mission } from "@/app/components/Mission";
 
 const curEvents: Array<[string, string, string]> = [
   ["Island Conference on Disability and Stem", "Short Description", "Date"],
