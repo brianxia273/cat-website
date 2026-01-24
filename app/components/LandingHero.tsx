@@ -5,6 +5,7 @@ import BlurTL from "@/public/assets/blur-tl.png"
 import BlurTR from "@/public/assets/blur-tr.png"
 import Image from 'next/image';
 import { loadingComplete, imgLoadStyles } from "../utils/imgLoad";
+import { useEffect } from "react"
 
 const HeroText = () => {
   return (
@@ -20,8 +21,8 @@ const HeroGraphic = () => {
   const detailScaleStyles = "scale-50 lg:scale-70 xl:scale-80"
 
   return (
-    <div className="w-full h-full flex justify-center mb-70 lg:contents">
-      <div className={`relative w-131.5 ${detailScaleStyles} -ml-15 lg:ml-0`}>
+    <div className="w-full h-full flex justify-center lg:contents">
+      <div className={`relative w-150 h-140 ${detailScaleStyles} mt-45 -ml-15 lg:ml-0 lg:mt-0`}>
         {/* No alts for decoration */}
         <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute left-24.25 top-32`} />
         <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute left-17 top-29`} />

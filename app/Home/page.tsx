@@ -5,6 +5,7 @@ import { PartnersAndSponsors } from "@/app/components/PartnersAndSponsors";
 import { TakePart } from "@/app/components/TakePart";
 import { Footer } from "@/app/components/Footer";
 import { Mission } from "@/app/components/Mission";
+import { UnderConstructionPopup } from "../components/UnderConstructionPopup";
 
 const curEvents: Array<[string, string, string]> = [
   ["Island Conference on Disability and Stem", "Short Description", "Date"],
@@ -16,6 +17,7 @@ export default function Home() {
 
   return (
     <div>
+      <UnderConstructionPopup />
       <Navbar />
       <LandingHero />
       <Mission />
