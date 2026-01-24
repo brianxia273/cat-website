@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.24.7",
     "next": "^16.1.1",
     "react": "19.2.0",
