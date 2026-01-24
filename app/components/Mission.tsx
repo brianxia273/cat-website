@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import { ButtonRed, ButtonWhite } from './Buttons';
 import ImgT from "@/public/assets/Landing/img-tr.png"
