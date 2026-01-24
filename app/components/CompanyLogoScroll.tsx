@@ -93,14 +93,14 @@ export default function CompanyLogoScroll({
                   alt={`${company.name} logo`}
                   width={48}
                   height={48}
-                  className="object-contain shrink-0 h-[1.875rem] w-auto min-h-[1.875rem]"
+                  className="object-contain shrink-0 h-10 w-auto min-h-8"
                   sizes="48px"
                 />
               ) : (
                 <span className="text-2xl shrink-0">{typeof company.logo === 'string' ? company.logo : ''}</span>
               )}
               {/* Company Name */}
-              <span className="text-text-dk-grey text-3xl whitespace-nowrap">
+              <span className="text-text-dk-grey text-2xl whitespace-nowrap">
                 {company.name}
               </span>
             </div>

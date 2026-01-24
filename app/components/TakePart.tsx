@@ -1,8 +1,5 @@
 "use client"
 
-import TakePartPic from "@/public/assets/Landing/takepart.jpg"
-import Image from 'next/image';
-import { useRouter } from "next/navigation";
 import { ButtonRed, ButtonWhite } from "./Buttons";
 
 
