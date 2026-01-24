@@ -24,10 +24,13 @@ function CommHighPics({ activeTab }: { activeTab: number }) {
     "Team photo at Sciencenter Workshop"
   ]
 
+  const scaleStyles = "scale-80 xl:scale-100 origin-right"
+  const bgScaleStyles = "scale-x-80 xl:scale-x-100 origin-right"
+
   return (
     <div className="h-140 w-161 relative">
-      <div className="h-100 w-118 absolute overflow-hidden rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-28 -translate-y-1/2
-          hover:scale-102 transition-transform duration-300 z-10">
+      <div className={`h-100 w-118 absolute overflow-hidden rounded-[20px] 
+        drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] top-1/2 right-17.5 xl:right-28 -translate-y-1/2 z-10 ${scaleStyles}`}>
         {pictures.map((pic, index) => {
           return (
             <Image
@@ -42,8 +45,8 @@ function CommHighPics({ activeTab }: { activeTab: number }) {
           )
         })}
       </div>
-      <img src="/assets/Landing/com-frame.svg" alt="" className="absolute top-1/2 right-24 -translate-y-1/2 w-126 h-auto" />
-      <img src="/assets/Landing/com-bg.svg" alt="" className="absolute -top-20 right-0 -z-10 h-160" />
+      <img src="/assets/Landing/com-frame.svg" alt="" className={`absolute top-1/2 right-14.5 xl:right-24 -translate-y-1/2 w-126 min-w-126 h-auto ${scaleStyles}`} />
+      <img src="/assets/Landing/com-bg.svg" alt="" className={`absolute -top-20 right-0 -z-10 h-160 ${bgScaleStyles}`} />
     </div>
   )
 }
@@ -61,7 +64,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
               <h3 className={activeTab === index ? "subheading text-text-dk-grey" : "subheading text-text-grey-muted"}>{subtitle}</h3>
               <p className={activeTab === index ? "descriptext text-text-grey mt-2 " : "descriptext text-text-grey-muted mt-2 "}>{descrip}</p>
               <p className={activeTab === index ? "descriptext text-text-grey" : "descriptext text-text-grey-muted"}>{date}</p>
-              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 ${activeTab === index ? "" : "opacity-10"}`} />
+              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 w-100 ${activeTab === index ? "" : "opacity-10"}`} />
             </div>
           )
         })}</div>

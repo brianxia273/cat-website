@@ -43,7 +43,7 @@ function ContactHeader({ className }: { className?: string }) {
       <div className={`h-60 w-full universepad flex justify-between`}>
         <div className="flex flex-col gap-3">
           <h1 className="whitemainheading pt-12">Contact Us</h1>
-          <p className="whitesubheading">Interested in collaborating or sharing your insights? Reach out to us.</p>
+          <p className="whitesubtext">Interested in collaborating or sharing your insights? Reach out to us.</p>
         </div>
         <div className="flex flex-col gap-4 justify-center">
           <SocialTag iconsrc="/assets/Contact/white-email.svg" label="assistivetech@cornell.edu" link="mailto:assistivetech@cornell.edu" className="underline underline-offset-3" />

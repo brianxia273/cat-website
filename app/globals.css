@@ -32,19 +32,33 @@
 
 @layer utilities {
   .mainheading {
-    @apply text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+    @apply text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-14 lg:leading-16;
   }
+
 
   .whitemainheading {
     @apply text-5xl font-semibold tracking-[-0.02em] text-theme-white leading-16;
   }
 
-  .whitesubheading {
+  .whitesubtext {
     @apply text-xl text-theme-white;
   }
 
   .heading {
-    @apply text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+    @apply text-3xl xl:text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+  }
+
+
+  .subtext {
+    @apply text-base lg:text-lg xl:text-xl text-text-dk-grey leading-[160%];
+  }
+
+  .footerheading {
+    @apply text-lg xl:text-xl font-semibold text-theme-red;
+  }
+
+  .footerbottomtext {
+    @apply text-sm xl:text-base leading-normal text-text-grey text-center
   }
 
   .ctaheading {
@@ -53,24 +67,12 @@
 
   /* do not add color  */
   .subheading {
-    @apply text-xl font-medium
+    @apply text-lg xl:text-xl font-medium
   }
 
   /* do not add color */
   .descriptext {
-    @apply text-lg font-normal leading-[160%];
-  }
-
-  .subtext {
-    @apply text-xl text-text-dk-grey leading-[160%];
-  }
-
-  .footerheading {
-    @apply text-2xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
-  }
-
-  .footerbottomtext {
-    @apply text-base leading-normal text-text-grey text-center
+    @apply text-base xl:text-lg font-normal leading-[160%];
   }
 
   .cardheading {
@@ -104,6 +106,18 @@
 
   .universepad {
     @apply px-24
+  }
+
+  .lgbutton {
+    @apply px-6 lg:px-8 xl:px-12 text-lg xl:text-xl py-3 h-13 min-w-60
+  }
+
+  .midbutton {
+    @apply px-6 text-lg xl:text-lg py-2 h-11 min-w-30
+  }
+
+  .smbutton {
+    @apply px-4 h-9
   }
 }
 
