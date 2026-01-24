@@ -7,13 +7,14 @@ import Pic3 from "@/public/assets/Landing/comm-high-3.webp"
 import Image from 'next/image';
 import { ButtonRed, ButtonWhite } from "./Buttons";
 import useEmblaCarousel from 'embla-carousel-react'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 
 
 interface CommHighProps {
   events: Array<[string, string, string]>;
 }
 
-const imgStyles = "drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] rounded-[20px]"
+const imgStyles = "drop-shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] rounded-[20px]"
 
 function CommHighPics({ activeTab }: { activeTab: number }) {
   const pictures = [
@@ -60,17 +61,10 @@ function CommHighTitleMobile() {
   )
 }
 
-function CommHighButtonsMobile() {
-  return (
-    <div className="flex gap-5 items-center">
-      <ButtonRed label="Visit Our Blog" to="/Blog" size="M" />
-      <ButtonWhite label="Join Our Newsletter" to="" size="M" />
-    </div>
-  )
-}
 
 export function CommunityHighlights({ events }: CommHighProps) {
   const [activeTab, setActiveTab] = useState(0);
+
 
   function GalleryTabs({ events }: CommHighProps) {
     return (
@@ -79,9 +73,9 @@ export function CommunityHighlights({ events }: CommHighProps) {
           return (
             <div key={index} className="flex flex-col cursor-pointer w-124"
               onClick={() => { setActiveTab(index) }}>
-              <h3 className={activeTab === index ? "subheading text-text-dk-grey" : "subheading text-text-grey-muted"}>{subtitle}</h3>
-              <p className={activeTab === index ? "descriptext text-text-grey mt-2 " : "descriptext text-text-grey-muted mt-2 "}>{descrip}</p>
-              <p className={activeTab === index ? "descriptext text-text-grey" : "descriptext text-text-grey-muted"}>{date}</p>
+              <h3 className={activeTab === index ? "subheading text-text-dk-grey" : "subheading text-text-lt-grey-2"}>{subtitle}</h3>
+              <p className={activeTab === index ? "descriptext text-text-grey mt-2 " : "descriptext text-text-lt-grey-2 mt-2 "}>{descrip}</p>
+              <p className={activeTab === index ? "descriptext text-text-grey" : "descriptext text-text-lt-grey-2"}>{date}</p>
               <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 w-100 ${activeTab === index ? "" : "opacity-10"}`} />
             </div>
           )
@@ -103,16 +97,15 @@ export function CommunityHighlights({ events }: CommHighProps) {
   }
 
 
-  function CommHighPicsMobile() {
+  function CommHighPicsMobile({ events }: CommHighProps) {
+    const [activeIndex, setActiveIndex] = useState(0)
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
     const pictures = [Pic1, Pic2, Pic3]
     const altDescriptions = [
       "Team photo at Island Conference on Disability and Stem",
       "Team photo at GoBabyGo 2025 at Ithaca College",
       "Team photo at Sciencenter Workshop"
     ]
-
-    const [activeIndex, setActiveIndex] = useState(0)
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
 
     useEffect(() => {
       if (!emblaApi) return
@@ -124,26 +117,48 @@ export function CommunityHighlights({ events }: CommHighProps) {
       return (): void => { emblaApi.off('select', onSelect) }
     }, [emblaApi])
 
-    return (
-      <div ref={emblaRef} className="overflow-hidden w-full h-90">
-        <div className="flex">
-          {pictures.map((pic, index) => (
-            <div key={index} className="flex-[0_0_60%] flex justify-center relative">
-              <div className={`relative w-96 h-80 transition-all duration-300 
-                ${index === activeIndex ? 'scale-100 opacity-100' : 'scale-80 opacity-70'}`}>
-                <Image
-                  src={pic}
-                  alt={altDescriptions[index]}
-                  fill
-                  className={`object-cover ${imgStyles}`}
-                  sizes="(max-width: 768px) 100vw, 548px"
-                />
-              </div>
-              <div className={`absolute bottom-0 bg-amber-200 w-96 h-20 rounded-b-[20px] transition-all duration-300 
-                 ${index === activeIndex ? 'scale-100 opacity-100' : 'scale-80 opacity-70'}`}></div>
-            </div>
-          ))}
+    function CommHighButtonsMobile() {
+      return (
+        <div className="flex gap-20 items-center">
+          <div className="flex gap-2">
+            <ChevronLeftIcon className="h-9 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
+            <ChevronRightIcon className="h-9 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollNext()} />
+          </div>
+          <div className="flex gap-4">
+            <ButtonRed label="Visit Our Blog" to="/Blog" size="S" />
+            <ButtonWhite label="Join Our Newsletter" to="" size="S" />
+          </div>
         </div>
+      )
+    }
+
+
+    return (
+      <div className="flex flex-col gap-5 items-center w-full">
+        <div ref={emblaRef} className="overflow-hidden w-full max-w-full h-90">
+          <div className="flex">
+            {pictures.map((pic, index) => (
+              <div key={index} className="flex-[0_0_60%] min-w-0 flex justify-center relative px-2">
+                <div className={`relative w-full max-w-96 h-80 transition-all duration-300 
+            ${index === activeIndex ? 'scale-100 opacity-100 z-10' : 'scale-90 opacity-50'}`}>
+                  <Image
+                    src={pic}
+                    alt={altDescriptions[index]}
+                    fill
+                    className={`object-cover ${imgStyles}`}
+                    sizes="(max-width: 768px) 100vw, 548px"
+                  />
+                  <div className={`absolute bottom-0 left-0 bg-text-dk-grey/50 w-full h-28 rounded-b-[20px] transition-all duration-300 backdrop-blur-sm pl-3 pt-2`}>
+                    <h3 className={activeIndex === index ? "subheading text-text-lt-grey" : "subheading text-text-grey-muted"}>{events[index][0]}</h3>
+                    <p className={activeIndex === index ? "descriptext text-text-lt-grey-2 mt-2 " : "descriptext text-text-grey-muted mt-2 "}>{events[index][1]}</p>
+                    <p className={activeIndex === index ? "descriptext text-text-lt-grey-2" : "descriptext text-text-grey-muted"}>{events[index][2]}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <CommHighButtonsMobile />
       </div>
     )
   }
@@ -151,10 +166,9 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
   return (
     <>
-      <div className="lg:hidden w-full h-200 flex flex-col items-center gap-5 mt-20">
+      <div className="lg:hidden w-full h-150 flex flex-col items-center gap-5 mt-20">
         <CommHighTitleMobile />
-        <CommHighPicsMobile />
-        <CommHighButtonsMobile />
+        <CommHighPicsMobile events={events} />
       </div>
       <div className="hidden lg:flex mt-20 h-200 w-full pl-24 justify-between items-center">
         <CommHighText events={events} />

@@ -8,9 +8,9 @@ import { Mission } from "@/app/components/Mission";
 import { UnderConstructionPopup } from "../components/UnderConstructionPopup";
 
 const curEvents: Array<[string, string, string]> = [
-  ["Island Conference on Disability and Stem", "Short Description", "Date"],
-  ["GoBabyGo! 2025 at Ithaca College", "Short Description", "Date"],
-  ["Sciencenter Workshop", "Short Description", "Date"],
+  ["Island Conference on Disability and Stem", "The Inclusion in Science Learning Conference", "09/26/2025"],
+  ["GoBabyGo! 2025 at Ithaca College", "Adapting toy cars for children with motor disabilities", "04/12/2025"],
+  ["Sciencenter Workshop", "Circuit workshop to make LED art", "03/22/2025"],
 ]
 
 export default function Home() {

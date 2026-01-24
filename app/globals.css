@@ -23,6 +23,8 @@
   --color-bg-lt-grey: #E5E5E5;
   --color-bg-m-grey: #898989;
   --color-bg-dk-grey: #404040;
+  --color-text-lt-grey: #eeeeee;
+  --color-text-lt-grey-2: #c4c4c4;
   --color-text-grey-muted: #ABABAB;
   --color-text-grey: #828282;
   --color-text-dk-grey: #404040;
@@ -72,7 +74,7 @@
 
   /* do not add color */
   .descriptext {
-    @apply text-base xl:text-lg font-normal leading-[160%];
+    @apply text-sm lg:text-base font-normal leading-[160%];
   }
 
   .cardheading {
@@ -109,15 +111,15 @@
   }
 
   .lgbutton {
-    @apply px-6 lg:px-8 xl:px-12 text-lg xl:text-xl py-3 h-13 min-w-60
+    @apply px-6 lg:px-8 xl:px-12 text-lg xl:text-xl py-3 h-13 min-w-45 lg:min-w-60
   }
 
   .midbutton {
-    @apply px-6 text-lg xl:text-lg py-2 h-11 min-w-30
+    @apply px-4 lg:px-6 text-base xl:text-lg py-2 h-11 min-w-30
   }
 
   .smbutton {
-    @apply px-4 h-9
+    @apply px-4 h-9 text-sm
   }
 }
 

@@ -24,7 +24,7 @@ import HumanEco from "@/public/assets/Landing/Sponsors/human-ecology.png"
 
 const rowStyles = "flex gap-8 justify-center items-center"
 const colStyles = "flex flex-col gap-12 mt-15"
-const imgStyles = "h-17 w-auto cursor-pointer"
+const imgStyles = "h-12 lg:h-17 w-auto cursor-pointer"
 
 function Partners() {
   // Row 1: 4 existing + 2 from row 3 (MountainLakesLibrary, Quorum) = 6 total, scroll right
