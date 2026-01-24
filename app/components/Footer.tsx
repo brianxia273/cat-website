@@ -8,11 +8,11 @@ import Image from "next/image"
 function TopFooter() {
   const router = useRouter()
   const location = usePathname();
-  const iconStyles = "hover:grayscale grayscale-0 hover:brightness-75 brightness-100 transition-all cursor-pointer";
+  const iconStyles = "hover:grayscale grayscale-0 hover:brightness-75 brightness-100 transition-all cursor-pointer scale-90 xl:scale-100";
   return (
-    <div className="h-50 bg-theme-grey flex justify-start px-15">
+    <div className="h-50 bg-theme-grey flex justify-start px-5">
       <div className="flex items-center">
-        <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-40 w-auto cursor-pointer"
+        <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto cursor-pointer"
           onClick={() => {
             if (location === "/") {
               window.scrollTo({ top: 0, behavior: "smooth" });
@@ -21,8 +21,8 @@ function TopFooter() {
             }
           }} />
       </div>
-      <div className="flex flex-col mt-5 ml-25">
-        <h3 className="footerheading">Find Us Online</h3>
+      <div className="flex flex-col mt-7 ml-25 gap-2">
+        <h3 className="footerheading w-50">Find Us Online</h3>
         <div className="flex gap-4.5">
           <img src="/assets/linkedin.svg" alt="Visit Our LinkedIn" className={iconStyles}
             onClick={() => window.open('https://www.linkedin.com/company/cornellassist/', '_blank')} />
@@ -32,7 +32,7 @@ function TopFooter() {
             onClick={() => window.open('https://www.youtube.com/@CornellAssistiveTechnologies', '_blank')} />
         </div>
       </div>
-      <div className="flex flex-col mt-5 ml-80">
+      <div className="flex flex-col mt-7 ml-20 xl:ml-50 gap-2">
         <h3 className="footerheading">Address</h3>
         <p className="subtext">Cornell University Ithaca, NY 14850 </p>
         <a href="mailto:assistivetech@cornell.edu" className="subtext underline underline-offset-3">assistivetech@cornell.edu</a>

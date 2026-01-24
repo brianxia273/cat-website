@@ -62,7 +62,7 @@ export function SupportPage() {
     return (
       <div className="h-65 w-full bg-linear-to-l from-theme-dk-red to-theme-red flex flex-col gap-3 mt-24 universepad pt-12 relative">
         <h1 className="whitemainheading">Support</h1>
-        <p className="whitesubheading">Thank you for your support of our initiative! You can support us by sponsoring us or making a donation.</p>
+        <p className="whitesubtext">Thank you for your support of our initiative! You can support us by sponsoring us or making a donation.</p>
         <FundingTabs className="absolute -bottom-1 left-24" />
       </div>
     )
