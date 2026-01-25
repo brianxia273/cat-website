@@ -47,3 +47,10 @@ export default function Home() {
 // Desktops and monitors
 // 1920 × 1080
 // 2560 × 1440
+
+// Breakpoints
+// sm 640
+// md 768
+// lg 1024
+// xl 1280
+// 2xl 1536
