@@ -44,9 +44,9 @@ export function Navbar() {
 
   function MobileTabs() {
     return (
-      <nav className={`bg-theme-white/80 fixed inset-0 mt-15 sm:mt-23 backdrop-blur-xs
+      <nav className={`bg-theme-white/80 fixed inset-0 mt-15 sm:mt-23 backdrop-blur-xs overflow-y-auto
       ${showMobileTabs ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
-        <div className="flex flex-col gap-10 items-end pr-7 pt-7" >
+        <div className="flex flex-col gap-10 items-end pr-7 py-7" >
           <Tab routeToPath="/" tabName="Home" />
           <Tab routeToPath="/OurWork" tabName="Our Work" />
           <Tab routeToPath="/AboutUs" tabName="About Us" />
@@ -62,7 +62,7 @@ export function Navbar() {
 
   return (
     <>
-      <div className="flex fixed top-0 left-0 w-full z-50 justify-between h-16 sm:h-24 bg-white">
+      <div className="flex fixed top-0 left-0 w-full z-50 justify-between h-16 sm:h-20 md:h-24 bg-white">
         <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto cursor-pointer"
           onClick={() => { router.push("/") }} />
         <nav className="hidden lg:flex justify-end">
