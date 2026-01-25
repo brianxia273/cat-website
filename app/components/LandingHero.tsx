@@ -38,7 +38,7 @@ const HeroGraphic = () => {
 
 const HeroContainer = ({ children }: any) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-16 sm:mt-24 universepad justify-between relative overflow-hidden h-110 sm:h-150 mb-20 lg:mb-0 lg:h-175">
+    <div className="flex flex-col-reverse lg:flex-row mt-16 sm:mt-20 md:mt-24 universepad justify-between relative overflow-hidden h-110 sm:h-150 mb-20 lg:mb-0 lg:h-175">
       <Image src={BlurTL} alt="" height={BlurTL.height / 3} width={BlurTL.width / 3} className="absolute left-0 top-0 -z-10" />
       <Image src={BlurTR} alt="" height={BlurTR.height / 1.5} width={BlurTR.width / 1.5} className="absolute right-0 top-0 -z-10" />
       {children}
