@@ -77,7 +77,7 @@ export function Navbar() {
             <Tab routeToPath="/Support" tabName="Support" />
           </div>
         </nav>
-        <div className="flex items-center pr-5">
+        <div className="flex lg:hidden items-center pr-5">
           <Bars3Icon className="flex lg:hidden h-10 nonActiveStyles" onClick={() => { setShowMobileTabs(!showMobileTabs) }} />
           <MobileTabs />
         </div>
