@@ -50,7 +50,7 @@ function BottomFooter() {
         className="underline underline-offset-3 mt-4.5">
         Equal Education & Employment
       </a>
-      <p className="mt-4.5">This organization is a registered student organization of Cornell University.</p>
+      <p className="mt-4.5 text-center px-2">This organization is a registered student organization of Cornell University.</p>
       <p>© 2025 Cornell Assistive Technologies Project Team.</p>
     </div>
   )
@@ -59,7 +59,7 @@ function BottomFooter() {
 
 export function Footer() {
   return (
-    <div className="flex flex-col mb-10">
+    <div className="flex flex-col mb-4">
       <TopFooter />
       <BottomFooter />
     </div>

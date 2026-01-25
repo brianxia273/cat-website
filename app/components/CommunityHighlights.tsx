@@ -119,7 +119,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
     function CommHighButtonsMobile() {
       return (
-        <div className="flex gap-20 items-center">
+        <div className="flex gap-10 mx-5 sm:gap-20 sm:mx-0 items-center">
           <div className="flex gap-2">
             <ChevronLeftIcon className="h-9 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
             <ChevronRightIcon className="h-9 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollNext()} />
@@ -148,10 +148,10 @@ export function CommunityHighlights({ events }: CommHighProps) {
                     className={`object-cover ${imgStyles}`}
                     sizes="(max-width: 768px) 100vw, 548px"
                   />
-                  <div className={`absolute bottom-0 left-0 bg-text-dk-grey/50 w-full h-28 rounded-b-[20px] transition-all duration-300 backdrop-blur-sm pl-3 pt-2`}>
+                  <div className={`absolute bottom-0 left-0 bg-text-dk-grey/50 w-full h-28 sm:h-28 rounded-b-[20px] transition-all duration-300 backdrop-blur-sm pl-3 pt-2`}>
                     <h3 className={activeIndex === index ? "subheading text-text-lt-grey" : "subheading text-text-grey-muted"}>{events[index][0]}</h3>
                     <p className={activeIndex === index ? "descriptext text-text-lt-grey-2 mt-2 " : "descriptext text-text-grey-muted mt-2 "}>{events[index][1]}</p>
-                    <p className={activeIndex === index ? "descriptext text-text-lt-grey-2" : "descriptext text-text-grey-muted"}>{events[index][2]}</p>
+                    <p className={activeIndex === index ? "descriptext text-text-lt-grey-2 mt-1" : "descriptext text-text-grey-muted"}>{events[index][2]}</p>
                   </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
   return (
     <>
-      <div className="lg:hidden w-full h-150 flex flex-col items-center gap-5 mt-20">
+      <div className="lg:hidden w-full h-130 md:h-150 flex flex-col items-center gap-5 mt-10 sm:mt-20">
         <CommHighTitleMobile />
         <CommHighPicsMobile events={events} />
       </div>

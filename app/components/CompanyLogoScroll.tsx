@@ -100,7 +100,7 @@ export default function CompanyLogoScroll({
                 <span className="text-2xl shrink-0">{typeof company.logo === 'string' ? company.logo : ''}</span>
               )}
               {/* Company Name */}
-              <span className="text-text-dk-grey text-2xl whitespace-nowrap">
+              <span className="text-text-dk-grey text-2xl whitespace-nowrap hidden lg:block">
                 {company.name}
               </span>
             </div>
