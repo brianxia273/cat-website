@@ -1,8 +1,10 @@
+"use client"
 import { ButtonRed, ButtonWhite } from "./Buttons"
 import HeroPic from "@/public/assets/OurWork/hero-pic.png"
 import BlurTL from "@/public/assets/blur-tl.png"
 import BlurTR from "@/public/assets/blur-tr.png"
 import Image from 'next/image';
+import { imgLoadStyles, loadingComplete } from "../utils/imgLoad";
 
 const HeroText = () => {
   return (
@@ -25,14 +27,15 @@ const HeroGraphic = () => {
       <div className="hidden lg:flex items-center">
         <div className="h-80 w-106">
           <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
-            className="rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]
-      origin-right scale-60 lg:scale-75 xl:scale-100" />
+            className={`rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] origin-right scale-60 lg:scale-75 xl:scale-100 ${imgLoadStyles}`}
+            onLoadingComplete={(img) => { loadingComplete(img) }} />
         </div>
       </div>
       <div className="flex lg:hidden items-end justify-center">
         <div className="h-86 w-106 -mb-5 sm:mb-0 origin-bottom scale-50 sm:scale-55 md:scale-60 lg:scale-75 xl:scale-100">
           <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
-            className="rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+            className={`rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
+            onLoadingComplete={(img) => { loadingComplete(img) }} />
         </div>
       </div>
     </>
