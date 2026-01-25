@@ -23,8 +23,8 @@ import ContributionProject from "@/public/assets/Landing/Sponsors/contribution-p
 import HumanEco from "@/public/assets/Landing/Sponsors/human-ecology.png"
 
 const rowStyles = "flex gap-8 justify-center items-center"
-const colStyles = "flex flex-col gap-12 mt-15"
-const imgStyles = "h-10 md:h-12 lg:h-17 w-auto cursor-pointer"
+const colStyles = "flex flex-col sm:gap-0 md:gap-2 lg:gap-6 xl:gap-8 mt-5 sm:mt-10 md:mt-15"
+const imgStyles = "h-7 sm:h-10 md:h-12 lg:h-17 w-auto cursor-pointer"
 
 function Partners() {
   // Row 1: 4 existing + 2 from row 3 (MountainLakesLibrary, Quorum) = 6 total, scroll right
@@ -127,14 +127,15 @@ function Sponsors() {
   )
 }
 
+
 export function PartnersAndSponsors() {
   return (
 
-    <div className="h-230 w-full flex flex-col universepad pt-15">
+    <div className="sm:h-160 md:h-200 lg:h-220 xl:h-230 w-full flex flex-col universepad pt-15">
       <h2 className="heading">Partners & Sponsors</h2>
-      <p className="subtext mt-10 text-center">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
+      <p className="subtext mt-2 sm:mt-6 md:mt-10 text-center">We are dedicated to partnering with various communities to support accessibility and inclusivity. Here are our partners!</p>
       <Partners />
-      <p className="subtext mt-24 text-center">We are so grateful to receive funding to support our mission. Here are our sponsors!</p>
+      <p className="subtext mt-4 sm:mt-12 md:mt-24 text-center">We are so grateful to receive funding to support our mission. Here are our sponsors!</p>
       <Sponsors />
     </div>
   )

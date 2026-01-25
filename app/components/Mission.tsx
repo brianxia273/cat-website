@@ -5,37 +5,55 @@ import ImgT from "@/public/assets/Landing/img-tr.png"
 import ImgB from "@/public/assets/Landing/img-br.png"
 import { loadingComplete, imgLoadStyles } from "../utils/imgLoad";
 
+const imgStyles =
+  "h-35 sm:h-50 w-full xl:h-60 xl:w-85 rounded-t-[20px] sm:rounded-[20px] shadow-[0_-2px_4px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)]";
+
 function MissionMainCard() {
   return (
-    <div className="h-90 xl:h-130 w-full backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] 
-    flex flex-col justify-between rounded-[20px] py-8 px-15 relative" >
-      <div className="flex flex-col">
-        <h2 className="heading">Our Mission</h2>
-        <p className="subtext mt-6">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities and raise awareness of their impact among communities in Ithaca and beyond.</p>
-        <p className="subtext mt-6 w-3/4">We partner with individuals, families, and organizations to engineer accessible, needs-driven solutions.</p>
+    <div className="flex flex-col items-center relative">
+      <Image
+        src={ImgT}
+        alt=""
+        className={`object-cover object-top ${imgStyles} ${imgLoadStyles} sm:hidden`}
+        width={340}
+        height={240}
+        onLoadingComplete={(img) => loadingComplete(img)}
+      />
+      <div className="h-85 sm:h-90 xl:h-130 w-full backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] 
+    flex flex-col justify-between rounded-b-[20px] sm:rounded-[20px] py-2 sm:py-8 px-10 sm:px-15 relative" >
+        <div className="flex flex-col">
+          <h2 className="heading">Our Mission</h2>
+          <p className="subtext mt-2 sm:mt-6">At the Cornell Assistive Technologies Student Project Team, we develop assistive technologies for people with disabilities and raise awareness of their impact among communities in Ithaca and beyond.</p>
+          <p className="subtext mt-4 sm:mt-6 w-3/4">We partner with individuals, families, and organizations to engineer accessible, needs-driven solutions.</p>
+        </div>
+        <div className="gap-6 mb-2 hidden xl:flex">
+          <ButtonRed label="Join Us" to="/JoinUs" />
+          <ButtonWhite label="Meet the Team" to="/AboutUs" />
+        </div>
+        <div className="gap-6 mb-4 sm:hidden flex">
+          <ButtonRed label="Join Us" to="/JoinUs" size="S" />
+          <ButtonWhite label="Meet the Team" to="/AboutUs" size="S" />
+        </div>
+        {/* decorative squares, for large screens */}
+        <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden xl:block absolute right-9 bottom-15" />
+        <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden xl:block absolute right-20 -bottom-10" />
+        {/* same squares for medium screens */}
+        <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden sm:block xl:hidden absolute right-0 top-8 -scale-y-100 scale-[60%]" />
+        <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden sm:block xl:hidden absolute right-5 -top-12 -scale-y-100 scale-[60%]" />
       </div>
-      <div className="gap-6 mb-2 hidden xl:flex">
-        <ButtonRed label="Join Us" to="/JoinUs" />
-        <ButtonWhite label="Meet the Team" to="/AboutUs" />
-      </div>
-      {/* decorative squares, for large screens */}
-      <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden xl:block absolute right-9 bottom-15" />
-      <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden xl:block absolute right-20 -bottom-10" />
-      {/* same squares for smaller screens */}
-      <img src="/assets/Landing/mission-square-t.svg" alt="" className="xl:hidden absolute right-0 top-8 -scale-y-100 scale-[60%]" />
-      <img src="/assets/Landing/mission-square-b.svg" alt="" className="xl:hidden absolute right-5 -top-12 -scale-y-100 scale-[60%]" />
+      {/* same squares for small screens */}
+      <img src="/assets/Landing/mission-square-t.svg" alt="" className="sm:hidden absolute rotate-180 -right-7 bottom-2 -scale-y-100 scale-[40%] z-10" />
+      <img src="/assets/Landing/mission-square-b.svg" alt="" className="sm:hidden absolute rotate-180 -right-7 -bottom-14 -scale-y-100 scale-[40%] z-10" />
     </div>
   )
 }
 function MissionGraphic() {
-  const imgStyles =
-    "h-50 w-full xl:h-60 xl:w-85 rounded-[20px] shadow-[0_-2px_4px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)]";
   return (
     <div className="flex flex-row-reverse justify-between xl:flex-col xl:h-130 gap-8 items-center w-full xl:w-1/3">
-      <div className="flex-1 flex flex-col items-center gap-8 xl:flex-none xl:w-85">
+      <div className="hidden sm:flex flex-1 flex-col items-center gap-8 xl:flex-none xl:w-85">
         <Image
           src={ImgT}
-          alt="Top mission image"
+          alt=""
           className={`object-cover object-top ${imgStyles} ${imgLoadStyles}`}
           width={340}
           height={240}
@@ -46,10 +64,10 @@ function MissionGraphic() {
           <ButtonWhite label="Meet the Team" to="/AboutUs" />
         </div>
       </div>
-      <div className="flex-1 flex flex-col items-center gap-8 xl:flex-none xl:w-85">
+      <div className="hidden sm:flex flex-1 flex-col items-center gap-8 xl:flex-none xl:w-85">
         <Image
           src={ImgB}
-          alt="Bottom mission image"
+          alt=""
           className={`object-cover ${imgStyles} ${imgLoadStyles}`}
           width={340}
           height={240}
