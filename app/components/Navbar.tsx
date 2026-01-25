@@ -62,7 +62,7 @@ export function Navbar() {
 
   return (
     <>
-      <div className="flex fixed top-0 left-0 w-full z-50 justify-between h-24 bg-white">
+      <div className="flex fixed top-0 left-0 w-full z-50 justify-between h-16 sm:h-24 bg-white">
         <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto cursor-pointer"
           onClick={() => { router.push("/") }} />
         <nav className="hidden lg:flex justify-end">
@@ -78,7 +78,7 @@ export function Navbar() {
           </div>
         </nav>
         <div className="flex lg:hidden items-center pr-5">
-          <Bars3Icon className="flex lg:hidden h-10 nonActiveStyles" onClick={() => { setShowMobileTabs(!showMobileTabs) }} />
+          <Bars3Icon className="flex lg:hidden h-8 sm:h-10 nonActiveStyles" onClick={() => { setShowMobileTabs(!showMobileTabs) }} />
           <MobileTabs />
         </div>
       </div>
