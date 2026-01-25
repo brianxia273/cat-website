@@ -82,7 +82,7 @@ function ProjectCard({ title, description1, description2, cta, textLocation, img
       {/* Textbox */}
       <div className="flex flex-col lg:w-1/2 pr-10 py-5 lg:py-13 px-10 h-full">
         <h3 className="cardheading">{title}</h3>
-        <ul className="list-disc list-outside pl-5 space-y-2 lg:mt-6 xl:mt-4">
+        <ul className="list-disc list-outside pl-5 space-y-2 lg:mt-6 xl:mt-8">
           <li className="cardtext mt-3 lg:mt-0">{description1}</li>
           <li className="cardtext mt-5">{description2}</li>
         </ul>

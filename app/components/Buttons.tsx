@@ -22,7 +22,16 @@ const sizeStyles = {
 function onClickNavigation({ to, behav = "Internal", disabled = false, router }: { to: string; behav: string; disabled: boolean; router: ReturnType<typeof useRouter> }) {
   if (!disabled) {
     if (behav === "Scroll") {
-      document.getElementById(to)?.scrollIntoView({ behavior: 'smooth' })
+      const element = document.getElementById(to);
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     } else if (behav === "Internal") {
       router.push(to)
     } else {
