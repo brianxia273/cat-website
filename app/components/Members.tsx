@@ -18,7 +18,6 @@ interface MemberCardInfo extends Member {
 
 interface CreateMemberCardProps {
   name: string;
-  img?: StaticImageData;
 }
 
 interface SectionProps {
@@ -44,14 +43,27 @@ function lookupHelper(name: string): Member {
   }
 };
 
-function createMemberCardInfo({ name, img }: CreateMemberCardProps): MemberCardInfo {
+// function getMemberImage(name: string) {
+//   const [fName, lName] = name.split(" ");
+//   try {
+//     return require(`@/public/assets/AboutUs/ProfilePics/${fName.toLowerCase()}-${lName.toLowerCase()}.png`);
+//   } catch {
+//     return undefined;
+//   }
+// }
+
+function createMemberCardInfo({ name }: CreateMemberCardProps): MemberCardInfo {
   const member = lookupHelper(name);
+  // const img = getMemberImage(name)
+  const img = undefined
   if (img !== undefined) {
+    console.log("Found img")
     return {
       ...member,
       img: img
     }
   } else {
+    console.log("No img")
     return member;
   }
 }
@@ -148,7 +160,7 @@ function MemberCard(member: Pick<MemberCardInfo, "name" | "role" | "img" | "link
   return (
     <div className="h-100 min-w-70 w-70 flex flex-col rounded-[20px] cursor-pointer">
       {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="h-75 w-full rounded-[15px]" /> : <div className="bg-text-grey h-75  w-full rounded-[15px]" />}
+        className="h-75 w-auto rounded-[15px]" /> : <div className="bg-text-grey h-75  w-full rounded-[15px]" />}
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
           <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
