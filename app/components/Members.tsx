@@ -45,19 +45,19 @@ function lookupHelper(name: string): Member {
   }
 };
 
-// function getMemberImage(name: string) {
-//   const [fName, lName] = name.split(" ");
-//   try {
-//     return require(`@/public/assets/AboutUs/ProfilePics/${fName.toLowerCase()}-${lName.toLowerCase()}.png`);
-//   } catch {
-//     return undefined;
-//   }
-// }
+function getMemberImage(name: string) {
+  const [fName, lName] = name.split(" ");
+  try {
+    return require(`@/public/assets/AboutUs/ProfilePics/${fName.toLowerCase()}-${lName.toLowerCase()}.png`);
+  } catch {
+    return undefined;
+  }
+}
 
 function createMemberCardInfo({ name }: CreateMemberCardProps): MemberCardInfo {
   const member = lookupHelper(name);
-  // const img = getMemberImage(name)
-  const img = undefined
+  const img = getMemberImage(name)
+  // const img = undefined
   if (img !== undefined) {
     console.log("Found img")
     return {
@@ -148,6 +148,14 @@ const opsSubteam: MemberCardInfo[] = opsSubteamInfo.map((member) => (createMembe
 const alumni: MemberCardInfo[] = alumniInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
 function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModal: () => void }) {
+  const imgSrc = () => {
+    if (member.img) {
+      return member.img
+    } else {
+      return "/assets/photo-placeholder.png"
+    }
+    
+  }
   return (
     <div className="fixed flex justify-center items-center bg-black/50 inset-0 z-50">
       <div className="bg-white rounded-2xl p-8 max-w-lg w-full relative">
@@ -156,9 +164,8 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
         </button>
 
         <div className="mt-4 flex flex-col items-center">
-          <img src="assets/photo-placeholder.png" className="w-100" />
-          {/* <img src={member.img} className="w-100" alt={`Photo of ${member.name}`}/> */}
-          <div className="mt-4 flex flex-col items-center">
+          <Image src={imgSrc()} width="300" height="300" alt={`Photo of ${member.name}`}/>
+          <div className="mt-4 justify-start">
             <p><span className="font-semibold">Name:</span> {member.name}</p>
             <p><span className="font-semibold">Role:</span> {member.role}</p>
             <p><span className="font-semibold">Year:</span> {member.year}</p>
@@ -181,9 +188,9 @@ function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () =
   const linkedin = member.linkedin
 
   return (
-    <div className="h-100 w-auto flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
+    <div className="h-125 w-auto flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
       {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="h-75 w-full rounded-[15px]" /> : <div className="bg-text-grey h-75 w-full rounded-[15px]" />}
+        className="h-100 w-auto rounded-[15px]" /> : <div className="bg-text-grey h-120 w-full rounded-[15px]" />}
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
           <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
