@@ -8,6 +8,14 @@
     "linkedin": "https://www.linkedin.com/in/richard-p-ballard/"
   },
   {
+    "name": "Abigail Jin",
+    "role": "Operations Lead",
+    "year": "2029",
+    "major": "Economics",
+    "college": "College of Arts & Sciences",
+    "linkedin": "https://www.linkedin.com/in/abigail-jin/"
+  },
+  {
     "name": "Andy Chen",
     "role": "Operations-Engineering Liaison",
     "year": "2028",
@@ -227,6 +235,14 @@
     "linkedin": "https://www.linkedin.com/in/rachel-turney-20786033a/"
   },
   {
+    "name": "William Chen",
+    "role": "Operations",
+    "year": "",
+    "major": "",
+    "college": "College of Agriculture and Life Sciences",
+    "linkedin": ""
+  },
+  {
     "name": "William Ellis",
     "role": "New Member Education Lead",
     "year": "2026",
@@ -399,5 +415,13 @@
     "major": "Computer Science & Math",
     "college": "College of Arts and Sciences",
     "linkedin": "https://www.linkedin.com/in/mihika-mukherjee-2343bb295/"
+  },
+  {
+    "name": "Alum",
+    "role": "",
+    "year": "",
+    "major": "",
+    "college": "",
+    "linkedin": ""
   }
 ]

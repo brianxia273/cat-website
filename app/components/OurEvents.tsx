@@ -1,3 +1,4 @@
+"use client"
 import { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import { ButtonRed, ButtonWhite } from './Buttons';
@@ -34,22 +35,32 @@ function OurEventsTopText() {
 }
 
 function EventCard({ title, description, img, redirect }: EventCardProps) {
+  const handleRedirect = () => {
+    if (redirect && typeof redirect == "string") {
+      window.location.href = redirect;
+    } 
+  }
+
   return (
-    <div className="flex gap-10">
-      {/* image */}
-      {(img === undefined) ?
-        <div className="bg-theme-grey rounded-[20px] h-40 w-40 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]" /> :
-        <Image src={img.pic} alt={img.alt} height={img.pic.height} width={img.pic.width}
-          className="rounded-[20px] h-40 w-40 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]" />}
-      {/* text */}
-      <div className="flex flex-col justify-between">
-        <div className="flex flex-col">
-          <h3 className="cardheading">{title}</h3>
-          <p className="cardtext mt-3">{description}</p>
+    <div onClick={handleRedirect}>
+      <div className="flex gap-10 pt-4 pb-4 border-t-1 border-gray-500 hover:bg-gray-100 cursor-pointer">
+        {/* image */}
+        {(img === undefined) ?
+          <div className="bg-theme-grey rounded-[20px] h-50 w-50 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]" /> :
+          <Image src={img.pic} alt={img.alt} height={img.pic.height} width={img.pic.width}
+            className="rounded-[20px] h-40 w-40 drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]" />}
+        {/* text */}
+        <div className="flex flex-col justify-between">
+          <div className="flex flex-col">
+            <h3 className="cardheading">{title}</h3>
+            <p className="cardtext mt-3">{description}</p>
+          </div>
+          {/* {redirect !== undefined && <ButtonRed label="Learn More" to={redirect} size="S" />} */}
         </div>
-        {redirect !== undefined && <ButtonRed label="Learn More" to={redirect} size="S" />}
       </div>
+
     </div>
+
   )
 }
 
@@ -66,12 +77,12 @@ export function OurEvents() {
   return (
     <div className="flex flex-col h-auto w-full universepad py-12 xl:py-18 2xl:py-24" id="our-events">
       <OurEventsTopText />
-      <div className="flex flex-col gap-15 my-20">
-        {/* {allEvents.map((item, index) => {
+      <div className="flex flex-col my-20">
+        {allEvents.map((item, index) => {
           return (
             <EventCard key={`event-${index}`} title={item.title} description={item.description} img={item?.img} redirect={item?.redirect} />
           )
-        })} */}
+        })}
       </div>
       <OurEventsBottomText />
     </div>
