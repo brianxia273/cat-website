@@ -108,8 +108,8 @@ export function OurProjects() {
           </div>
         </div>
       </div>
-      <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10 -mb-[0.75px]" />
-      <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10" />
+      <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10 w-full -mb-[0.75px]" />
+      <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10 w-full" />
     </div>
   )
 }
