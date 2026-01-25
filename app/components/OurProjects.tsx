@@ -68,24 +68,22 @@ function OurProjectsTopText() {
 }
 
 function ProjectCard({ title, description1, description2, cta, textLocation, img, index = 0 }: ProjectCardProps) {
-  const solidBlobStyles = `-z-10 ${centered} ${rotationClasses[index % 4]}`
-  const clearBlobStyles = `-z-20 ${centered} ${negRotationClasses[index % 4]}`
   return (
-    <div className={`flex justify-between items-center ${(textLocation === "Right") ? "flex-row" : "flex-row-reverse"}`}>
+    <div className={`flex h-130 lg:h-110 justify-between items-center flex-col-reverse ${(textLocation === "Right") ? "lg:flex-row" : "lg:flex-row-reverse"} backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] rounded-[20px]`}>
       {/* Image */}
-      <div className="relative h-full w-127">
-        {(img === undefined) ?
-          <div className={`bg-theme-grey rounded-[20px] h-87 w-127 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${centered}`} /> :
+      <div className="relative h-full w-full lg:w-1/2">
+        {/* {(img === undefined) ?
+          <div className={`bg-theme-grey rounded-[20px] h-87 w-127 drop-shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] ${centered} lg:scale-70 xl:scale-100`} /> :
           <Image src={img.pic} alt={img.alt} height={img.pic.height} width={img.pic.width}
-            className={`rounded-[20px] h-87 w-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${centered}`} />}
-        <img src="/assets/OurWork/blob-solid.svg" className={solidBlobStyles} />
-        <img src="/assets/OurWork/blob-clear.svg" className={clearBlobStyles} />
+            className={`rounded-[20px] h-87 w-auto drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${centered}`} />} */}
+        <div className={`hidden lg:block bg-text-grey ${(textLocation === "Right") ? "lg:rounded-l-[20px]" : "lg:rounded-r-[20px]"} z-10 h-full lg:rounded-br-0`}></div>
+        <div className={`lg:hidden bg-text-grey rounded-b-[20px] z-10 h-full lg:rounded-br-0`}></div>
       </div>
       {/* Textbox */}
-      <div className="flex flex-col py-8 w-150 h-110">
+      <div className="flex flex-col lg:w-1/2 pr-10 py-5 lg:py-13 px-10 h-full">
         <h3 className="cardheading">{title}</h3>
-        <ul className="list-disc list-outside pl-5 space-y-2 mt-4">
-          <li className="cardtext">{description1}</li>
+        <ul className="list-disc list-outside pl-5 space-y-2 lg:mt-6 xl:mt-4">
+          <li className="cardtext mt-3 lg:mt-0">{description1}</li>
           <li className="cardtext mt-5">{description2}</li>
         </ul>
         {cta !== undefined && <ButtonRed label={cta.label} to={cta.to} />}
@@ -97,9 +95,9 @@ function ProjectCard({ title, description1, description2, cta, textLocation, img
 export function OurProjects() {
   return (
     <div className="flex flex-col">
-      <div className="h-auto w-full flex flex-col universepad py-24" id="our-projects">
+      <div className="h-auto w-full flex flex-col universepad py-8 2xl:py-24" id="our-projects">
         <OurProjectsTopText />
-        <div className="flex flex-col gap-25 mt-20">
+        <div className="flex flex-col gap-15 lg:gap-25 mt-20">
           {allProjects.map((item, index) => {
             const isEven = index % 2 === 0;
             return (<ProjectCard key={`project-${index}`} title={item.title} description1={item.description1}
@@ -110,7 +108,7 @@ export function OurProjects() {
           </div>
         </div>
       </div>
-      <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10" />
+      <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10 -mb-[0.75px]" />
       <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10" />
     </div>
   )

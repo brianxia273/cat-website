@@ -50,7 +50,6 @@
     @apply text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-8 md:leading-10 lg:leading-16;
   }
 
-
   .subtext {
     @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-text-dk-grey leading-[160%];
   }
@@ -78,11 +77,11 @@
   }
 
   .cardheading {
-    @apply text-2xl font-semibold tracking-[-0.02em] text-theme-red;
+    @apply text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-semibold tracking-[-0.02em] text-theme-red;
   }
 
   .cardtext {
-    @apply text-base leading-normal text-text-dk-grey
+    @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl leading-normal text-text-dk-grey
   }
 
   .teamheading {
@@ -111,7 +110,7 @@
   }
 
   .lgbutton {
-    @apply px-4 md:px-6 lg:px-8 xl:px-12 text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-2xl py-0 sm:py-3 h-10 sm:h-13 2xl:h-16 min-w-20 sm:min-w-35 md:min-w-45 lg:min-w-60
+    @apply px-4 md:px-6 lg:px-8 xl:px-12 text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-2xl py-0 sm:py-3 h-9 sm:h-13 2xl:h-16 min-w-20 sm:min-w-35 md:min-w-45 xl:min-w-60
   }
 
   .midbutton {

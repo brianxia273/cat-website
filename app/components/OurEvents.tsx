@@ -64,14 +64,14 @@ function OurEventsBottomText() {
 
 export function OurEvents() {
   return (
-    <div className="flex flex-col h-auto w-full universepad py-24" id="our-events">
+    <div className="flex flex-col h-auto w-full universepad py-12 xl:py-18 2xl:py-24" id="our-events">
       <OurEventsTopText />
       <div className="flex flex-col gap-15 my-20">
-        {allEvents.map((item, index) => {
+        {/* {allEvents.map((item, index) => {
           return (
             <EventCard key={`event-${index}`} title={item.title} description={item.description} img={item?.img} redirect={item?.redirect} />
           )
-        })}
+        })} */}
       </div>
       <OurEventsBottomText />
     </div>

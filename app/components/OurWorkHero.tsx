@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 const HeroText = () => {
   return (
-    <div className="flex flex-col mt-40">
-      <h1 className="mainheading w-140 mb-6">Our Work</h1>
-      <p className="subtext w-140 mb-16">
+    <div className="flex flex-col items-center lg:items-start lg:mt-40 w-full lg:w-1/2 xl:w-140 mb-5 lg:mb-0">
+      <h1 className="mainheading mb-2 md:mb-4 lg:mb-6">Our Work</h1>
+      <p className="subtext mb-6 md:mb-10 lg:mb-16 text-center lg:text-start">
         Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
       </p>
       <div className="flex gap-10">
@@ -21,21 +21,34 @@ const HeroText = () => {
 
 const HeroGraphic = () => {
   return (
-    <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
-      className="mt-36 h-80 w-auto rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+    <>
+      <div className="hidden lg:flex items-center">
+        <div className="h-80 w-106">
+          <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
+            className="rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]
+      origin-right scale-60 lg:scale-75 xl:scale-100" />
+        </div>
+      </div>
+      <div className="flex lg:hidden items-end justify-center">
+        <div className="h-86 w-106 -mb-5 sm:mb-0 origin-bottom scale-50 sm:scale-55 md:scale-60 lg:scale-75 xl:scale-100">
+          <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
+            className="rounded-[20px] hover:scale-102 transition-transform duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        </div>
+      </div>
+    </>
   )
 }
 
 const HeroContainer = ({ children }: any) => {
   return (
     <div className="flex flex-col">
-      <div className="h-140 mt-24 universepad flex justify-between relative overflow-hidden">
+      <div className="h-90 sm:h-105 md:h-130 lg:h-140 mt-16 sm:mt-20 md:mt-24 universepad flex flex-col-reverse lg:flex-row justify-between relative overflow-hidden">
         <Image src={BlurTL} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute left-0 top-0 -z-10" />
         <Image src={BlurTR} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute right-0 top-0 -z-10" />
         {children}
       </div>
       <img src="/assets/OurWork/wave-solid-top.svg" className="-z-10" />
-      <img src="/assets/OurWork/wave-solid-bottom.svg" className="-z-10" />
+      <img src="/assets/OurWork/wave-solid-bottom.svg" className="-z-10 -mt-[0.75px]" />
     </div>
   )
 }
