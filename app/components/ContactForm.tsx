@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import BlurM from "@/public/assets/blur-m.png"
 import BlurTR from "@/public/assets/blur-tr.png"
+import { sendEmail } from "@/app/actions/sendEmail";
 
 
 interface SocialTagProps {
@@ -56,13 +57,15 @@ function ContactHeader({ className }: { className?: string }) {
 }
 
 function TextField({ label, size, val, setter, className }: TextFieldProps) {
+  const inputId = `field-${label.toLowerCase().replace(/\s+/g, '-')}`;
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
-      <p className="formlabel text-text-dk-grey">{label}
+      <label htmlFor={inputId} className="formlabel text-text-dk-grey">{label}
         <span className="text-theme-red ml-1">*</span>
-      </p>
+      </label>
       {size === "Line" ? (
         <input
+          id={inputId}
           type="text"
           value={val}
           onChange={event => { setter(event.target.value) }}
@@ -71,6 +74,7 @@ function TextField({ label, size, val, setter, className }: TextFieldProps) {
         />
       ) : (
         <textarea
+          id={inputId}
           value={val}
           rows={10}
           onChange={(event) => setter(event.target.value)}
@@ -88,45 +92,112 @@ function Form({ className }: { className?: string }) {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error" | null; message: string }>({ type: null, message: "" });
 
   const isValidForm = firstName.trim() !== "" && lastName.trim() !== "" && email.trim() !== "" && message.trim() !== ""
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    if (!isValidForm || isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const result = await sendEmail({
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim(),
+        message: message.trim(),
+      });
+
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully."
+        });
+        // Reset form
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: result.error || "Failed to send message. Please try again."
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An unexpected error occurred. Please try again later."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className={`flex flex-col bg-theme-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] h-160 w-141 rounded-[20px] px-10 pt-4 ${className}`}>
       <h2 className="heading">Send a Message</h2>
-      <div className="flex pt-6 gap-10">
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <div className="flex pt-6 gap-10">
+          <TextField
+            label="First Name"
+            size="Line"
+            val={firstName}
+            setter={setFirstName}
+          />
+          <TextField
+            label="Last Name"
+            size="Line"
+            val={lastName}
+            setter={setLastName}
+          />
+        </div>
         <TextField
-          label="First Name"
+          label="Email"
           size="Line"
-          val={firstName}
-          setter={setFirstName}
+          val={email}
+          setter={setEmail}
+          className="mt-4"
         />
         <TextField
-          label="Last Name"
-          size="Line"
-          val={lastName}
-          setter={setLastName}
+          label="Message"
+          size="Area"
+          val={message}
+          setter={setMessage}
+          className="mt-4"
         />
-      </div>
-      <TextField
-        label="Email"
-        size="Line"
-        val={email}
-        setter={setEmail}
-        className="mt-4"
-      />
-      <TextField
-        label="Message"
-        size="Area"
-        val={message}
-        setter={setMessage}
-        className="mt-4"
-      />
-      <button type="submit" className="mt-6 w-full h-10 text-center formlabel text-theme-white bg-theme-red rounded-[1000px]
-      hover:bg-theme-dk-red cursor-pointer transition-colors duration-200"
-        disabled={!isValidForm}>
-        Submit
-      </button>
+        
+        {/* Status message */}
+        {submitStatus.type && (
+          <div className={`mt-4 p-3 rounded-sm text-sm ${
+            submitStatus.type === "success" 
+              ? "bg-green-50 text-green-800 border border-green-200" 
+              : "bg-red-50 text-red-800 border border-red-200"
+          }`}>
+            {submitStatus.message}
+          </div>
+        )}
+        
+        <button 
+          type="submit" 
+          className={`mt-6 w-full h-10 text-center formlabel text-theme-white bg-theme-red rounded-[1000px]
+          transition-colors duration-200 ${
+            !isValidForm || isSubmitting
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-theme-dk-red cursor-pointer"
+          }`}
+          disabled={!isValidForm || isSubmitting}
+        >
+          {isSubmitting ? "Sending..." : "Submit"}
+        </button>
+      </form>
     </div>
   );
 }
