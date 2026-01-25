@@ -44,7 +44,7 @@ export function Navbar() {
 
   function MobileTabs() {
     return (
-      <nav className={`bg-theme-white/80 fixed inset-0 mt-16 sm:mt-24 backdrop-blur-xs
+      <nav className={`bg-theme-white/80 fixed inset-0 mt-15 sm:mt-23 backdrop-blur-xs
       ${showMobileTabs ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'}`}>
         <div className="flex flex-col gap-10 items-end pr-7 pt-7" >
           <Tab routeToPath="/" tabName="Home" />
