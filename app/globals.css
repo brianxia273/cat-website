@@ -34,7 +34,7 @@
 
 @layer utilities {
   .mainheading {
-    @apply text-4xl xl:text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-14 lg:leading-16;
+    @apply text-3xl md:text-4xl xl:text-5xl font-semibold tracking-[-0.02em] text-theme-red leading-14 lg:leading-16;
   }
 
 
@@ -47,20 +47,20 @@
   }
 
   .heading {
-    @apply text-3xl xl:text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-16;
+    @apply text-2xl md:text-3xl xl:text-4xl font-semibold tracking-[-0.02em] text-theme-red leading-12 md:leading-16;
   }
 
 
   .subtext {
-    @apply text-base lg:text-lg xl:text-xl text-text-dk-grey leading-[160%];
+    @apply sm:text-sm md:text-base lg:text-lg xl:text-xl text-text-dk-grey leading-[160%];
   }
 
   .footerheading {
-    @apply text-lg xl:text-xl font-semibold text-theme-red;
+    @apply text-base md:text-lg xl:text-xl font-semibold text-theme-red;
   }
 
   .footerbottomtext {
-    @apply text-sm xl:text-base leading-normal text-text-grey text-center
+    @apply text-xs md:text-sm xl:text-base leading-normal text-text-dk-grey
   }
 
   .ctaheading {
@@ -69,12 +69,12 @@
 
   /* do not add color  */
   .subheading {
-    @apply text-lg xl:text-xl font-medium
+    @apply text-base md:text-lg xl:text-xl font-medium
   }
 
   /* do not add color */
   .descriptext {
-    @apply text-sm lg:text-base font-normal leading-[160%];
+    @apply text-xs md:text-sm lg:text-base font-normal leading-[160%];
   }
 
   .cardheading {
@@ -111,7 +111,7 @@
   }
 
   .lgbutton {
-    @apply px-6 lg:px-8 xl:px-12 text-lg xl:text-xl py-3 h-13 min-w-45 lg:min-w-60
+    @apply px-4 md:px-6 lg:px-8 xl:px-12 text-base md:text-lg xl:text-xl py-3 h-13 min-w-35 md:min-w-45 lg:min-w-60
   }
 
   .midbutton {

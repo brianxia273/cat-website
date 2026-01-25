@@ -78,7 +78,7 @@ export function Navbar() {
           </div>
         </nav>
         <div className="flex items-center pr-5">
-          <Bars3Icon className="flex lg:hidden h-13 nonActiveStyles" onClick={() => { setShowMobileTabs(!showMobileTabs) }} />
+          <Bars3Icon className="flex lg:hidden h-10 nonActiveStyles" onClick={() => { setShowMobileTabs(!showMobileTabs) }} />
           <MobileTabs />
         </div>
       </div>

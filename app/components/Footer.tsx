@@ -10,8 +10,8 @@ function TopFooter() {
   const location = usePathname();
   const iconStyles = "hover:grayscale grayscale-0 hover:brightness-75 brightness-100 transition-all cursor-pointer scale-90 xl:scale-100";
   return (
-    <div className="h-50 bg-theme-grey flex justify-start px-5">
-      <div className="flex items-center">
+    <div className="h-40 lg:h-50 bg-theme-grey flex justify-center gap-20 lg:justify-between lg:gap-0 px-5 w-full">
+      <div className="hidden lg:flex items-center ">
         <Image src={CATLogo} alt="Cornell Assistive Technologies Logo" height={CATLogo.height} width={CATLogo.width} className="h-auto w-auto cursor-pointer"
           onClick={() => {
             if (location === "/") {
@@ -21,21 +21,23 @@ function TopFooter() {
             }
           }} />
       </div>
-      <div className="flex flex-col mt-7 ml-25 gap-2">
-        <h3 className="footerheading w-50">Find Us Online</h3>
-        <div className="flex gap-4.5">
-          <img src="/assets/linkedin.svg" alt="Visit Our LinkedIn" className={iconStyles}
-            onClick={() => window.open('https://www.linkedin.com/company/cornellassist/', '_blank')} />
-          <img src="/assets/instagram.svg" alt="Visit Our Instagram" className={iconStyles}
-            onClick={() => window.open('https://www.instagram.com/cornellassist/', '_blank')} />
-          <img src="/assets/youtube.svg" alt="Visit Our Youtube" className={iconStyles}
-            onClick={() => window.open('https://www.youtube.com/@CornellAssistiveTechnologies', '_blank')} />
+      <div className="flex w-full mx-20 justify-between lg:justify-center lg:w-auto lg:mx-0">
+        <div className="flex flex-col mt-7 lg:ml-10 xl:ml-25 gap-2">
+          <h3 className="footerheading w-50">Find Us Online</h3>
+          <div className="flex gap-4.5">
+            <img src="/assets/linkedin.svg" alt="Visit Our LinkedIn" className={iconStyles}
+              onClick={() => window.open('https://www.linkedin.com/company/cornellassist/', '_blank')} />
+            <img src="/assets/instagram.svg" alt="Visit Our Instagram" className={iconStyles}
+              onClick={() => window.open('https://www.instagram.com/cornellassist/', '_blank')} />
+            <img src="/assets/youtube.svg" alt="Visit Our Youtube" className={iconStyles}
+              onClick={() => window.open('https://www.youtube.com/@CornellAssistiveTechnologies', '_blank')} />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col mt-7 ml-20 xl:ml-50 gap-2">
-        <h3 className="footerheading">Address</h3>
-        <p className="subtext">Cornell University Ithaca, NY 14850 </p>
-        <a href="mailto:assistivetech@cornell.edu" className="subtext underline underline-offset-3">assistivetech@cornell.edu</a>
+        <div className="flex flex-col mt-7 ml-0 lg:ml-10 xl:ml-25 gap-2 lg:mr-20">
+          <h3 className="footerheading">Address</h3>
+          <p className="footerbottomtext">Cornell University Ithaca, NY 14850 </p>
+          <a href="mailto:assistivetech@cornell.edu" className="footerbottomtext underline underline-offset-3">assistivetech@cornell.edu</a>
+        </div>
       </div>
     </div>
   )
