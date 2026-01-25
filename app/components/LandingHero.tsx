@@ -18,7 +18,7 @@ const HeroText = () => {
 }
 
 const HeroGraphic = () => {
-  const detailScaleStyles = "xl:origin-right scale-40 sm:scale-50 lg:scale-70 xl:scale-80 2xl:scale-100"
+  const detailScaleStyles = "xl:origin-right scale-45 sm:scale-50 lg:scale-70 xl:scale-80 2xl:scale-100"
 
   return (
     <div className="w-full h-full flex justify-center lg:contents">
