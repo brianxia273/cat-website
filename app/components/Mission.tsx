@@ -35,8 +35,8 @@ function MissionMainCard() {
           <ButtonWhite label="Meet the Team" to="/AboutUs" size="S" />
         </div>
         {/* decorative squares, for large screens */}
-        <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden xl:block absolute right-9 bottom-15" />
-        <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden xl:block absolute right-20 -bottom-10" />
+        <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden xl:block absolute right-0 bottom-15 scale-[80%]" />
+        <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden xl:block absolute right-6 -bottom-10 scale-[80%]" />
         {/* same squares for medium screens */}
         <img src="/assets/Landing/mission-square-t.svg" alt="" className="hidden sm:block xl:hidden absolute right-0 top-8 -scale-y-100 scale-[60%]" />
         <img src="/assets/Landing/mission-square-b.svg" alt="" className="hidden sm:block xl:hidden absolute right-5 -top-12 -scale-y-100 scale-[60%]" />
@@ -49,7 +49,7 @@ function MissionMainCard() {
 }
 function MissionGraphic() {
   return (
-    <div className="flex flex-row-reverse justify-between xl:flex-col xl:h-130 gap-8 items-center w-full xl:w-1/3">
+    <div className="flex flex-row-reverse justify-between xl:flex-col xl:h-130 gap-8 items-center w-full xl:w-1/3 2xl:w-auto">
       <div className="hidden sm:flex flex-1 flex-col items-center gap-8 xl:flex-none xl:w-85">
         <Image
           src={ImgT}

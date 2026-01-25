@@ -31,3 +31,19 @@ export default function Home() {
   );
 }
 
+
+// Phones
+// 375 × 667
+// 414 × 896
+
+// Tablets and IPads
+// 768 × 1024
+// 1024 × 768
+
+// Laptops
+// 1280 × 800
+// 1366 × 768
+
+// Desktops and monitors
+// 1920 × 1080
+// 2560 × 1440

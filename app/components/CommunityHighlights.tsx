@@ -33,7 +33,7 @@ function CommHighPics({ activeTab }: { activeTab: number }) {
 
   return (
     <div className="h-140 w-161 relative">
-      <div className={`h-100 w-118 absolute overflow-hidden top-1/2 right-17.5 xl:right-28 -translate-y-1/2 z-10 ${imgStyles} ${scaleStyles}`}>
+      <div className={`h-100 2xl:h-128 w-118 2xl:w-152 absolute overflow-hidden top-1/2 right-17.5 xl:right-28 -translate-y-1/2 z-10 ${imgStyles} ${scaleStyles}`}>
         {pictures.map((pic, index) => {
           return (
             <Image
@@ -48,8 +48,8 @@ function CommHighPics({ activeTab }: { activeTab: number }) {
           )
         })}
       </div>
-      <img src="/assets/Landing/com-frame.svg" alt="" className={`absolute top-1/2 right-14.5 xl:right-24 -translate-y-1/2 w-126 min-w-126 h-auto ${scaleStyles}`} />
-      <img src="/assets/Landing/com-bg.svg" alt="" className={`absolute -top-20 right-0 -z-10 h-160 ${bgScaleStyles}`} />
+      <img src="/assets/Landing/com-frame.svg" alt="" className={`absolute top-1/2 right-14.5 xl:right-24 -translate-y-1/2 w-126 2xl:w-180 min-w-126 h-auto ${scaleStyles}`} />
+      <img src="/assets/Landing/com-bg.svg" alt="" className={`absolute -top-20 right-0 -z-10 h-160 2xl:h-200 ${bgScaleStyles}`} />
     </div>
   )
 }
@@ -68,7 +68,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
 
   function GalleryTabs({ events }: CommHighProps) {
     return (
-      <div className="mt-12 flex flex-col gap-14">{
+      <div className="mt-12 flex flex-col gap-14 2xl:gap-20">{
         events.map(([subtitle, descrip, date], index) => {
           return (
             <div key={index} className="flex flex-col cursor-pointer w-124"
@@ -76,7 +76,7 @@ export function CommunityHighlights({ events }: CommHighProps) {
               <h3 className={activeTab === index ? "subheading text-text-dk-grey" : "subheading text-text-lt-grey-2"}>{subtitle}</h3>
               <p className={activeTab === index ? "descriptext text-text-grey mt-2 " : "descriptext text-text-lt-grey-2 mt-2 "}>{descrip}</p>
               <p className={activeTab === index ? "descriptext text-text-grey" : "descriptext text-text-lt-grey-2"}>{date}</p>
-              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 w-100 ${activeTab === index ? "" : "opacity-10"}`} />
+              <img src="/assets/Landing/line-full.svg" alt="" className={`mt-3 w-100 2xl:w-130 ${activeTab === index ? "" : "opacity-10"}`} />
             </div>
           )
         })}</div>
