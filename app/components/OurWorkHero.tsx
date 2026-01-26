@@ -32,7 +32,7 @@ const HeroGraphic = () => {
         </div>
       </div>
       <div className="flex lg:hidden items-end justify-center">
-        <div className="h-86 w-106 -mb-5 sm:mb-0 origin-bottom scale-50 sm:scale-55 md:scale-60 lg:scale-75 xl:scale-100">
+        <div className="h-80 sm:h-86 w-106 -mb-5 sm:mb-0 origin-bottom scale-80 sm:scale-55 md:scale-60 lg:scale-75 xl:scale-100">
           <Image src={HeroPic} alt="Cornell Assistive Technologies team member working on the sensory watch project" height={HeroPic.height} width={HeroPic.width}
             className={`rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
             onLoadingComplete={(img) => { loadingComplete(img) }} />
@@ -45,13 +45,15 @@ const HeroGraphic = () => {
 const HeroContainer = ({ children }: any) => {
   return (
     <div className="flex flex-col">
-      <div className="h-90 sm:h-105 md:h-130 lg:h-140 mt-16 sm:mt-20 md:mt-24 universepad flex flex-col-reverse lg:flex-row justify-between relative overflow-hidden">
+      <div className="h-120 sm:h-105 md:h-130 lg:h-140 mt-16 sm:mt-20 md:mt-24 universepad flex flex-col-reverse lg:flex-row sm:justify-between relative overflow-hidden">
         <Image src={BlurTL} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute left-0 top-0 -z-10" />
         <Image src={BlurTR} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute right-0 top-0 -z-10" />
         {children}
       </div>
-      <img src="/assets/OurWork/wave-solid-top.svg" className="-z-10 w-full" />
-      <img src="/assets/OurWork/wave-solid-bottom.svg" className="-z-10 -mt-[0.75px] w-full" />
+      <div className="flex flex-col mt-10 sm:mt-0">
+        <img src="/assets/OurWork/wave-solid-top.svg" className="-z-10 w-full" />
+        <img src="/assets/OurWork/wave-solid-bottom.svg" className="-z-10 -mt-[0.75px] w-full" />
+      </div>
     </div>
   )
 }
