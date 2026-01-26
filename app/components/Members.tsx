@@ -78,6 +78,7 @@ const teamLeadsInfo: CreateMemberCardProps[] = [
   { name: 'William Ellis' },
   { name: 'Savaas Iqbal' },
   { name: 'Josephine Kelly' },
+  { name: 'Zaid Al-Shoha' },
   { name: 'Richard Ballard' },
   { name: 'Abigail Jin' }
 ]
@@ -116,7 +117,6 @@ const eduOutSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Morgan Ogata' },
   { name: 'Rachel Turney' },
   { name: 'Vanessa Chen Hsieh' },
-  { name: 'Zaid Al-Shoha' },
   { name: 'Omar Alkhitan' },
   { name: 'Chloe Jung' },
   { name: 'Scott Zinman' },
