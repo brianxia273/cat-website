@@ -7,10 +7,25 @@ import { Footer } from "@/app/components/Footer";
 import { Mission } from "@/app/components/Mission";
 import { UnderConstructionPopup } from "../components/UnderConstructionPopup";
 
-const curEvents: Array<[string, string, string]> = [
-  ["ISLAND Conference", "Inclusion in Science Learning Conference", "09/26/2025"],
-  ["GoBabyGo! 2025", "Adapting toy cars for children with motor disabilities", "04/12/2025"],
-  ["Sciencenter Workshop", "Hands-on circuit workshop to make LED art", "03/22/2025"],
+const curEvents: Array<[string, { short: string; long: string }, string]> = [
+  ["ISLAND Conference",
+    {
+      short: "Inclusion in Science Learning Conference",
+      long: "Our team participated in the Inclusion in Science Learning Conference, which highlights work that removes barriers to access for people with disabilities"
+    },
+    "09/26/2025"],
+  ["GoBabyGo! 2025",
+    {
+      short: "Adapting toy cars for children with motor disabilities",
+      long: "Our annual event where we adapt toy cars for children with motor disabilities, in collaboration with Ithaca College Occupational Therapists"
+    },
+    "04/12/2025"],
+  ["Sciencenter Workshop",
+    {
+      short: "Hands-on circuit workshop to make LED art",
+      long: "We taught a hands-on circuit workshop at Ithaca's Sciencenter, introducing basic circuitry to make LED art"
+    },
+    "03/22/2025"],
 ]
 
 export default function Home() {
