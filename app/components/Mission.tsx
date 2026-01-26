@@ -6,7 +6,7 @@ import ImgB from "@/public/assets/Landing/img-br.png"
 import { loadingComplete, imgLoadStyles } from "../utils/imgLoad";
 
 const imgStyles =
-  "h-35 sm:h-50 w-full xl:h-60 xl:w-85 rounded-t-[20px] sm:rounded-[20px] shadow-[0_-2px_4px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)]";
+  "h-35 sm:h-50 w-full xl:h-60 xl:w-85 2xl:h-70 2xl:w-100 rounded-t-[20px] sm:rounded-[20px] shadow-[0_-2px_4px_rgba(0,0,0,0.06),0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)]";
 
 function MissionMainCard() {
   return (
@@ -19,7 +19,7 @@ function MissionMainCard() {
         height={240}
         onLoadingComplete={(img) => loadingComplete(img)}
       />
-      <div className="h-85 sm:h-90 xl:h-130 w-full backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] 
+      <div className="h-85 sm:h-90 xl:h-130 2xl:h-150 w-full backdrop-blur-[2px] bg-theme-white/90 shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] 
     flex flex-col justify-between rounded-b-[20px] sm:rounded-[20px] py-2 sm:py-8 px-10 sm:px-15 relative" >
         <div className="flex flex-col">
           <h2 className="heading">Our Mission</h2>
@@ -49,7 +49,7 @@ function MissionMainCard() {
 }
 function MissionGraphic() {
   return (
-    <div className="flex flex-row-reverse justify-between xl:flex-col xl:h-130 gap-8 items-center w-full xl:w-1/3 2xl:w-auto">
+    <div className="flex flex-row-reverse justify-between xl:flex-col xl:h-130 2xl:h-150 gap-8 items-center w-full xl:w-1/3">
       <div className="hidden sm:flex flex-1 flex-col items-center gap-8 xl:flex-none xl:w-85">
         <Image
           src={ImgT}
@@ -85,7 +85,7 @@ function MissionGraphic() {
 
 export function Mission() {
   return (
-    <div className="xl:h-130 flex flex-col-reverse xl:flex-row gap-8 items-center universepad relative">
+    <div className="xl:h-130 2xl:h-140 flex flex-col-reverse xl:flex-row gap-8 items-center universepad relative">
 
       <MissionGraphic />
       <MissionMainCard />

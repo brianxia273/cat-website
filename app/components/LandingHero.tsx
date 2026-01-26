@@ -14,15 +14,16 @@ const HeroText = () => {
       <p className="subtext w-full mb-8 sm:mb-10 lg:mb-16 text-center lg:text-left">We create assistive technologies and teach inclusive design to empower communities in Ithaca and beyond.</p>
       <ButtonRed label="Explore Our Work" to="/OurWork" />
     </div>
+
   )
 }
 
 const HeroGraphic = () => {
-  const detailScaleStyles = "xl:origin-right scale-45 sm:scale-50 lg:scale-70 xl:scale-80 2xl:scale-100"
+  const detailScaleStyles = "xl:origin-right scale-55 sm:scale-50 lg:scale-70 xl:scale-80 2xl:scale-90"
 
   return (
     <div className="w-full h-full flex justify-center lg:contents">
-      <div className={`relative w-150 h-140 ${detailScaleStyles} mt-20 sm:mt-45 -ml-15 lg:ml-0 lg:mt-0`}>
+      <div className={`relative w-150 h-140 ${detailScaleStyles} mt-30 -ml-30 sm:mt-45 lg:ml-0 lg:mt-0`}>
         {/* No alts for decoration */}
         <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute left-24.25 top-32`} />
         <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute left-17 top-29`} />
@@ -38,7 +39,7 @@ const HeroGraphic = () => {
 
 const HeroContainer = ({ children }: any) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-16 sm:mt-20 md:mt-24 universepad justify-between relative overflow-hidden h-110 sm:h-150 mb-20 lg:mb-0 lg:h-175">
+    <div className="flex flex-col-reverse lg:flex-row mt-16 sm:mt-20 md:mt-24 universepad justify-between relative overflow-hidden h-135 sm:h-150 lg:h-175 2xl:h-190 mb-20 lg:mb-0 ">
       <Image src={BlurTL} alt="" height={BlurTL.height / 3} width={BlurTL.width / 3} className="absolute left-0 top-0 -z-10" />
       <Image src={BlurTR} alt="" height={BlurTR.height / 1.5} width={BlurTR.width / 1.5} className="absolute right-0 top-0 -z-10" />
       {children}
