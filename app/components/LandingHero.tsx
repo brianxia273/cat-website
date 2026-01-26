@@ -19,27 +19,56 @@ const HeroText = () => {
 }
 
 const HeroGraphic = () => {
-  const detailScaleStyles = "xl:origin-right scale-55 sm:scale-50 lg:scale-70 xl:scale-80 2xl:scale-90"
-
+  const detailScaleStyles = "origin-bottom lg:origin-right scale-70 sm:scale-80 md:scale-85 lg:scale-70 xl:scale-80 2xl:scale-90"
+  // scale-70 sm:scale-55 md:scale-60
   return (
-    <div className="w-full h-full flex justify-center lg:contents">
-      <div className={`relative w-150 h-140 ${detailScaleStyles} mt-30 -ml-30 sm:mt-45 lg:ml-0 lg:mt-0`}>
-        {/* No alts for decoration */}
-        <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute left-24.25 top-32`} />
-        <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute left-17 top-29`} />
-        <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={310} width={466}
-          className={`absolute left-32 top-48 rounded-[1000px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
+    <>
+      <div className="hidden lg:block w-1/2 xl:w-132 2xl:w-132 relative">
+        <div className={`relative right-0 top-0 ${detailScaleStyles}`}>
+          {/* No alts for decoration */}
+          <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute left-7.25 top-32`} />
+          <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute left-0 top-29`} />
+          <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={310} width={466}
+            className={`absolute left-15 top-48 rounded-[1000px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
 
-          onLoadingComplete={(img) => { loadingComplete(img) }} />
-        <img src="/assets/Landing/hero-group.svg" alt="" className={`scale-70 sm:scale-100 absolute left-40 -z-10`} />
+            onLoadingComplete={(img) => { loadingComplete(img) }} />
+          <img src="/assets/Landing/hero-group.svg" alt="" className={`scale-70 sm:scale-100 absolute left-23 -z-10`} />
+        </div>
       </div>
-    </div>
+      <div className="lg:hidden w-4/5 sm:w-2/3 md:w-3/5 relative">
+        <div className={`relative right-0 top-0 ${detailScaleStyles}`}>
+          {/* No alts for decoration */}
+          <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute -left-0.75 top-32`} />
+          <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute -left-8 top-29`} />
+          <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={310} width={466}
+            className={`absolute left-7 top-44 sm:top-48 rounded-[1000px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
+            onLoadingComplete={(img) => { loadingComplete(img) }} />
+          <img src="/assets/Landing/hero-group.svg" alt="" className={`scale-65 md:scale-70 lg:scale-100 absolute sm:-top-6 md:top-0 left-10 md:left-8 -z-10`} />
+        </div>
+      </div>
+    </>
+    // <>
+    //   {/* <div className="w-full h-full lg:contents"> */}
+    //   <div className={`w-90 lg:w-150 ${detailScaleStyles} -mt-10 sm:mt-45 md:mt-55 lg:-mt-10 flex justify-center items-center`}>
+    //     <div className="relative h-full w-full">
+    //       {/* No alts for decoration */}
+    //       <img src="/assets/Landing/hero-blob-solid.svg" alt="" className={`absolute left-7.25 top-32`} />
+    //       <img src="/assets/Landing/hero-blob-clear.svg" alt="" className={`absolute left-0 top-29`} />
+    //       <Image src={HeroPic} alt="Cornell Assistive Technologies team member helping a student" height={310} width={466}
+    //         className={`absolute left-15 top-48 rounded-[1000px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] ${imgLoadStyles}`}
+
+    //         onLoadingComplete={(img) => { loadingComplete(img) }} />
+    //       <img src="/assets/Landing/hero-group.svg" alt="" className={`scale-70 sm:scale-100 absolute left-23 -z-10`} />
+    //     </div>
+    //     {/* </div> */}
+    //   </div>
+    // </>
   )
 }
 
 const HeroContainer = ({ children }: any) => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-16 sm:mt-20 md:mt-24 universepad justify-between relative overflow-hidden h-135 sm:h-150 lg:h-175 2xl:h-190 mb-20 lg:mb-0 ">
+    <div className="flex flex-col-reverse lg:flex-row mt-10 sm:mt-16 lg:mt-24 universepad justify-between items-center lg:items-start relative overflow-hidden h-140 sm:h-175 md:h-190 lg:h-155 xl:h-170 2xl:h-190 mb-20 lg:mb-0 ">
       <Image src={BlurTL} alt="" height={BlurTL.height / 3} width={BlurTL.width / 3} className="absolute left-0 top-0 -z-10" />
       <Image src={BlurTR} alt="" height={BlurTR.height / 1.5} width={BlurTR.width / 1.5} className="absolute right-0 top-0 -z-10" />
       {children}
