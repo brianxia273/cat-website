@@ -154,7 +154,7 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
     } else {
       return "/assets/photo-placeholder.png"
     }
-    
+
   }
   return (
     <div className="fixed flex justify-center items-center bg-black/50 inset-0 z-50">
@@ -164,7 +164,7 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
         </button>
 
         <div className="mt-4 flex flex-col items-center">
-          <Image src={imgSrc()} width="300" height="300" alt={`Photo of ${member.name}`}/>
+          <Image src={imgSrc()} width="300" height="300" alt={`Photo of ${member.name}`} />
           <div className="mt-4 justify-start">
             <p><span className="font-semibold">Name:</span> {member.name}</p>
             <p><span className="font-semibold">Role:</span> {member.role}</p>
@@ -181,7 +181,7 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
   )
 }
 
-function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () => void}) {
+function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () => void }) {
   const name = member.name
   const role = member.role
   const img = member.img
@@ -190,7 +190,7 @@ function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () =
   return (
     <div className="h-125 w-auto flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
       {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="h-100 w-auto rounded-[15px]" /> : <div className="bg-text-grey h-120 w-full rounded-[15px]" />}
+        className="min-h-100 max-h-100 w-full object-cover rounded-[15px]" /> : <div className="bg-text-grey h-120 w-full rounded-[15px]" />}
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
           <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
@@ -224,7 +224,7 @@ function TeamSection({ title, team, clickMember }: SectionProps) {
 
 
 export function Members() {
-  const [selectedMember, setSelectedMember] = useState<MemberCardInfo | null > (null);
+  const [selectedMember, setSelectedMember] = useState<MemberCardInfo | null>(null);
   const clickMember = (member: MemberCardInfo) => {
     setSelectedMember(member)
   }
@@ -244,7 +244,7 @@ export function Members() {
       <TeamSection title="Operations Subteam" team={opsSubteam} clickMember={clickMember} />
       <TeamSection title="Our Alumni" team={alumni} clickMember={clickMember} />
 
-      
+
       <img src="/assets/AboutUs/wave-top.svg" alt="" className="absolute bottom-full left-0 w-full scale-x-[-1]" />
       {modal}
     </div>
