@@ -5,6 +5,32 @@
   --foreground: #171717;
   --red: #DD2233;
   --dk-red: #a81c29;
+  
+  /* Hero Graphic Layout Variables */
+  --hero-graphic-container-width: 150;
+  --hero-graphic-container-height: 140;
+  --hero-graphic-margin-top-base: 30;
+  --hero-graphic-margin-top-sm: 45;
+  --hero-graphic-margin-top-md: 55;
+  --hero-graphic-margin-top-lg: 10;
+  --hero-graphic-margin-left-base: 30;
+  --hero-graphic-margin-left-md: 0;
+  --hero-graphic-margin-left-lg: 0;
+  --hero-graphic-scale-base: 0.55;
+  --hero-graphic-scale-sm: 0.55;
+  --hero-graphic-scale-md: 0.60;
+  --hero-graphic-scale-lg: 0.70;
+  --hero-graphic-scale-xl: 0.80;
+  --hero-graphic-scale-2xl: 0.90;
+  --hero-blob-solid-left: 24.25;
+  --hero-blob-solid-top: 32;
+  --hero-blob-clear-left: 17;
+  --hero-blob-clear-top: 29;
+  --hero-pic-left: 32;
+  --hero-pic-top: 48;
+  --hero-group-scale-base: 0.70;
+  --hero-group-scale-sm: 1;
+  --hero-group-left: 40;
 }
 
 @theme inline {
