@@ -241,7 +241,7 @@ export function Members() {
     <div className="bg-bg-dk-grey b-10 mt-5 relative pt-5">
       <TeamSection title="Our Team Leads" team={teamLeads} clickMember={clickMember} />
       <TeamSection title="Engineering Subteam" team={engSubteam} clickMember={clickMember} />
-      <TeamSection title="Education & Outreach Subteam" team={eduOutSubteam} clickMember={clickMember} />
+      <TeamSection title="Outreach & Education Subteam" team={eduOutSubteam} clickMember={clickMember} />
       <TeamSection title="Operations Subteam" team={opsSubteam} clickMember={clickMember} />
       <TeamSection title="Our Alumni" team={alumni} clickMember={clickMember} />
 
