@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import data from "@/public/assets/AboutUs/team.json";
-import { memo, useState } from "react";
+import { useState } from "react";
 
 interface Member {
   name: string;
