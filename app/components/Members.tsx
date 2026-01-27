@@ -120,13 +120,13 @@ const eduOutSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Vanessa Chen Hsieh' },
   { name: 'Omar Alkhitan' },
   { name: 'Chloe Jung' },
-  { name: 'Scott Zinman' },
   { name: 'Neel Behari' }
 ]
 
 const opsSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Andy Chen' },
   { name: 'Ariana Sanchez' },
+  { name: 'Scott Zinman' },
   { name: 'Sonya Zheng' },
   { name: 'Jason Yang' },
   { name: 'Dina Shlufman' },
