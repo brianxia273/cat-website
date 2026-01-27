@@ -86,6 +86,7 @@ const teamLeadsInfo: CreateMemberCardProps[] = [
 const engSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Shannon Lin' },
   { name: 'Alan Wu' },
+  { name: 'Annie Park' },
   { name: 'Rishabh Dholakia' },
   { name: 'Emily Wang' },
   { name: 'Liz Pappania' },
