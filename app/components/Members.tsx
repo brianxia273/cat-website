@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import data from "@/public/assets/AboutUs/team.json";
-import { memo, useState } from "react";
+import { useState } from "react";
 
 interface Member {
   name: string;
@@ -46,7 +46,8 @@ function lookupHelper(name: string): Member {
 };
 
 function getMemberImage(name: string) {
-  const [fName, lName] = name.split(" ");
+  const fullName = name.split(" ");
+  const [fName, lName] = [fullName[0], fullName[fullName.length - 1]];
   try {
     return require(`@/public/assets/AboutUs/ProfilePics/${fName.toLowerCase()}-${lName.toLowerCase()}.png`);
   } catch {
