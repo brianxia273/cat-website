@@ -69,10 +69,11 @@ function OurProjectsTopText() {
 
 
 export function OurProjects() {
-
   function ProjectCard({ projects }: { projects: ProjectCardProps[] }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' })
     const [activeTab, setActiveTab] = useState(0)
+    const [curPicIdx, setCurPicIdx] = useState(0);
+
     useEffect(() => {
       if (!emblaApi) return
 
@@ -83,12 +84,15 @@ export function OurProjects() {
       return (): void => { emblaApi.off('select', onSelect) }
     }, [emblaApi])
 
+    useEffect(() => {
+      setCurPicIdx(0);
+    }, [activeTab])
+
     return (
       <div className="flex flex-col">
         <div className="overflow-hidden flex" ref={emblaRef}>
           <div className="flex">
             {projects.map((project, index) => {
-              const [curPicIdx, setCurPicIdx] = useState(0);
               return (
                 <div key={`project-${index}`} className="flex-[0_0_100%] min-w-0 flex flex-col md:flex-row items-center md:items-start h-130 2xl:h-140 md:justify-end gap-10 xl:gap-12 2xl:gap-14">
                   <div className="h-full w-[50%] relative rounded-[20px] overflow-hidden">
@@ -121,7 +125,6 @@ export function OurProjects() {
                           </div>
                         </div>
                       ))}
-                      {/* map other imgs */}
                     </div>
                     {/* text */}
                     <div className="flex flex-col text-center md:text-start">
