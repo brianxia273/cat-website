@@ -113,7 +113,7 @@ export function SupportPage() {
         <ButtonRed label="See Wishlist" to="https://www.amazon.com/hz/wishlist/ls/13KDRAOU6ZAPR?ref_=wl_share" size="M" />
         <h3 className="subtext font-bold mt-8">Donate With Card</h3>
         <p className="subtext">If you would like to donate via card, you can navigate to our <a href="https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=16421&cid=27217&dids=5596&sort=1&bledit=1" className="underline underline-offset-2">Giving to Cornell</a> page.</p>
-        <p className="subtext mb-6">From here, Giving to Cornell will assist you in safely transferring the funds to our Cornell Assistive Technologies internal account.</p>
+        <p className="subtext mb-6">From here, Giving to Cornell will guide you in safely transferring the funds to our Cornell Assistive Technologies internal account.</p>
         <ButtonRed label="Visit Giving to Cornell" to="https://securelb.imodules.com/s/1717/giving/interior.aspx?sid=1717&gid=2&pgid=16421&cid=27217&dids=5596&sort=1&bledit=1" size="M" />
       </div>
     </div>;

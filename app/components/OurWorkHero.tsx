@@ -11,7 +11,7 @@ const HeroText = () => {
     <div className="flex flex-col items-center lg:items-start lg:mt-40 w-full lg:w-1/2 xl:w-140 mb-5 lg:mb-0">
       <h1 className="mainheading mb-2 md:mb-4 lg:mb-6">Our Work</h1>
       <p className="subtext mb-6 md:mb-10 lg:mb-16 text-center lg:text-start">
-        Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
+        Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education.
       </p>
       <div className="hidden lg:flex gap-10">
         <ButtonRed label="Our Projects" to="our-projects" behav="Scroll" />
