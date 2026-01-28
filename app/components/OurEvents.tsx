@@ -75,7 +75,7 @@ function OurEventsBottomText() {
 
 export function OurEvents() {
   return (
-    <div className="flex flex-col h-auto w-full universepad py-12 xl:py-18 2xl:py-24" id="our-events">
+    <div className="flex flex-col h-auto w-full universepad py-12 xl:py-18 2xl:py-10" id="our-events">
       <OurEventsTopText />
       <div className="flex flex-col my-20">
         {allEvents.map((item, index) => {
