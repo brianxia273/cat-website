@@ -105,7 +105,7 @@ export function OurProjects() {
                     ))}
                   </div>
                   {/* rightside content and selecting photo */}
-                  <div className="flex flex-col justify-between w-[50%]">
+                  <div className="flex flex-col justify-between w-[50%] h-full">
                     <div className="flex flex-row justify-center md:flex-col md:justify-start gap-6">
                       {project.imgs.map((item, index) => (
                         <div key={`subpic-${index}`}>
