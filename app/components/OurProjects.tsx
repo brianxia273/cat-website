@@ -28,7 +28,7 @@ const project1: ProjectCardProps = {
   title: "Tactile Coding Blocks",
   description1: "Touch-friendly code blocks with Braille labels and unique textures, enabling visually impaired learners to explore programming through touch",
   imgs: [{ pic: Tcb1, alt: "A team member opening a tactile coding blocks kit" }, { pic: Tcb2, alt: "An example of code written using tacile coding blocks." }],
-  cta: { label: "Visit the Project Website", to: "https://tactile-coding-blocks-unified-websi.vercel.app/" },
+  cta: { label: "Visit Project's Website", to: "https://tactile-coding-blocks-unified-websi.vercel.app/" },
 }
 
 const project2: ProjectCardProps = {
@@ -62,7 +62,7 @@ function OurProjectsTopText() {
   return (
     <div className="flex flex-col">
       <h2 className="heading">Our Projects</h2>
-      <p className="subtext mt-3">Take a look at some of our featured projects we're currently working on!</p>
+      <p className="subtext mt-3 -mb-4 sm:mb-0">Take a look at some of our featured projects we're currently working on!</p>
     </div>
   )
 }
