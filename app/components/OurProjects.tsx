@@ -88,6 +88,18 @@ export function OurProjects() {
       setCurPicIdx(0);
     }, [activeTab])
 
+    function ProjectButtons({ className }: { className?: string }) {
+      return (
+        <div className="flex gap-10 self-center mt-10 sm:mt-12 md:mt-15 items-center">
+          <ChevronLeftIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
+          <p className="subtext">
+            Project <span className="font-medium">{activeTab + 1}</span> of <span className="font-medium">{projects.length}</span>
+          </p>
+          <ChevronRightIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollNext()} />
+        </div>
+      )
+    }
+
     return (
       <div className="flex flex-col">
         <div className="overflow-hidden flex" ref={emblaRef}>
@@ -131,11 +143,16 @@ export function OurProjects() {
                     {/* text */}
                     <div className="flex flex-col text-center lg:text-start mt-10 lg:mt-0 items-center lg:items-start">
                       <h3 className="cardheading">{project.title}</h3>
-                      <p className="mt-5 cardtext max-w-[50%] sm:max-w-[75%] md:max-w-none">{project.description1}</p>
-                      {project.description2 && <p className="cardtext mt-3 max-w-[50%] sm:max-w-[75%] md:max-w-none">{project.description2}</p>}
+                      <p className="mt-5 cardtext max-w-[50%] sm:max-w-[75%] lg:max-w-none">{project.description1}</p>
+                      {project.description2 && <p className="cardtext mt-3 max-w-[50%] sm:max-w-[75%] lg:max-w-none">{project.description2}</p>}
                       {project.cta !== undefined &&
                         <div className="mt-5">
-                          <ButtonRed label={project.cta.label} to={project.cta.to} behav='External' size="M" />
+                          <div className="hidden md:block">
+                            <ButtonRed label={project.cta.label} to={project.cta.to} behav='External' size="M" />
+                          </div>
+                          <div className="block md:hidden">
+                            <ButtonRed label={project.cta.label} to={project.cta.to} behav='External' size="S" />
+                          </div>
                         </div>}
                     </div>
                   </div>
@@ -144,13 +161,7 @@ export function OurProjects() {
             })}
           </div>
         </div >
-        <div className="flex gap-10 self-center mt-15 items-center">
-          <ChevronLeftIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
-          <p className="subtext">
-            Project <span className="font-medium">{activeTab + 1}</span> of <span className="font-medium">{projects.length}</span>
-          </p>
-          <ChevronRightIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollNext()} />
-        </div>
+        <ProjectButtons />
       </div >
     )
   }
