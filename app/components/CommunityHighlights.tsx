@@ -54,16 +54,17 @@ export function CommunityHighlights({ events }: CommHighProps) {
             <ChevronLeftIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
             <ChevronRightIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollNext()} />
           </div>
+          {/* Uncomment once blog and newsletter are finished */}
           {/* medium buttons for larger screens */}
-          <div className="hidden xl:flex gap-4">
+          {/* <div className="hidden xl:flex gap-4">
             <ButtonRed label="Visit Our Blog" to="/Blog" size="M" />
             <ButtonWhite label="Join Our Newsletter" to="" size="M" />
-          </div>
+          </div> */}
           {/* small buttons for smaller screens */}
-          <div className="flex xl:hidden gap-4">
+          {/* <div className="flex xl:hidden gap-4">
             <ButtonRed label="Visit Our Blog" to="/Blog" size="S" />
             <ButtonWhite label="Join Our Newsletter" to="" size="S" />
-          </div>
+          </div> */}
         </div>
       )
     }
