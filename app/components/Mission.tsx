@@ -23,7 +23,7 @@ function MissionMainCard() {
     flex flex-col justify-between rounded-b-[20px] sm:rounded-[20px] py-2 sm:py-8 px-10 sm:px-15 relative" >
         <div className="flex flex-col">
           <h2 className="heading">Our Mission</h2>
-          <p className="subtext mt-2 sm:mt-6">We’re a student-led team at Cornell working with community partners to design assistive technologies and promote accessibility for people with disabilities in Ithaca and beyond.</p>
+          <p className="subtext mt-2 sm:mt-6">We are a student-led team working with community partners to design assistive technologies and promote accessibility for people with disabilities in Ithaca and beyond.</p>
           <p className="subtext mt-4 sm:mt-6 w-3/4">We work with individuals, families, and organizations to create accessible solutions and educational opportunities.</p>
         </div>
         <div className="gap-6 mb-2 hidden xl:flex">
