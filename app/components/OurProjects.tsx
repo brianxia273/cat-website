@@ -27,29 +27,29 @@ interface ProjectCardProps {
 const project1: ProjectCardProps = {
   title: "Tactile Coding Blocks",
   description1: "Touch-friendly code blocks with Braille labels and unique textures, enabling visually impaired learners to explore programming through touch",
-  imgs: [{ pic: Tcb1, alt: "" }, { pic: Tcb2, alt: "" }],
-  cta: { label: "Learn More", to: "https://tactile-coding-blocks-unified-websi.vercel.app/" },
+  imgs: [{ pic: Tcb1, alt: "A team member opening a tactile coding blocks kit" }, { pic: Tcb2, alt: "An example of code written using tacile coding blocks." }],
+  cta: { label: "Visit the Project Website", to: "https://tactile-coding-blocks-unified-websi.vercel.app/" },
 }
 
 const project2: ProjectCardProps = {
   title: "Urinary Drainage Bag",
   description1: "A urinary drainage bag designed for practicality and dignity, offering a lightweight, durable, and leak-resistant solution.",
   description2: "The reusable system includes a custom remote-controlled clamp, allowing easy repeated open-and-close cycles for daily use",
-  imgs: [{ pic: Bag2, alt: "" }, { pic: Bag1, alt: "" }],
+  imgs: [{ pic: Bag2, alt: "A close-up photo of the urinary drainage bag's clamp" }, { pic: Bag1, alt: "Team members working on the urinary drainage bag" }],
 }
 
 const project3: ProjectCardProps = {
   title: "Sensory Music Touchpad",
   description1: "A lap touchpad that lets users with hearing impairments feel music through vibrations",
   description2: "Melodies and rhythms are translated into pulse patterns, making music accessible and enjoyable for everyone",
-  imgs: [{ pic: Touchpad1, alt: "" }, { pic: Touchpad2, alt: "" }],
+  imgs: [{ pic: Touchpad1, alt: "Team members building 2 sensory music touchpads" }, { pic: Touchpad2, alt: "A close-up photo of the sensory music touchpad" }],
 }
 
 const project4: ProjectCardProps = {
   title: "Smart Wheelchair",
   description1: "An electric wheelchair controlled through brain–computer interfaces, under development to expand accessible mobility.",
   description2: "The system currently supports remote control and vision-based control modes.",
-  imgs: [{ pic: Chair1, alt: "" }],
+  imgs: [{ pic: Chair1, alt: "A team member testing the smart wheelchair" }],
 }
 
 
@@ -62,7 +62,7 @@ function OurProjectsTopText() {
   return (
     <div className="flex flex-col">
       <h2 className="heading">Our Projects</h2>
-      <p className="subtext mt-3">See what we're building!</p>
+      <p className="subtext mt-3">Take a look at some of our featured projects we're currently working on!</p>
     </div>
   )
 }
@@ -162,12 +162,12 @@ export function OurProjects() {
         <div className="flex flex-col gap-15 xl:gap-25 mt-15">
           <ProjectCard projects={allProjects} />
           <div className="flex justify-center">
-            <ButtonWhite label="See All Our Projects" to="/assets/OurWork/Extensive-Documentation-of-CAT-Projects.pdf" behav="External" />
+            <ButtonWhite label="Explore All Projects We've Built" to="/assets/OurWork/Extensive-Documentation-of-CAT-Projects.pdf" behav="External" />
           </div>
         </div>
       </div>
-      <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10 w-full -mb-[0.75px]" />
-      <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10 w-full" />
+      {/* <img src="/assets/OurWork/wave2-solid-top.svg" className="-z-10 w-full -mb-[0.75px]" />
+      <img src="/assets/OurWork/wave2-solid-bottom.svg" className="-z-10 w-full" /> */}
     </div>
   )
 }

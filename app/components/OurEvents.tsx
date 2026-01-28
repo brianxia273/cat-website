@@ -38,7 +38,7 @@ function EventCard({ title, description, img, redirect }: EventCardProps) {
   const handleRedirect = () => {
     if (redirect && typeof redirect == "string") {
       window.location.href = redirect;
-    } 
+    }
   }
 
   return (
@@ -84,7 +84,8 @@ export function OurEvents() {
           )
         })}
       </div>
-      <OurEventsBottomText />
+      {/* wait until blog page is finished */}
+      {/* <OurEventsBottomText /> */}
     </div>
   )
 }
