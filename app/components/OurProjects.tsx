@@ -60,7 +60,7 @@ const allProjects = [project1, project2, project3, project4];
 
 function OurProjectsTopText() {
   return (
-    <div className="flex flex-col universepad">
+    <div className="flex flex-col">
       <h2 className="heading">Our Projects</h2>
       <p className="subtext mt-3">See what we're building!</p>
     </div>
