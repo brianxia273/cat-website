@@ -13,9 +13,13 @@ const HeroText = () => {
       <p className="subtext mb-6 md:mb-10 lg:mb-16 text-center lg:text-start">
         Our teams at Cornell Assistive Technologies design adaptive technologies and foster partnerships to expand access to assistive solutions and STEM education
       </p>
-      <div className="flex gap-10">
+      <div className="hidden lg:flex gap-10">
         <ButtonRed label="Our Projects" to="our-projects" behav="Scroll" />
         <ButtonWhite label="Our Events" to="our-events" behav="Scroll" />
+      </div>
+      <div className="flex lg:hidden gap-10">
+        <ButtonRed label="Our Projects" to="our-projects" behav="Scroll" size="M" />
+        <ButtonWhite label="Our Events" to="our-events" behav="Scroll" size="M" />
       </div>
     </div>
   )
@@ -50,7 +54,8 @@ const HeroContainer = ({ children }: any) => {
         <Image src={BlurTR} alt="" height={BlurTL.height / 2} width={BlurTL.width / 2} className="absolute right-0 top-0 -z-10" />
         {children}
       </div>
-      <div className="flex flex-col mt-10 sm:mt-0">
+      <div className="block mt-8 sm:mt-15 md:mt-20 lg:hidden" />
+      <div className="hidden lg:flex flex-col mt-20 lg:mt-0">
         <img src="/assets/OurWork/wave-solid-top.svg" className="-z-10 w-full" />
         <img src="/assets/OurWork/wave-solid-bottom.svg" className="-z-10 -mt-[0.75px] w-full" />
       </div>
