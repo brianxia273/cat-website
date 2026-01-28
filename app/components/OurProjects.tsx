@@ -94,8 +94,8 @@ export function OurProjects() {
           <div className="flex">
             {projects.map((project, index) => {
               return (
-                <div key={`project-${index}`} className="flex-[0_0_100%] min-w-0 flex flex-col md:flex-row items-center md:items-start h-130 2xl:h-140 md:justify-end gap-10 xl:gap-12 2xl:gap-14">
-                  <div className="h-full w-[50%] relative rounded-[20px] overflow-hidden">
+                <div key={`project-${index}`} className="flex-[0_0_100%] min-w-0 flex flex-col lg:flex-row items-center lg:items-start h-130 2xl:h-140 lg:justify-end gap-3 lg:gap-10 xl:gap-12 2xl:gap-14 px-4">
+                  <div className="h-full w-[50%] sm:w-[80%] lg:max-h-none lg:w-[50%] relative rounded-[20px] overflow-hidden">
                     {project.imgs.map((item, index) => (
                       <Image
                         key={index}
@@ -109,8 +109,8 @@ export function OurProjects() {
                     ))}
                   </div>
                   {/* rightside content and selecting photo */}
-                  <div className="flex flex-col justify-between w-[50%] md:h-full">
-                    <div className="flex flex-row justify-center md:flex-col md:justify-start gap-6">
+                  <div className="flex flex-col justify-between w-full lg:w-[50%] lg:h-full">
+                    <div className="flex flex-row justify-center lg:flex-col lg:justify-start gap-6">
                       {project.imgs.map((item, index) => (
                         <div key={`subpic-${index}`}>
                           <div className="h-12 w-18 xl:h-14 xl:w-20 2xl:h-16 2xl:w-22 relative rounded-lg overflow-hidden drop-shadow-[0_1px_2px_rgba(0,0,0,0.06),0_12px_24px_rgba(0,0,0,0.08)] cursor-pointer brightness-90"
@@ -120,19 +120,19 @@ export function OurProjects() {
                               alt={item.alt}
                               fill
                               priority={index === activeTab && index === 0}
-                              loading={index === activeTab ? "eager" : "lazy"} className={`object-cover`} />
+                              // loading={index === activeTab ? "eager" : "lazy"}
+                              className={`object-cover`}
+                            />
                             {index === curPicIdx && <div className="absolute inset-0 bg-white/50 rounded-lg pointer-events-none" />}
                           </div>
                         </div>
                       ))}
                     </div>
                     {/* text */}
-                    <div className="flex flex-col text-center md:text-start">
+                    <div className="flex flex-col text-center lg:text-start mt-10 lg:mt-0 items-center lg:items-start">
                       <h3 className="cardheading">{project.title}</h3>
-                      <ul className="mt-4 lg:mt-6 xl:mt-5">
-                        <li className="cardtext">{project.description1}</li>
-                        {project.description2 && <li className="cardtext mt-3">{project.description2}</li>}
-                      </ul>
+                      <p className="mt-5 cardtext max-w-[50%] sm:max-w-[75%] md:max-w-none">{project.description1}</p>
+                      {project.description2 && <p className="cardtext mt-3 max-w-[50%] sm:max-w-[75%] md:max-w-none">{project.description2}</p>}
                       {project.cta !== undefined &&
                         <div className="mt-5">
                           <ButtonRed label={project.cta.label} to={project.cta.to} behav='External' size="M" />
@@ -144,7 +144,7 @@ export function OurProjects() {
             })}
           </div>
         </div >
-        <div className="flex gap-10 self-center mt-15">
+        <div className="flex gap-10 self-center mt-15 items-center">
           <ChevronLeftIcon className="h-9 2xl:h-12 cursor-pointer text-text-grey hover:text-text-dk-grey" onClick={() => emblaApi?.scrollPrev()} />
           <p className="subtext">
             Project <span className="font-medium">{activeTab + 1}</span> of <span className="font-medium">{projects.length}</span>
@@ -156,10 +156,10 @@ export function OurProjects() {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       <div className="h-auto w-full flex flex-col universepad py-8 2xl:py-24" id="our-projects">
         <OurProjectsTopText />
-        <div className="flex flex-col gap-15 xl:gap-25 mt-15">
+        <div className="flex flex-col gap-15 xl:gap-25 mt-15 items-center">
           <ProjectCard projects={allProjects} />
           <div className="flex justify-center">
             <ButtonWhite label="Explore All Projects We've Built" to="/assets/OurWork/Extensive-Documentation-of-CAT-Projects.pdf" behav="External" />
