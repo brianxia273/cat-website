@@ -39,9 +39,9 @@ function ContactHeader({ className }: { className?: string }) {
   return (
     <div className={`relative ${className}`}>
       <Image src={BlurM} alt="" height={BlurM.height} width={BlurM.width} className="absolute left-1/2 -translate-x-1/2 -bottom-75 -z-10" />
-      <img src="/assets/Contact/blob-bg.svg" alt="" className="absolute left-1/2 -translate-x-1/2 -top-10 w-full -z-10"></img>
+      <img src="/assets/Contact/blob-bg.svg" alt="" className="absolute left-1/2 -translate-x-1/2 -top-10 w-full -z-10 scale-y-1100 scale-x-500 sm:scale-x-125 md:scale-x-100 xl:scale-y-100 lg:scale-y-160 md:scale-y-300 sm:scale-y-400"></img>
       {/* Note the heading and socialtags arent meant to be aligned */}
-      <div className={`h-60 w-full universepad flex justify-between`}>
+      <div className={`h-60 w-full universepad flex flex-col gap-5 sm:flex-row sm:gap-0 justify-between `}>
         <div className="flex flex-col gap-3">
           <h1 className="whitemainheading pt-12">Contact Us</h1>
           <p className="whitesubtext">Interested in collaborating or sharing your insights? Reach out to us.</p>
@@ -142,10 +142,11 @@ function Form({ className }: { className?: string }) {
   };
 
   return (
-    <div className={`flex flex-col bg-theme-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] h-160 w-141 rounded-[20px] px-10 pt-4 ${className}`}>
+    <div className={`flex flex-col bg-theme-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] h-160 lg:w-141 md:w-130 sm:w-120 w-80 rounded-[20px] px-10 pt-4 ${className}`}>
       <h2 className="heading">Send a Message</h2>
       <form onSubmit={handleSubmit} className="flex flex-col">
-        <div className="flex pt-6 gap-10">
+        {/* <div className="flex pt-6 gap-10"> */}
+        <div className="flex flex-col sm:flex-row sm:pt-6 sm:gap-10">
           <TextField
             label="First Name"
             size="Line"
@@ -204,12 +205,12 @@ function Form({ className }: { className?: string }) {
 
 export function ContactForm() {
   return (
-    <div className="h-220 mt-24 relative overflow-hidden">
+    <div className="h-260 sm:h-230 mt-24 relative overflow-hidden">
       <ContactHeader className="absolute left-0 top-0" />
-      <Form className="absolute left-24 top-55" />
+      <Form className="absolute left-8 sm:left-24 sm:top-55 top-85" />
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.791640024081!2d-76.47607762388589!3d42.45344917118449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0821a6191da9d%3A0xf50ee64d821b9ff4!2sCornell%20University!5e0!3m2!1sen!2sus!4v1768798639466!5m2!1sen!2sus"
-        className="absolute w-140 h-100 right-24 top-80 rounded-sm"
+        className="absolute xl:w-100 2xl:w-140 h-100 right-24 top-80 rounded-sm hidden xl:block"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
