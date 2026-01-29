@@ -114,6 +114,7 @@ const engSubteamInfo: CreateMemberCardProps[] = [
 const eduOutSubteamInfo: CreateMemberCardProps[] = [
   { name: 'Sarah Swee' },
   { name: 'Rafael Green Mendez' },
+  { name: 'Emmanuella Umoh' },
   { name: 'David Han' },
   { name: 'Evan Lee' },
   { name: 'Sophia Roache' },
