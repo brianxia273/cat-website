@@ -2,7 +2,8 @@
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import data from "@/public/assets/AboutUs/team.json";
-import { useState } from "react";
+import portraitPlaceholder from "@/public/assets/AboutUs/ProfilePics/portrait-placeholder.png"
+import { memo, useState } from "react";
 
 interface Member {
   name: string;
@@ -160,7 +161,7 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
   }
   return (
     <div className="fixed flex justify-center items-center bg-black/50 inset-0 z-50">
-      <div className="bg-white rounded-2xl p-8 max-w-lg w-full relative">
+      <div className="bg-white rounded-2xl p-8 max-w-lg w-auto relative">
         <button className="absolute top-2 right-4 text-xl" onClick={closeModal}>
           <img src="/assets/close-x-svgrepo-com.svg" alt="Close" className="h-10 w-10" />
         </button>
@@ -186,13 +187,13 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
 function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () => void }) {
   const name = member.name
   const role = member.role
-  const img = member.img
+  const img = member.img ?? portraitPlaceholder
   const linkedin = member.linkedin
 
   return (
-    <div className="h-125 w-auto flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
-      {img !== undefined ? <Image src={img} alt={name} width={img.width} height={img.height}
-        className="min-h-100 max-h-100 w-full object-cover rounded-[15px]" /> : <div className="bg-text-grey h-120 w-full rounded-[15px]" />}
+    <div className="flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
+      <Image src={img} alt={name} width={img.width} height={img.height}
+        className="w-auto rounded-[15px]" /> 
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
           <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
@@ -213,7 +214,7 @@ function TeamSection({ title, team, clickMember }: SectionProps) {
   return (
     <div className={`flex flex-col universepad w-full pt-10 pb-15`}>
       <h2 className="teamheading">{title}</h2>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 mt-10">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 2xl:gap-20 xl:gap-12 lg:gap-12 md:gap-15 sm:gap-10 gap-10 mt-10">
         {team.map((item, index) => {
           return (
             <MemberCard key={`Team Lead ` + index} member={item} onClick={() => clickMember(item)} />
