@@ -106,7 +106,7 @@ export function OurProjects() {
           <div className="flex">
             {projects.map((project, index) => {
               return (
-                <div key={`project-${index}`} className="flex-[0_0_100%] min-w-0 flex flex-col lg:flex-row items-center lg:items-start h-130 2xl:h-140 lg:justify-end gap-3 lg:gap-10 xl:gap-12 2xl:gap-14 px-4">
+                <div key={`project-${index}`} className="flex-[0_0_100%] min-w-0 flex flex-col lg:flex-row items-center lg:items-start h-130 2xl:h-140 lg:justify-end gap-6 lg:gap-10 xl:gap-12 2xl:gap-14 px-4">
                   <div className="h-full w-[50%] sm:w-[80%] lg:max-h-none lg:w-[50%] relative rounded-[20px] overflow-hidden">
                     {project.imgs.map((item, index) => (
                       <Image
@@ -168,7 +168,7 @@ export function OurProjects() {
 
   return (
     <div className="flex flex-col overflow-x-hidden">
-      <div className="h-auto w-full flex flex-col universepad py-8 2xl:py-24" id="our-projects">
+      <div className="h-auto w-full flex flex-col universepad py-8 xl:py-15 2xl:py-24" id="our-projects">
         <OurProjectsTopText />
         <div className="flex flex-col gap-8 lg:gap-10 xl:gap-15 2xl:gap-25 mt-15 items-center">
           <ProjectCard projects={allProjects} />

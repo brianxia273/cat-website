@@ -51,7 +51,7 @@ export default function Home() {
 
 // Phones
 // 375 × 667
-// 414 × 896
+// 414 × 736
 
 // Tablets and IPads
 // 768 × 1024

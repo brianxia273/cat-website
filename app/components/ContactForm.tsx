@@ -99,7 +99,7 @@ function Form({ className }: { className?: string }) {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!isValidForm || isSubmitting) {
       return;
     }
@@ -144,6 +144,7 @@ function Form({ className }: { className?: string }) {
   return (
     <div className={`flex flex-col bg-theme-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] h-160 lg:w-141 md:w-130 sm:w-120 w-80 rounded-[20px] px-10 pt-4 ${className}`}>
       <h2 className="heading">Send a Message</h2>
+      <h2 className="subtext">This section is currently under construction, but you can contact us using our social media in the meantime.</h2>
       <form onSubmit={handleSubmit} className="flex flex-col">
         {/* <div className="flex pt-6 gap-10"> */}
         <div className="flex flex-col sm:flex-row sm:pt-6 sm:gap-10">
@@ -174,26 +175,24 @@ function Form({ className }: { className?: string }) {
           setter={setMessage}
           className="mt-4"
         />
-        
+
         {/* Status message */}
         {submitStatus.type && (
-          <div className={`mt-4 p-3 rounded-sm text-sm ${
-            submitStatus.type === "success" 
-              ? "bg-green-50 text-green-800 border border-green-200" 
-              : "bg-red-50 text-red-800 border border-red-200"
-          }`}>
+          <div className={`mt-4 p-3 rounded-sm text-sm ${submitStatus.type === "success"
+            ? "bg-green-50 text-green-800 border border-green-200"
+            : "bg-red-50 text-red-800 border border-red-200"
+            }`}>
             {submitStatus.message}
           </div>
         )}
-        
-        <button 
-          type="submit" 
+
+        <button
+          type="submit"
           className={`mt-6 w-full h-10 text-center formlabel text-theme-white bg-theme-red rounded-[1000px]
-          transition-colors duration-200 ${
-            !isValidForm || isSubmitting
+          transition-colors duration-200 ${!isValidForm || isSubmitting
               ? "opacity-50 cursor-not-allowed"
               : "hover:bg-theme-dk-red cursor-pointer"
-          }`}
+            }`}
           disabled={!isValidForm || isSubmitting}
         >
           {isSubmitting ? "Sending..." : "Submit"}
