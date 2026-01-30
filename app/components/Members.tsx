@@ -136,9 +136,9 @@ const opsSubteamInfo: CreateMemberCardProps[] = [
   { name: 'William Chen' }
 ]
 
-const alumniInfo: CreateMemberCardProps[] = [
-  { name: 'Alum' },
-]
+// const alumniInfo: CreateMemberCardProps[] = [
+//   { name: 'Alum' },
+// ]
 
 
 const teamLeads: MemberCardInfo[] = teamLeadsInfo.map((member) => (createMemberCardInfo({ name: member.name })))
@@ -149,7 +149,7 @@ const eduOutSubteam: MemberCardInfo[] = eduOutSubteamInfo.map((member) => (creat
 
 const opsSubteam: MemberCardInfo[] = opsSubteamInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
-const alumni: MemberCardInfo[] = alumniInfo.map((member) => (createMemberCardInfo({ name: member.name })))
+// const alumni: MemberCardInfo[] = alumniInfo.map((member) => (createMemberCardInfo({ name: member.name })))
 
 function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModal: () => void }) {
   const imgSrc = () => {
@@ -194,7 +194,7 @@ function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () =
   return (
     <div className="flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
       <Image src={img} alt={name} width={img.width} height={img.height}
-        className="w-auto rounded-[15px]" /> 
+        className="w-auto rounded-[15px]" />
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
           <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
@@ -246,7 +246,7 @@ export function Members() {
       <TeamSection title="Engineering Subteam" team={engSubteam} clickMember={clickMember} />
       <TeamSection title="Outreach & Education Subteam" team={eduOutSubteam} clickMember={clickMember} />
       <TeamSection title="Operations Subteam" team={opsSubteam} clickMember={clickMember} />
-      <TeamSection title="Our Alumni" team={alumni} clickMember={clickMember} />
+      {/* <TeamSection title="Our Alumni" team={alumni} clickMember={clickMember} /> */}
 
 
       <img src="/assets/AboutUs/wave-top.svg" alt="" className="absolute bottom-full left-0 w-full scale-x-[-1]" />
