@@ -21,7 +21,7 @@ const HeroGraphic = () => {
   return (
     <div className="flex justify-center md:justify-start w-full lg:w-1/2 min-w-64 md:min-w-80 mt-20 sm:mt-20 md:mt-0">
       <Image src={HeroPic} alt="Cornell Assistive Technologies team photo" height={HeroPic.height} width={HeroPic.width}
-        className="xl:h-100 xl:w-auto md:scale-80 lg:scale-110 xl:scale-100 2xl:scale-140 origin-left rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
+        className="xl:h-100 xl:w-auto md:scale-80 lg:scale-100 xl:scale-100 2xl:scale-110 origin-left rounded-[20px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]" />
     </div>
   )
 }
