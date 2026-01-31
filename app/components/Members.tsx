@@ -160,22 +160,24 @@ function MemberModal({ member, closeModal }: { member: MemberCardInfo, closeModa
     }
 
   }
+
+  const labelStyles = "font-semibold"
   return (
     <div className="fixed flex justify-center items-center bg-black/50 inset-0 z-50">
-      <div className="bg-white rounded-2xl p-8 max-w-lg w-auto relative">
+      <div className="bg-text-dk-grey rounded-[20px] max-w-lg w-auto relative px-15 py-8">
         <button className="absolute top-2 right-4 text-xl" onClick={closeModal}>
-          <img src="/assets/close-x-svgrepo-com.svg" alt="Close" className="h-10 w-10" />
+          <img src="/assets/close-x-svgrepo-com.svg" alt="Close" className="h-10 w-10 cursor-pointer" />
         </button>
 
         <div className="mt-4 flex flex-col items-center">
-          <Image src={imgSrc()} width="300" height="300" alt={`Photo of ${member.name}`} />
-          <div className="mt-4 justify-start">
-            <p><span className="font-semibold">Name:</span> {member.name}</p>
-            <p><span className="font-semibold">Role:</span> {member.role}</p>
-            <p><span className="font-semibold">Year:</span> {member.year}</p>
-            <p><span className="font-semibold">Major:</span> {member.major}</p>
-            <p><span className="font-semibold">College:</span> {member.college}</p>
-            <p><span className="font-semibold">LinkedIn:</span> <a href={member.linkedin} target="_blank" className="text-red-600 visited:text-purple-600">{member.linkedin}</a></p>
+          <Image src={imgSrc()} width="300" height="300" alt={`Photo of ${member.name}`} className="rounded-[20px]" />
+          <div className="mt-4 justify-start whitesubtext">
+            <p><span className={labelStyles}>Name:</span> {member.name}</p>
+            <p><span className={labelStyles}>Role:</span> {member.role}</p>
+            <p><span className={labelStyles}>Year:</span> {member.year}</p>
+            <p><span className={labelStyles}>Major:</span> {member.major}</p>
+            <p><span className={labelStyles}>College:</span> {member.college}</p>
+            {/* <p><span className={labelStyles}>LinkedIn:</span> <a href={member.linkedin} target="_blank" className="text-red-600 visited:text-purple-600">{member.linkedin}</a></p> */}
           </div>
 
         </div>
@@ -191,14 +193,20 @@ function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () =
   const img = member.img ?? portraitPlaceholder
   const linkedin = member.linkedin
 
+  const linkedinStyles = "bg-theme-white rounded-md border-2 border-theme-white"
+
   return (
-    <div className="flex flex-col rounded-[20px] cursor-pointer max-w-xs" onClick={onClick}>
-      <Image src={img} alt={name} width={img.width} height={img.height}
-        className="w-auto rounded-[15px]" />
+    <div className="flex flex-col rounded-[20px] cursor-pointer max-w-xs scale-90 2xl:scale-100" onClick={onClick}>
+      <div className="relative">
+        <Image src={img} alt={name} width={img.width} height={img.height}
+          className="w-auto rounded-[15px]" />
+        {/* mobile linkedin button */}
+        <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`} className={`${linkedin === "" ? "hidden" : "block lg:hidden"} absolute right-3 bottom-3 sm:bottom-5 sm:right-5 h-9 sm:h-12 ${linkedinStyles}`} />
+      </div>
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
-          <h4 className={name.length <= 18 ? "membername" : "longmembername"}>{name}</h4>
-          <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`} className="h-7"
+          <h4 className={`max-w-4/5 ${name.length <= 14 ? "membername" : "longmembername"}`}>{name}</h4>
+          <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`} className={`${linkedin === "" ? "hidden" : "hidden lg:block"} lg:h-9 2xl:h-10 ${linkedinStyles}`}
             onClick={() => window.open((linkedin !== undefined ? linkedin : ""), '_blank')} />
         </div>
         {role !== "" &&

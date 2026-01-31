@@ -69,7 +69,8 @@
   }
 
   .whitesubtext {
-    @apply text-xl text-theme-white;
+    @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-theme-white leading-[160%];
+
   }
 
   .heading {
@@ -115,11 +116,11 @@
   }
 
   .membername {
-    @apply text-xl leading-normal text-theme-white font-medium
+    @apply text-xl sm:text-2xl leading-normal text-theme-white font-medium
   }
 
   .longmembername {
-    @apply text-lg leading-normal text-theme-white font-medium
+    @apply text-base sm:text-xl leading-normal text-theme-white font-medium
   }
 
 
