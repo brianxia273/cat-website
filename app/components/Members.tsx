@@ -193,15 +193,17 @@ function MemberCard({ member, onClick }: { member: MemberCardInfo, onClick: () =
   const img = member.img ?? portraitPlaceholder
   const linkedin = member.linkedin
 
-  const linkedinStyles = "bg-theme-white rounded-md border-2 border-theme-white"
+  const linkedinStyles = "bg-theme-white rounded-md border-2 border-theme-white cursor-pointer"
 
   return (
-    <div className="flex flex-col rounded-[20px] cursor-pointer max-w-xs scale-90 2xl:scale-100" onClick={onClick}>
+    <div className="flex flex-col rounded-[20px] max-w-xs scale-90 2xl:scale-100">
       <div className="relative">
         <Image src={img} alt={name} width={img.width} height={img.height}
-          className="w-auto rounded-[15px]" />
+          className="w-auto rounded-[15px] cursor-pointer" onClick={onClick} />
         {/* mobile linkedin button */}
-        <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`} className={`${linkedin === "" ? "hidden" : "block lg:hidden"} absolute right-3 bottom-3 sm:bottom-5 sm:right-5 h-9 sm:h-12 ${linkedinStyles}`} />
+        <img src="/assets/linkedin.svg" alt={`Visit ${name}'s LinkedIn profile`}
+          className={`${linkedin === "" ? "hidden" : "block lg:hidden"} absolute right-3 bottom-3 sm:bottom-5 sm:right-5 h-9 sm:h-12 ${linkedinStyles}`}
+          onClick={() => window.open((linkedin !== undefined ? linkedin : ""), '_blank')} />
       </div>
       <div className="flex flex-col pt-3 px-2">
         <div className="flex justify-between items-center">
