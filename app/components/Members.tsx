@@ -251,15 +251,27 @@ export function Members() {
   }
 
   return (
-    <div className="bg-bg-dk-grey b-10 mt-5 relative pt-5">
+    <div className="bg-bg-dk-grey b-10 mt-5 relative pt-5"
+      style={{
+        backgroundImage: `
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.02) 2px,
+      rgba(255,255,255,0.02) 4px
+    )
+  `,
+      }}>
       <TeamSection title="Our Team Leads" team={teamLeads} clickMember={clickMember} />
       <TeamSection title="Engineering Subteam" team={engSubteam} clickMember={clickMember} />
       <TeamSection title="Outreach & Education Subteam" team={eduOutSubteam} clickMember={clickMember} />
       <TeamSection title="Operations Subteam" team={opsSubteam} clickMember={clickMember} />
       {/* <TeamSection title="Our Alumni" team={alumni} clickMember={clickMember} /> */}
 
+      {/* <img src="/assets/AboutUs/wave-top.svg" alt="" className="absolute bottom-full left-0 w-full scale-x-[-1]"
+        /> */}
 
-      <img src="/assets/AboutUs/wave-top.svg" alt="" className="absolute bottom-full left-0 w-full scale-x-[-1]" />
       {modal}
     </div>
   )
